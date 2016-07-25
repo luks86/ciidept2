@@ -1,0 +1,129 @@
+ <div class="container"> 
+      <div class="row"> 
+        <div class="col-md-12">
+        	
+      <!--  -->
+
+			<div class="shadow-z-1 fondo-blanco " ng-init="pagos='contado'">
+		<!-- 		<div class="form-group box-plan">
+				<label for="">Cambiar plan de pagos</label>
+					<select name="" id="" class="form-control">
+						<option value="contado">10 cuotas</option>
+
+						<option value="contado">Contado</option>
+						<option value="contado">12 cuotas</option>
+					</select>
+				</div> -->
+				<label for="">Planes de pagos</label><br>
+
+				<button class="btn btn-default btn-raised" ng-class="{'btn-warning' : pagos == 'contado' }"  ng-click="pagos = 'contado'">Contado</button>
+			<button class="btn btn-default btn-raised"     ng-class="{ 'btn-warning' : pagos == 'diez' }"  ng-click="pagos = 'diez'">10 cuotas</button>
+			<button class="btn btn-default btn-raised"     ng-class="{ 'btn-warning' : pagos == 'doce' }"  ng-click="pagos = 'doce'">12 cuotas</button>
+		
+				<div class="row" ng-switch="pagos">
+				<div class="col-md-12">
+					<hr>
+				</div>
+					<div class="col-md-12"  ng-switch-when="contado">
+						<!-- <h4 class="detalle-destacado">Plan de estudio</h4> -->
+						
+							
+							<div class="contado">
+								<h1>{{detalle[0].planes_de_pago[0]}}</h1>
+								<h3>Aprovecha un descuento de 20% pagando de contado!</h3>
+							</div>
+							<a href="#/alumno" class="btn btn-warning btn-raised">Seleccionar este plan</a>
+
+					</div>
+						
+					<div class="col-md-12"  ng-switch-when="diez">
+				<table class="table table-bordered " >
+					<thead>
+						<tr>
+							<th>Concepto</th>
+							<th class="pago1">1° Vencimiento</th>
+							<th class="pago1">Importe</th>
+							<th class="pago2">2° Vencimiento</th>
+							<th class="pago2">Importe</th>
+							<th class="pago3">3° Vencimiento</th>
+							<th class="pago3">Importe</th>
+							<th class="pago4">4° Vencimiento</th>
+							<th class="pago4">Importe</th>
+							
+							
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="pago in detalle[0].plan_de_pago">
+							<td>{{pago.concepto}}</td>
+							<td class="pago1">{{pago.fecha_1er_vto}}</td>
+							<td class="pago1">${{pago.importe_1er_vto}}</td>
+							<td class="pago2">{{pago.fecha_2er_vto}}</td>
+							<td class="pago2">${{pago.importe_2er_vto}}</td>
+							<td class="pago3">{{pago.fecha_3er_vto}}</td>
+							<td class="pago3">${{pago.importe_3er_vto}}</td>
+							<td class="pago4">{{pago.fecha_4er_vto}}</td>
+							<td class="pago4">${{pago.importe_4er_vto}}</td>
+							
+						</tr>
+					</tbody>
+				</table>
+				<hr>
+				<p>
+					Plan de financiación de 10 cuotas
+					<ul>
+						<li>Tasa de interés: <strong>2.5%</strong> </li>
+						<li>Interés por plazo: <strong>0.3%</strong></li>
+					</ul>
+					<a href="#/alumno" class="btn btn-warning btn-raised">Seleccionar este plan</a>
+				</p>
+				</div>
+				<div class="col-md-12"  ng-switch-when="doce">
+				   <!--  -->
+				   <table class="table table-bordered " >
+					<thead>
+						<tr>
+							<th>Concepto</th>
+							<th class="pago1">1° Vencimiento</th>
+							<th class="pago1">Importe</th>
+							<th class="pago2">2° Vencimiento</th>
+							<th class="pago2">Importe</th>
+							<th class="pago3">3° Vencimiento</th>
+							<th class="pago3">Importe</th>
+							<th class="pago4">4° Vencimiento</th>
+							<th class="pago4">Importe</th>
+							
+							
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="pago in detalle[0].plan_de_pago">
+							<td>{{pago.concepto}}</td>
+							<td class="pago1">{{pago.fecha_1er_vto}}</td>
+							<td class="pago1">${{pago.importe_1er_vto}}</td>
+							<td class="pago2">{{pago.fecha_2er_vto}}</td>
+							<td class="pago2">${{pago.importe_2er_vto}}</td>
+							<td class="pago3">{{pago.fecha_3er_vto}}</td>
+							<td class="pago3">${{pago.importe_3er_vto}}</td>
+							<td class="pago4">{{pago.fecha_4er_vto}}</td>
+							<td class="pago4">${{pago.importe_4er_vto}}</td>
+							
+						</tr>
+					</tbody>
+				</table>
+				<hr>
+				<p>
+					Plan de financiación de 10 cuotas
+					<ul>
+						<li>Tasa de interés: <strong>2.5%</strong> </li>
+						<li>Interés por plazo: <strong>0.3%</strong></li>
+					</ul>
+					<a href="#/alumno" class="btn btn-warning btn-raised">Seleccionar este plan</a>
+				</p>
+				</div>
+					</div>
+				</div>
+				
+			</div>
+<!--  -->
+</div></div></div>

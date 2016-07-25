@@ -1,0 +1,433 @@
+{
+    "propuestas":[
+       {
+            "id":"1",
+            "titulo":"COCINERO PROFESIONAL CON CERTIFICACION UNIVERSITARIA",
+            "imagen":"http://redmilenium.com.ar/cloudy/propuestas/2012092112hs42min57seg_img.jpg",
+            "descripcion":"Una carrera profesional, basadas en las técnicas y tecnología de la cocina moderna, nacional e internacional, para quienes quieran introducirse de lleno en todos los secretos del arte culinario.",
+            "duracion":"2 años",
+            "cant_materias":"20",
+            "horas_cursado":"500",
+            "planes_de_pago":["Contado $1150","10 cuotas de $1450", "12 cuotas de $1300"],
+            "plan_de_estudio": [
+                {
+                "anio":"1",
+                "nombre":"COCINA I",
+                "docente":"Hernandez, Hector",
+                "turno":"Lunes 15:00 - 17:00 hs"
+                },
+                {
+                "anio":"1",
+                "nombre":"PASTELERIA",
+                "docente":"Rodriguez, Diego",
+                "turno":"Lunes 17:00 - 19:00 hs"
+                },
+                {
+                "anio":"1",
+                "nombre":"COCINA LATINOAMERICANA",
+                "docente":"Fernandez, Juan",
+                "turno":"Martes 15:00 - 17:00 hs"
+                },
+                {
+                "anio":"1",
+                "nombre":"BUFET I",
+                "docente":"Vera, Daniel",
+                "turno":"Martes 15:00 - 17:00"
+                },
+                {
+                "anio":"1",
+                "nombre":"PASTAS Y SALSAS",
+                "docente":"Robles, Bruno",
+                "turno":"Miércoles 15:00 - 17:00"
+                },
+                {
+                "anio":"1",
+                "nombre":"PANADERIA I",
+                "docente":"Ale, Julian",
+                "turno":"Miércoles 17:00 - 19:00"
+                },
+                {
+                "anio":"1",
+                "nombre":"HIGIENE Y BROMATOLOGIA",
+                "docente":"Ortega, Orlando",
+                "turno":"Jueves 13:00 - 15:00"
+                },
+                {
+                "anio":"1",
+                "nombre":"ENOLOGIA",
+                "docente":"Trimarco, Hernan",
+                "turno":"Jueves 15:00 - 17:00"
+                },
+                {
+                "anio":"1",
+                "nombre":"NUTRICION",
+                "docente":"Gonzalez, Javier",
+                "turno":"Viernes 13:00 - 15:00"
+                },
+                {
+                "anio":"1",
+                "nombre":"QUIMICA CULINARIA",
+                "docente":"Ramirez, Pedro",
+                "turno":"Viernes 17:00 - 19:00"
+                },
+                {
+                "anio":"2",
+                "nombre":"COCINA II",
+                "docente":"Gonzalez, Javier",
+                "turno":"Viernes 17:00 - 19:00"
+                },
+                {
+                "anio":"2",
+                "nombre":"COCINA INTERNACIONAL",
+                "docente":"Cordoba, Francisco",
+                "turno":"Viernes 17:00 - 19:00"
+                },
+                {
+                "anio":"2",
+                "nombre":"ALTA PASTELERIA",
+                "docente":"Diaz, Francisco",
+                "turno":"Viernes 17:00 - 19:00"
+                },
+                {
+                "anio":"2",
+                "nombre":"ALTA PANADERIA",
+                "docente":"Graneros, Luis",
+                "turno":"Viernes 17:00 - 19:00"
+                },
+                {
+                "anio":"2",
+                "nombre":"BUFET II",
+                "docente":"Contreras, Raul",
+                "turno":"Viernes 17:00 - 19:00"
+                },
+                {
+                "anio":"2",
+                "nombre":"ORGANIZACION DE EVENTOS",
+                "docente":"Padua, Milagros",
+                "turno":"Viernes 17:00 - 19:00"
+                },
+                {
+                "anio":"2",
+                "nombre":"COSTOS GASTRONOMICOS",
+                "docente":"Mayorga, Patricio",
+                "turno":"Viernes 17:00 - 19:00"
+                },
+                {
+                "anio":"2",
+                "nombre":"MARKETING GASTRONOMICO",
+                "docente":"Azar, Walter",
+                "turno":"Viernes 17:00 - 19:00"
+                },
+                {
+                "anio":"2",
+                "nombre":"MANAGMENT GASTRONOMICO",
+                "docente":"Reyes, Karina",
+                "turno":"Viernes 17:00 - 19:00"
+                },
+                {
+                "anio":"2",
+                "nombre":"TESIS FINAL",
+                "docente":"Ruiz, Jorge",
+                "turno":"Viernes 17:00 - 19:00"
+                }
+                
+            ],
+            "plan_de_pago":[
+                {
+                "concepto":"Matricula",
+                "fecha_1er_vto":"10/03/2016",
+                "importe_1er_vto":"845",
+                "fecha_2er_vto":"10/03/2016",
+                "importe_2er_vto":"845",
+                "fecha_3er_vto":"10/03/2016",
+                "importe_3er_vto":"845",
+                "fecha_4er_vto":"10/03/2016",
+                "importe_4er_vto":"845"
+                },
+                {
+                "concepto":"Cuota Marzo",
+                "fecha_1er_vto":"10/03/2016",
+                "importe_1er_vto":"1450",
+                "fecha_2er_vto":"15/03/2016",
+                "importe_2er_vto":"1500",
+                "fecha_3er_vto":"20/03/2016",
+                "importe_3er_vto":"1550",
+                "fecha_4er_vto":"25/03/2016",
+                "importe_4er_vto":"1600"
+                },
+                {
+                "concepto":"Cuota Abril",
+                "fecha_1er_vto":"10/04/2016",
+                "importe_1er_vto":"1450",
+                "fecha_2er_vto":"15/04/2016",
+                "importe_2er_vto":"1500",
+                "fecha_3er_vto":"20/04/2016",
+                "importe_3er_vto":"1550",
+                "fecha_4er_vto":"25/04/2016",
+                "importe_4er_vto":"1600"
+                },
+                {
+                "concepto":"Cuota Mayo",
+                "fecha_1er_vto":"10/05/2016",
+                "importe_1er_vto":"1450",
+                "fecha_2er_vto":"15/05/2016",
+                "importe_2er_vto":"1500",
+                "fecha_3er_vto":"20/05/2016",
+                "importe_3er_vto":"1550",
+                "fecha_4er_vto":"25/05/2016",
+                "importe_4er_vto":"1600"
+                },
+                {
+                "concepto":"Cuota Junio",
+                "fecha_1er_vto":"10/06/2016",
+                "importe_1er_vto":"1450",
+                "fecha_2er_vto":"15/06/2016",
+                "importe_2er_vto":"1500",
+                "fecha_3er_vto":"20/06/2016",
+                "importe_3er_vto":"1550",
+                "fecha_4er_vto":"25/06/2016",
+                "importe_4er_vto":"1600"
+                },
+                {
+                "concepto":"Cuota Julio",
+                "fecha_1er_vto":"10/07/2016",
+                "importe_1er_vto":"1450",
+                "fecha_2er_vto":"15/07/2016",
+                "importe_2er_vto":"1500",
+                "fecha_3er_vto":"20/07/2016",
+                "importe_3er_vto":"1550",
+                "fecha_4er_vto":"25/07/2016",
+                "importe_4er_vto":"1600"
+                },
+                {
+                "concepto":"Cuota Agosto",
+                "fecha_1er_vto":"10/08/2016",
+                "importe_1er_vto":"1450",
+                "fecha_2er_vto":"15/08/2016",
+                "importe_2er_vto":"1500",
+                "fecha_3er_vto":"20/08/2016",
+                "importe_3er_vto":"1550",
+                "fecha_4er_vto":"25/08/2016",
+                "importe_4er_vto":"1600"
+                },
+                {
+                "concepto":"Cuota Septiembre",
+                "fecha_1er_vto":"10/09/2016",
+                "importe_1er_vto":"1450",
+                "fecha_2er_vto":"15/09/2016",
+                "importe_2er_vto":"1500",
+                "fecha_3er_vto":"20/09/2016",
+                "importe_3er_vto":"1550",
+                "fecha_4er_vto":"25/09/2016",
+                "importe_4er_vto":"1600"
+                },
+                {
+                "concepto":"Cuota Octubre",
+                "fecha_1er_vto":"10/10/2016",
+                "importe_1er_vto":"1450",
+                "fecha_2er_vto":"15/10/2016",
+                "importe_2er_vto":"1500",
+                "fecha_3er_vto":"20/10/2016",
+                "importe_3er_vto":"1550",
+                "fecha_4er_vto":"25/10/2016",
+                "importe_4er_vto":"1600"
+                },
+                {
+                "concepto":"Cuota Noviembre",
+                "fecha_1er_vto":"10/11/2016",
+                "importe_1er_vto":"1450",
+                "fecha_2er_vto":"15/11/2016",
+                "importe_2er_vto":"1500",
+                "fecha_3er_vto":"20/11/2016",
+                "importe_3er_vto":"1550",
+                "fecha_4er_vto":"25/11/2016",
+                "importe_4er_vto":"1600"
+                },
+                {
+                "concepto":"Cuota Diciembre",
+                "fecha_1er_vto":"10/12/2016",
+                "importe_1er_vto":"1450",
+                "fecha_2er_vto":"15/12/2016",
+                "importe_2er_vto":"1500",
+                "fecha_3er_vto":"20/12/2016",
+                "importe_3er_vto":"1550",
+                "fecha_4er_vto":"25/12/2016",
+                "importe_4er_vto":"1600"
+                }
+            ]
+        },
+
+
+        {
+            "id":"2",
+            "titulo":"MASTER EN GASTRONOMIA",
+            "imagen":"http://redmilenium.com.ar/cloudy/propuestas/2014032009hs07min11seg_img.jpg",
+            "descripcion":"Está dirigido a egresados de la carrera de Profesional Gastronómico o título equivalente y a todas aquellas personas con sólidos conocimientos del arte culinario.",
+            "duracion":"1 año",
+            "cant_materias":"10",
+            "horas_cursado":"250",
+            "planes_de_pago":["Contado $14.000","10 cuotas de $1.600", "12 cuotas de $1.300"],
+            "plan_de_estudio": [
+                
+            ],
+            "plan_de_pago":[
+                
+            ]
+        },
+
+
+        {
+            "id":"3",
+            "titulo":"PROFESIONAL PASTELERO",
+            "imagen":"http://redmilenium.com.ar/cloudy/propuestas/2015012906hs44min27seg_img.jpg",
+            "descripcion":"Los productos obtenidos de la pastelería ya no son, en la actualidad, fruto del azar. En este dulce mundo todo está regido y controlado para que la creatividad encuentre el espacio adecuado para desarrollarse con bases sólidas",
+            "duracion":"1 año",
+            "cant_materias":"10",
+            "horas_cursado":"250",
+            "planes_de_pago":["Contado $11.320","10 cuotas de $1.350", "12 cuotas de $1.120"],
+            "plan_de_estudio": [
+                
+            ],
+            "plan_de_pago":[
+                
+            ]
+        },
+
+        {
+            "id":"4",
+            "titulo":"OPERADOR OFFICE FULL CON CERTIFICACION UNIVERSITARIA",
+            "imagen":"http://redmilenium.com.ar/cloudy/propuestas/2012092112hs55min43seg_img.jpg",
+            "descripcion":"Esta capacitación está orientada para quienes poseen conocimientos muy básicos de informática y desean profesionalizarse en el ámbito de la Ofimática. Planilla de cálculo, Procesador de texto, Internet, Redes Sociales, Presentaciones gráficas animadas, Bases de datos, son algunos de los temas a tratar.",
+            "duracion":"1 año",
+            "cant_materias":"10",
+            "horas_cursado":"250",
+            "planes_de_pago":["Contado $4.300","10 cuotas de $500", "12 cuotas de $430"],
+            "plan_de_estudio": [
+                
+            ],
+            "plan_de_pago":[
+                
+            ]
+        },
+
+        {
+            "id":"5",
+            "titulo":"INST. Y CONFIG. DE CÁMARAS DE SEGURIDAD",
+            "imagen":"http://redmilenium.com.ar/cloudy/propuestas/2012092112hs48min26seg_img.png",
+            "descripcion":"Va Dirigido a personas que sin experiencia previa, quieran dedicarse a la instalación de Circuitos cerrados o monitoreo por Internet. La demanda de estos técnicos, va en permanente crecimiento, ya que la necesidad del monitoreo por seguridad y/o control por parte de Empresas, negocios, comercios y casas de familias, es cada vez más marcada.",
+            "duracion":"3 meses",
+            "cant_materias":"3",
+            "horas_cursado":"100",
+            "planes_de_pago":["2 cuotas de $300"],
+            "plan_de_estudio": [
+                
+            ],
+            "plan_de_pago":[
+                
+            ]
+        },
+
+        {
+            "id":"6",
+            "titulo":"DISEÑO GRÁFICO CON CERTIFICACION UNIVERSITARIA",
+            "imagen":"http://redmilenium.com.ar/cloudy/propuestas/2012092112hs52min04seg_img.jpg",
+            "descripcion":"La propuesta en Diseño Gráfico, te permitirá dar los primeros pasos para convertirte en un profesional en la materia. Las clases son dictadas por profesionales que se desarrollan en este ámbito. Clases prácticas, intensivas.",
+            "duracion":"1 año",
+            "cant_materias":"10",
+            "horas_cursado":"300",
+            "planes_de_pago":["10 cuotas de $550"],
+            "plan_de_estudio": [
+                
+            ],
+            "plan_de_pago":[
+                
+            ]
+        },
+
+        {
+            "id":"7",
+            "titulo":"AYUDANTE TERAPEUTICO",
+            "imagen":"",
+            "descripcion":"El AYUDANTE EN SALUD es nexo fundamental entre familia y equipo de profesionales que trata al paciente. Sus conocimientos le permitirán asistirlo correctamente en la toma de medicamentos, colaborar en el vínculo Paciente/Familia, determinar una emergencia y actuar en consecuencia, Observar y cumplir las indicaciones profesionales en favor del restablecimiento",
+            "duracion":"10 meses",
+            "cant_materias":"8",
+            "horas_cursado":"300",
+            "planes_de_pago":["Contado $5.120","10 cuotas de $590", "12 cuotas de $490"],
+            "plan_de_estudio": [
+                
+            ],
+            "plan_de_pago":[
+                
+            ]
+        },
+
+        {
+            "id":"8",
+            "titulo":"AUXILIAR EN FARMACIA CON CERTIFICACION UNIVERSITARIA",
+            "imagen":"http://redmilenium.com.ar/cloudy/propuestas/2013073007hs07min01seg_img.jpg",
+            "descripcion":"Auxiliar de Farmacia es una capacitación con excelente salida laboral. Nuestros alumnos tienen la posibilidad de realizar PASANTIAS para prácticas profesionales en las cadenas farmacéuticas más importantes de la Provincia.",
+            "duracion":"10 meses",
+            "cant_materias":"8",
+            "horas_cursado":"300",
+            "planes_de_pago":["Contado $5.120","10 cuotas de $590", "12 cuotas de $490"],
+            "plan_de_estudio": [
+                
+            ],
+            "plan_de_pago":[
+                
+            ]
+        },
+
+        {
+            "id":"9",
+            "titulo":"DIPLOMATURA EN PERIODISMO DEPORTIVO CON CERTIFICACIÓN UNIVERSITARIA",
+            "imagen":"http://redmilenium.com.ar/cloudy/propuestas/2012092112hs30min23seg_img.jpg",
+            "descripcion":"Elegí Periodismo Deportivo y convertí tu pasión por los deportes en una pujante y reconocida profesión. La modalidad de enseñanza, contenidos y recursos tecnológicos y pedagógicos están diseñados para que puedas destacarte en esta apasionante profesión.",
+            "duracion":"3 años",
+            "cant_materias":"24",
+            "horas_cursado":"750",
+            "planes_de_pago":["Contado $9.320","10 cuotas de $1.100", "12 cuotas de $910"],
+            "plan_de_estudio": [
+                
+            ],
+            "plan_de_pago":[
+                
+            ]
+        },
+
+        {
+            "id":"10",
+            "titulo":"DIPLOMATURA EN RECURSOS HUMANOS CON CERTIFICACION UNIVERSITARIA",
+            "imagen":"http://redmilenium.com.ar/cloudy/propuestas/2012092112hs36min44seg_img.jpg",
+            "descripcion":"Esta Diplomatura está organizada en Módulos independientes, cada uno de ellos representa una actividad profesional en el área de Recursos Humanos y otras relacionadas. Organizada en tiempo y modalidad para ofrecer posibilidad de cursado a quienes poseen una actividad laboral, asegura su finalización y ofrece un importante nivel de competitividad para sus egresados.",
+            "duracion":"2 años",
+            "cant_materias":"20",
+            "horas_cursado":"500",
+            "planes_de_pago":["Contado $7.120","10 cuotas de $840", "12 cuotas de $700"],
+            "plan_de_estudio": [
+                
+            ],
+            "plan_de_pago":[
+                
+            ]
+        }
+
+
+    ],
+
+  "alumnos":[
+        {
+           "nombre":"Raul",
+           "apellido":"Diaz Solis",
+           "dni":"12345678",
+           "telefono":"3815123654",
+           "domicilio":"Savedra 129",
+           "localidad":"San Miguel de Tucumán",
+           "foto": "https://avatars3.githubusercontent.com/u/2073511?v=3&s=460"
+
+
+        }
+   ]
+}
+
+         

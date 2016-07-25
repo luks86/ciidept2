@@ -1,0 +1,43 @@
+ <div class="container tab-pane fade in"> 
+      <div class="row"> 
+        <div class="col-md-12">
+        	
+      <!--  -->
+			<div class="shadow-z-1 fondo-blanco ">
+			<!-- <label for="">Elija una sede</label> -->
+			<button class="btn btn-default btn-raised" ng-class="tuc" ng-click="ElegirSede('tuc')">Tucumán</button>
+			<button class="btn btn-default btn-raised" ng-class="sierra" ng-click="ElegirSede('sierra')">Santa Cruz de la Sierra</button>
+			
+			<!-- Caja que contiene la informacion de la propuesta -->
+			<div class="propuesta-box" ng-repeat="propuesta in propuestas">
+			  <div class="row">
+			  <!-- imagen del curso -->
+			  	<div class="col-md-2">
+			  		<img src="{{propuesta.imagen}}" alt="" class="img-responsive" style="margin-top:24px">
+			  	</div>
+			  	<!-- contenido -->
+			  	<div class="col-md-10">
+			  	<!-- titulo -->
+			  		<h3>{{propuesta.titulo}}</h3>
+			  	<!-- descripcion -->
+			  	<p>{{propuesta.descripcion}}</p>
+			  	<ul>
+			  		<li>Duración: <strong>{{propuesta.duracion}}</strong></li>
+			  		<li>Cantidad de materias del curso: <strong>{{propuesta.cant_materias}}</strong></li>
+			  		<li>Sedes: <strong>Capital, Santa Cruz de la Sierra</strong></li>
+			  		
+			  	</ul>
+			  	<!-- planes de pago -->
+			  	<a href="#/detalle" class="btn btn-warning" ng-click="Tab(2)">Plan de estudios</a>
+			  	<a href="#/inversion" class="btn btn-info" ng-click="ElegirPago(1)">{{propuesta.planes_de_pago[0]}}</a>
+			  	<a href="#/inversion" class="btn btn-success" ng-click="ElegirPago(10)">{{propuesta.planes_de_pago[1]}}</a>
+			  	<a href="#/inversion" class="btn btn-primary" ng-click="ElegirPago(12)">{{propuesta.planes_de_pago[2]}}</a>
+			  	
+			  	</div>
+			  </div>
+			</div>	
+
+			</div>
+<!--  -->
+
+</div></div></div>

@@ -1,0 +1,89 @@
+ <div class="container"> 
+      <div class="row"> 
+        <div class="col-md-12">
+        	
+      <!--  -->
+
+<div class="shadow-z-1 fondo-blanco ">
+ 
+ <div class="seleccion-box">
+ 	
+ </div>
+<hr>
+<form action="">
+	<div class="row">
+		<div class="col-md-4 border-right">
+		<legend>Datos de acceso</legend>
+			<div class="form-group">
+				<label for="">DNI</label>
+				<input type="text" class="form-control" ng-model="user.dni" placeholder="Ingrese su dni sin puntos" ng-keyup="getDatos()"  >	
+				
+		</div>
+		<div class="form-group">
+				<!-- <label for="">Contraseña</label> -->
+				<!-- <input type="password" class="form-control" ng-model="user.pass" placeholder="*****">	 -->
+		</div>
+		</div>
+			<div class="col-md-4 border-right">
+			<legend>Datos de Personales</legend>
+			<div class="form-group">
+				<label for="">Nombre</label>
+				<input type="text" class="form-control" ng-model="user.nombre" value="user.nombre" >	
+		</div>
+		<div class="form-group">
+				<label for="">Apellido</label>
+				<input type="text" class="form-control" ng-model="user.apellido" value="user.apellido">	
+		</div>
+		<div class="form-group">
+				<label for="">Correo</label>
+				<input type="mail" class="form-control" ng-model="user.correo" value="user.correo">	
+		</div>
+		<div class="form-group">
+				<label for="">Teléfono</label>
+				<input type="text" class="form-control" ng-model="user.tel" value="user.tel" >	
+		</div>
+		<div class="form-group">
+				<label for="">Dirección</label>
+				<input type="mail" class="form-control" ng-model="user.dir" placeholder=""  value="user.dir"	>
+		</div>
+		<div class="form-group">
+				<label for="">Localidad</label>
+				<input type="mail" class="form-control" ng-model="user.localidad" placeholder="" value="user.localidad" >	
+		</div>
+			
+		</div>
+			<div class="col-md-4">
+			<legend>Foto de Perfil</legend>
+			<!-- rc="" -->
+			<img alt="" src="{{alumnos[0].foto}}" class="img-responsive" ng-show="hayfoto">
+			<hr>
+			
+		</div>
+		<div class="col-md-12">
+			<hr>
+			<legend>Mi selección</legend>
+			<table class="table table-bordered table-striped">
+				<tr>
+					<th>Curso</th>
+					<td>{{detalle[0].titulo}}</td>
+				</tr>
+				<tr>
+					<th>Sede</th>
+					<td>Tucumán - Capital</td>
+
+				</tr>
+				<tr>
+					<th>Inversión</th>
+					<td>{{detalle[0].planes_de_pago[1]}}</td>
+
+				</tr>
+
+			</table>
+ 			<a href="" class="btn btn-lg btn-warning btn-block">Inscribirme</a>
+		</div>
+	</div>
+</form>
+</div>
+
+<!--  -->
+</div></div></div>
