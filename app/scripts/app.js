@@ -2,39 +2,54 @@
   'use strict';
 
 
-
- 
-  function config ($routeProvider) {
+  function config ($routeProvider, $locationProvider) {
    
-    $routeProvider
-      .when('/listado', {
-        templateUrl: 'templates/listado.tpl.html',
-        controller: 'WizardCtrl'
-      })
-       .when('/detalle', {
-        templateUrl: 'templates/detalles.tpl.html',
-        controller: 'WizardCtrl'
-      })
-      .when('/inversion', {
-        templateUrl: 'templates/plan-pagos.tpl.html',
-        controller: 'WizardCtrl'
-      })
-         .when('/alumno', {
-        templateUrl: 'templates/inscripcion.tpl.html',
-        controller: 'WizardCtrl'
-      })
-  
-     
-     
+ $locationProvider.html5Mode(true);
 
-      .otherwise({ reditrectTo : '/listado' });
+    $routeProvider
+      .when('/', {
+        templateUrl: 'templates/home.tpl.html',
+        controller: 'HomeCtrl'
+      })
+
+      .when('/evento/:id', {
+        templateUrl: 'templates/home.tpl.html',
+        controller: 'EventoCtrl'
+      })
+
+      .when('/eventos', {
+        templateUrl: 'templates/listado-eventos.tpl.html',
+        controller: 'HomeCtrl'
+      })
+
+      .when('/noticias', {
+        templateUrl: 'templates/listado-noticias.tpl.html',
+        controller: 'HomeCtrl'
+      })
+
+      .when('/proyectos', {
+        templateUrl: 'templates/listado-proyectos.tpl.html',
+        controller: 'HomeCtrl'
+      })
+
+      .when('/enlaces', {
+        templateUrl: 'templates/listado-enlaces.tpl.html',
+        controller: 'HomeCtrl'
+      })
+      
+      .when('/reservas', {
+        templateUrl: 'templates/reservas.tpl.html',
+        controller: 'HomeCtrl',
+        controllerAs: 'postformulario'
+
+      })
+
+      .otherwise({ reditrectTo : '/' });
 
   } 
 
-
-
   angular
-    .module('wizard', ['ngRoute','wizard.controllers','ui.bootstrap'])
+    .module('ciidept', ['ngRoute','ciidept.controllers','ui.bootstrap', 'ngSanitize','angularVideoBg'])
     .config(config);
 
    

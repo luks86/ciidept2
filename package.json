@@ -1,8 +1,8 @@
 {
-  "name": "ciidept2-sitio",
+  "name": "pagina-web-ciidept",
   "version": "0.0.1",
-  "description": "pagina-nueva-ciidept",
-  "author": "lucas laime",
+  "description": "pagina web Ciidept",
+  "author": "Lucas Laime, Pablo Aguero",
   "keywords": [
     "angular",
     "webapp",

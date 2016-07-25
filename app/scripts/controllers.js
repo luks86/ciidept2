@@ -1,143 +1,87 @@
 (function () {
   'use strict';
 
-// Controlador
+  angular
+    .module('ciidept.controllers', ['ciidept.services','ngLocale'])
+    .controller('HomeCtrl',  HomeCtrl)
+    .controller('EventoCtrl',  EventoCtrl);
+    
+angular
+  .module('wizard.controllers', [])
+  .controller('WizardCtrl',  WizardCtrl);
+
   function WizardCtrl($scope,$http) {
 
   $scope.template = {'nav': 'templates/menu-nav.tpl.html',
-                    'step1': 'templates/listado.tpl.html',
+                    'step1': 'templates/listado-eventos.tpl.html',
                     'step2': 'templates/detalles.tpl.html',
                     'step3': 'templates/plan-pagos.tpl.html',
                     'step4': 'templates/inscripcion.tpl.html'};
- 
-    /*************LEER JSON************/
-  
-         $scope.propuestas = [];
-          $http.get('propuestas.json')
-            .then(function(res){
-              $scope.propuestas = res.data.propuestas;
-               console.log($scope.propuestas);
+  }
 
-            }, function(res){
-              $scope.propuestas = [{name: 'Error!! ' + res.status}];
-            });
-    /**********************************/
+  function HomeCtrl($scope, Eventos, EventosxDia, NoticiasCiidept, ImagenesNoticias, ProyectosCiidept, EnlacesCiidept, ReservasCiidept, $http){
 
-  // $scope.id = $routeParams.id - 1; //resto uno para que se corresponda con la posicion en el array
-  // console.log('posicion del array: ' + $scope.id);
-    /*************LEER JSON - POR OBJETO************/
-  
-         $scope.detalle = [];
-          $http.get('propuestas.json')
-            .then(function(res){
-              $scope.detalle = res.data.propuestas;
-               console.log($scope.detalle[0]);
+    $scope.dia=EventosxDia.query();
+          
+          $scope.dia.$promise.then(function(res){
+          $scope.dias = res;
+          console.log($scope.dias.length);
 
-            }, function(res){
-              $scope.detalle = [{name: 'Error!! ' + res.status}];
-            });
-    /**********************************/
+        });
 
-     /*************LEER JSON - Obtener usuario************/
-  
-         $scope.alumnos = [];
-          $http.get('propuestas.json')
-            .then(function(res){
-              $scope.alumnos = res.data.alumnos;
-               console.log($scope.alumnos[0]);
+		$scope.eventos1 = Eventos.query();
+          $scope.eventos1.$promise.then(function(res){
+          $scope.eventos = res;
+          console.log($scope.eventos);
+        });
 
-            }, function(res){
-              $scope.alumnos = [{name: 'Error!! ' + res.status}];
-            });
-    /**********************************/
+    $scope.noticia = NoticiasCiidept.query();
+          
+          $scope.noticia.$promise.then(function(res){
+          $scope.noticias = res;
+          console.log($scope.noticias);
+        });
 
+    $scope.imagen = ImagenesNoticias.query();
+          
+          $scope.imagen.$promise.then(function(res){
+          $scope.imagenes = res;
+          console.log($scope.imagenes);
+        });
 
+    $scope.proyecto = ProyectosCiidept.query();
+          
+          $scope.proyecto.$promise.then(function(res){
+          $scope.proyectos = res;
+          console.log($scope.proyectos);
+        });
 
-    /*****************SELECCIONAR SEDE********************/
+    $scope.enlace = EnlacesCiidept.query();
+          
+          $scope.enlace.$promise.then(function(res){
+          $scope.enlaces = res;
+          console.log($scope.enlaces);
+        });
 
-    $scope.tuc = 'btn-warning';
-    $scope.sierra = 'btn-default';
+    $scope.proyecto = ProyectosCiidept.query();
+          
+          $scope.proyecto.$promise.then(function(res){
+          $scope.proyectos = res;
+          console.log($scope.proyectos);
+        });
 
-    $scope.ElegirSede = function(sede)
-    {
-        if(sede == 'tuc')
-        {
-           $scope.tuc = 'btn-warning';
-    $scope.sierra = 'btn-default';
-        }
-        else
-        {
-           $scope.tuc = 'btn-default';
-            $scope.sierra = 'btn-warning';
-        }
-    }
+    $scope.reserva = ReservasCiidept.query();
+          
+          $scope.reserva.$promise.then(function(res){
+          $scope.reservas = res;
+          console.log($scope.reservas);
+        });
+/*          console.log($scope.eventos1);
+*/  }
 
-    /****************PAgos*******************/
-  
-
-  $scope.tab = {
-    'listado':'sad',
-    'detalle':'sad'
-  };
-  
-      
-      $scope.getDetalles = function(){
-
-    // angular.element('listado').data('toggle','');
-          $scope.tab = {
-            'listado':'sdfds',
-            'detalle':'sad'
-          }
-          console.log($scope.tab);
-      }
-     
-      
-   $scope.activeTab = 1,
-
-    /***************************************/
-   $scope.Tab = function(tab){
-     
-      $scope.activeTab = tab;
-        console.log(tab);
-     
-
-   }
-
-    /*********************************/
-    $scope.hayfoto = false;
-    $scope.user = {
-      "nombre":'',
-      "apellido": '',
-      "correo":'',
-      "tel":'',
-      "dir":'',
-      "localidad":'',
-      "foto":''
-    }
-    
-    $scope.getDatos = function(){
-
- if(13 == 13)
-        {
-         $scope.user = {
-                      "nombre":'Raul',
-                      "apellido": 'Diaz Solis',
-                      "correo":'raul@gmail.com',
-                      "tel":'4526',
-                      "dir":'Savedra 129',
-                      "localidad":'Tucumán',
-                      "foto":'https://avatars3.githubusercontent.com/u/2073511?v=3&s=460'
-                    };
-                    $scope.hayfoto = true;
-                  }
-    }
-}
-
-
-
-  /***************************************************************/
-  angular
-    .module('wizard.controllers', [])
-    .controller('WizardCtrl',  WizardCtrl);
+  function EventoCtrl($scope, $routeParams){
+    $scope.id=$routeParams.id;
+    console.log($scope.id);
+  }
 })();
  

@@ -1,5 +1,7 @@
 <!doctype html>
-<html lang="es-ES" ng-app="wizard" >
+<html lang="es-ES" ng-app="ciidept" >
+<base href="/">
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
@@ -14,12 +16,23 @@
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="lib/bootstrap-material-design/dist/css/material.css" />
     <link rel="stylesheet" href="lib/bootstrap-material-design/dist/css/ripples.css" />
-    <!-- endbower -->
+     <!-- Bootstrap -->
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <link rel="stylesheet" href="lib/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="lib/css/form-material.css">
+
+  <!-- Bootstrap Material Design -->
+<!--     <link rel="stylesheet" href="lib/bootstrap-material-design/dist/css/ripples.min.css">
+     -->    <!-- endbower -->
     <!-- inject:css -->
    
-    <link rel="stylesheet" href="/stylesheets/wizard.css">
+    <link rel="stylesheet" href="/stylesheets/ciidept.css">
    
     <!-- endinject -->
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
     <link href='https://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
     <!-- endbuild -->    
@@ -34,20 +47,17 @@ III. Anatomía de una aplicación AngularJS.
 3.1 HTML5Boilerplate
  </p> 
  <![endif]-->
-
+<script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
 
   </head>
   <body > 
   
+     <div ng-view></div>
 
-<div ng-controller="WizardCtrl" ng-include="template.nav"></div>
-
-<div ng-view="">
-  
-</div>
-
-
- 
     <!-- build:js js/vendor.min.js -->
     <!-- bower:js -->
     <script src="lib/jquery/dist/jquery.js"></script>
@@ -58,10 +68,18 @@ III. Anatomía de una aplicación AngularJS.
     <script src="lib/bootstrap-material-design/dist/js/ripples.js"></script>
     <script src="lib/angular-sanitize/angular-sanitize.js"></script>
     <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-video-bg/angular-video-bg.min.js"></script>
+    <script src="lib/js/jquery.timepicker.min.js"></script>
+    <script src="lib/js/jquery.numeric.min.js"></script>
+    <script src="lib/js/jquery-ui.min.js"></script>
+
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->
     <!-- inject:js -->
+   
+    <script src="/scripts/services.js"></script>
    
     <script src="/scripts/controllers.js"></script>
    

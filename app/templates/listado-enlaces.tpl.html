@@ -1,0 +1,45 @@
+<div class="container"> 
+      <div class="row">
+            <div class="col-md-12">
+                <div class="fondo_foto">
+                    <img src="img/1-Logo_nuevo_ciidept-.png" alt="" class="img-responsive">
+                </div>
+            </div>
+       </div>
+
+      <div class="row"> 
+	        <div class="col-md-9 eventos_texto">
+				<!-- <ul>
+				 	<li ng-repeat="evento in eventos">
+				 		{{evento.id}}
+				 	</li>
+				 
+				 </ul>	   --> 
+<!-- 				<img src="http://ciidept.edu.ar/uploads/image/1467397264 - IMG_9023.JPG" alt="">
+				 -->				
+				<div class="list-group " ng-repeat="enlace in enlaces">
+		  			<div class="list-group-item">
+		    			<div class="row-picture">
+		      				<img class="circle" src="http://ciidept.edu.ar/uploads/image/" alt="icon">
+		    			</div>
+			    
+			    		<div class="row-content">
+			      			<p class="list-group-item-text">
+				      			<a href="{{enlace.url}}" target="_blank"> 
+				      				<h3>{{enlace.title}}</h3>
+				      			</a>
+							</p>
+			    		</div>
+			  		</div>
+			  		<div class="list-group-separator"></div>
+	  			</div>
+	  		</div>
+			<div class="col-md-3">
+                <a href="/" class="btn btn-raised btn-block">Home</a>
+                    <a href="/noticias" class="btn btn-raised btn-block">Noticias</a>
+                    <a href="/proyectos" class="btn btn-raised btn-block">Proyectos</a>
+                    <a href="/enlaces" class="btn btn-raised btn-block">Enlaces</a>
+                    <a href="/reservas" class="btn btn-raised btn-block">Contacto</a>
+	        </div>
+		</div>
+</div>
