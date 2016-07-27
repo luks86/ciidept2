@@ -39,8 +39,8 @@
       
       .when('/reservas', {
         templateUrl: 'templates/reservas.tpl.html',
-        controller: 'HomeCtrl',
-        controllerAs: 'postformulario'
+        controller: 'ReservasCtrl',
+        controllerAs: 'reservar'
 
       })
 
