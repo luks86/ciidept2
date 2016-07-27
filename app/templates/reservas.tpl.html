@@ -1,6 +1,53 @@
+<style>
+  .full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+  }
+  .partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+  }
+</style>
 <div class="container">
- <div class="row">
- 
+  <div class="row">
+
+    <div ng-controller="DatepickerPopupDemoCtrl">
+        <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
+
+        <h4>Popup</h4>
+        <div class="row">
+          <div class="col-md-6">
+            <p class="input-group">
+              <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+          </div>
+
+          <div class="col-md-6">
+            <p class="input-group">
+              <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Format: <span class="muted-text">(manual alternate <em>{{altInputFormats[0]}}</em>)</span></label> <select class="form-control" ng-model="format" ng-options="f for f in formats"><option></option></select>
+          </div>
+        </div>
+
+        <hr />
+        <button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
+        <button type="button" class="btn btn-sm btn-default" ng-click="setDate(2009, 7, 24)">2009-08-24</button>
+        <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
+        <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" uib-tooltip="After today restriction">Min date</button>
+    </div>
  <!-- <form name="formReservas" role="form" ng-submit="postcreate.create()">
   
  
@@ -256,49 +303,47 @@
 </div> -->
 
 
-<form name="formReservas" role="form" ng-submit="postcreate.create()"><input name="_token" type="hidden" value="  fmdX8KeGKQdU2yMuPvKm3T9rKcIAce1m5C49MRoy">
+<form name="formReservas" role="form" >
   <div class="col-xs-12 col-sm-12 col-md-12">
-    <div class="cont-form-material">
-      <div class="form-material">
-      <h3 class="text-primary text-center">Datos de la reserva</h3>
-        <div class="form-group">
-          <label for="evento">Evento:</label>
-          <input class="form-control" placeholder="Nombre del Evento" required="required" name="evento" type="text" id="evento">
-        </div>
-        <div class="form-group">
-          <label for="organizador">Organizador:</label>
-          <input class="form-control" placeholder="Nombre del Organizador" required="required" name="organizador" type="text" id="organizador">
-        </div>
-        <div class="form-group">
-          <label for="fecha">Fecha:</label>
-          <input class="dtfecha form-control" placeholder="Fecha del Evento" required="required" name="fecha" type="text" id="fecha">
-        </div>
-        <div class="row">
-          <div class='form-group col-sm-6 col-md-6'>
-            <label>Entrada:</label>
-            <input type='text' name='Entrada' id='Entrada' class='time form-control' placeholder='00:00:00' required>
+          <h3 class="text-primary text-center">Datos de la reserva</h3>
+          <div class="form-group">
+            <label for="evento">Evento:</label>
+            <input class="form-control" placeholder="Nombre del Evento" required="required" name="evento" type="text" id="evento">
+          </div>
+          <div class="form-group">
+            <label for="organizador">Organizador:</label>
+            <input class="form-control" placeholder="Nombre del Organizador" required="required" name="organizador" type="text" id="organizador">
+          </div>
+          <!-- <div class="form-group">
+            <label for="fecha">Fecha:</label>
+            <input class="form-control" placeholder="Fecha del Evento" required="required" name="fecha" type="text" id="fecha">
+          </div> -->
+          <div class="row">
+            <div class='form-group col-sm-6 col-md-6'>
+              <label>Entrada:</label>
+              <input type='text' name='Entrada' id='Entrada' class='time form-control' placeholder='00:00:00' required>
             
-          </div>
-          <div class='form-group col-sm-6 col-md-6'>
-            <label>Salida:</label>
-            <input type='text' name='Salida' id='Salida' class='time form-control' placeholder='00:00:00' required>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class='form-group col-sm-6 col-md-6'>
-            <label for="asistentes">Asistentes:</label>
-            <input id="asistentes" class="form-control" placeholder="Cantidad de Asistentes" required="required" name="asistentes" type="text">
-          </div>
-          <div class='col-sm-6 col-md-6'>
-            <label for="catering">Catering:</label>
-            <div class="">
-              <select name="catering" class="selectpicker form-control">
-                <option value="0" >Sin Catering</option>
-                <option value="1" >Con Catering</option>
-              </select>
+            </div>
+            <div class='form-group col-sm-6 col-md-6'>
+              <label>Salida:</label>
+              <input type='text' name='Salida' id='Salida' class='time form-control' placeholder='00:00:00' required>
             </div>
           </div>
+
+          <div class="row">
+            <div class='form-group col-sm-6 col-md-6'>
+              <label for="asistentes">Asistentes:</label>
+              <input id="asistentes" class="form-control" placeholder="Cantidad de Asistentes" required="required" name="asistentes" type="text">
+            </div>
+            <div class='col-sm-6 col-md-6'>
+              <label for="catering">Catering:</label>
+              <div class="">
+                <select name="catering" class="selectpicker form-control">
+                  <option value="0" >Sin Catering</option>
+                  <option value="1" >Con Catering</option>
+                </select>
+              </div>
+            </div>
         </div>
 
         <div class="row">
@@ -335,10 +380,10 @@
           <div class="form-group">
             <label for="destinatarios">Destinatarios:</label> 
             <br>
-            <textarea name="destinatarios" rows="5" class="form-control" style="resize: none;"></textarea>
+            <textarea name="destinatarios" rows="5" class="form-control"></textarea>
           </div>
         </div>
-      </div>
+      
     </div>
   </div>
 
