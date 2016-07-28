@@ -20,12 +20,17 @@
 				 <h2>Noticias</h2>				
 				<div class="list-group " ng-repeat="noticia in noticias">
 		  			<div class="list-group-item">
+		    			<span>
+		    				{{noticia.publish_date}}
+		    			</span>
 		    			<div class="row-picture">
-		      				<img class="circle" src="http://ciidept.edu.ar/uploads/image/{{noticia.name}}" alt="icon">
+		    				<img class="circle" src="http://ciidept.edu.ar/uploads/image/{{noticia.name}}" alt="icon">
 		    			</div>
 			    
 			    		<div class="row-content">
+			      			<a href="#"> 
 			      			<h4 class="list-group-item-heading"> {{noticia.title}}</h4>
+			      			</a>
 
 			      			<p class="list-group-item-text" ng-bind-html="noticia.abstract"></p>
 			    		</div>
@@ -44,6 +49,8 @@
 	        </div>
 		</div>
 </div>
+
+
 		<!-- <div class="media material-media">
 			<div class="media-left material-media__column material-media__column_vertical-middle">
 				<a href="#0"><img class="media-object material-media__object material-media__object_lg"  alt="avatar" src="http://stas-melnikov.ru/cliparts/stas.jpg"/></a>

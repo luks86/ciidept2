@@ -9,24 +9,20 @@
 
       <div class="row"> 
 	        <div class="col-md-9 eventos_texto">
-				<!-- <ul>
-				 	<li ng-repeat="evento in eventos">
-				 		{{evento.id}}
-				 	</li>
-				 
-				 </ul>	   --> 
-<!-- 				<img src="http://ciidept.edu.ar/uploads/image/1467397264 - IMG_9023.JPG" alt="">
-				 -->		
-				 <h2>Proyectos</h2>		
+				<h2>Proyectos</h2>		
 				<div class="list-group " ng-repeat="proyecto in proyectos">
 		  			<div class="list-group-item">
+		  			<span>
+		    				{{proyecto.publish_date}}
+		    			</span>
 		    			<div class="row-picture">
-		      				<img class="circle" src="http://ciidept.edu.ar/uploads/image/" alt="icon">
+		      				<img class="circle" src="http://ciidept.edu.ar/uploads/image/{{proyecto.name}}" alt="icon">
 		    			</div>
 			    
 			    		<div class="row-content">
+			      			<a href="#">
 			      			<h4 class="list-group-item-heading"> {{proyecto.title}}</h4>
-
+							</a>
 			      			<p class="list-group-item-text" ng-bind-html="proyecto.abstract"></p>
 			    		</div>
 			  		</div>
