@@ -4,8 +4,9 @@
   angular
     .module('ciidept.controllers', ['ciidept.services','ngLocale'])
     .controller('HomeCtrl',  HomeCtrl)
-    .controller('EventoCtrl',  EventoCtrl);
-    
+    .controller('EventoCtrl',  EventoCtrl)
+    .controller('ReservasCtrl',  ReservasCtrl);
+
 angular
   .module('wizard.controllers', [])
   .controller('WizardCtrl',  WizardCtrl);
@@ -19,7 +20,7 @@ angular
                     'step4': 'templates/inscripcion.tpl.html'};
   }
 
-  function HomeCtrl($scope, Eventos, EventosxDia, NoticiasCiidept, ImagenesNoticias, ProyectosCiidept, EnlacesCiidept, ReservasCiidept, $http){
+  function HomeCtrl($scope, Eventos, EventosxDia, NoticiasCiidept, ImagenesNoticias, ProyectosCiidept, EnlacesCiidept, $http){
 
     $scope.dia=EventosxDia.query();
           
@@ -70,14 +71,23 @@ angular
           console.log($scope.proyectos);
         });
 
-    $scope.reserva = ReservasCiidept.query();
+    /*$scope.reserva = ReservasCiidept.query();
           
           $scope.reserva.$promise.then(function(res){
           $scope.reservas = res;
           console.log($scope.reservas);
         });
-/*          console.log($scope.eventos1);
-*/  }
+/*          console.log($scope.eventos1);*/
+ 
+  }
+
+  function ReservasCtrl (ReservasCiidept) {
+    var self = this;
+    
+    this.create = function() {
+      ReservasCiidept.save(self.post);
+    };
+  }
 
   function EventoCtrl($scope, $routeParams){
     $scope.id=$routeParams.id;

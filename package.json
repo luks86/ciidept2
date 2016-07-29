@@ -18,6 +18,8 @@
     "type": "git",
     "url": ""
   },
+  "dependencies": {
+  },
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.13.0",
@@ -52,3 +54,5 @@
     "wiredep": "^1.8.2"
   }
 }
+
+

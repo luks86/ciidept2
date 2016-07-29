@@ -1,56 +1,8 @@
 'use strict';
 
+
 var gulp = require('gulp'),
     bs = require('browser-sync').create();
-
-
-gulp.task('browser-sync',  function() {
-    bs.init({
-        server: {
-            baseDir: "./app"
-        }
-    });
-});
-
-
-
-gulp.task('watch', ['browser-sync'], function () {
-    gulp.watch("*.html").on('change', bs.reload);
-});
-// gulp.task('server', function(){
-//   connect.server({
-//     root: './src',
-//     hostname: '0.0.0.0',
-//     port: '8000',
-//     livereload: true,
-//     middelware: function(connect, opt){
-//       return [historyApiFallback];
-//     }
-//   });
-// });
-
-// // Servidor web para probar el entorno de producción
-// gulp.task('server-dist', function() {
-//   connect.server({
-//     root: './dist',
-//     hostname: '0.0.0.0',
-//     port: '8080',
-//     livereload: true,
-//     middleware: function(connect, opt) {
-//       return [ historyApiFallback ];
-//     }
-//   });
-// });
-
-// gulp.task('html', function(){
-//   gulp.src(['./src/**/*.html'])
-//   .pipe(connect.reload());
-// });
-
-// gulp.task('css', function(){
-//   gulp.src(['./src/stylesheets/**/*.css'])
-//   .pipe(connect.reload());
-// });
 
 // gulp.task('jshint', function(){
 //   return gulp.src(['./src/scripts/**/*.js'])

@@ -1,447 +1,175 @@
 <div class="container">
- <div class="row">
- 
- <!-- <form name="formReservas" role="form" ng-submit="postcreate.create()">
-  
- 
- <input name="_token" type="hidden" value="fmdX8KeGKQdU2yMuPvKm3T9rKcIAce1m5C49MRoy">  
-  <div class="col-xs-12 col-sm-12 col-md-12">
-    <div class="cont-form-material">
-      <div class="form-material">
-        <h3 class="text-primary text-center">Datos de la reserva</h3>
-        <div class="form-group">
-          <label for="evento">Evento:</label>
-          <input class="form-control" placeholder="Nombre del Evento" required="required" name="evento" type="text" id="evento">
-        </div>
-        <div class="form-group">
-          <label for="organizador">Organizador:</label>
-          <input class="form-control" placeholder="Nombre del Organizador" required="required" name="organizador" type="text" id="organizador">
-        </div>
-        <div class="form-group">
-          <label for="fecha">Fecha:</label>
-          <input class="dtfecha form-control hasDatepicker" placeholder="Fecha del Evento" required="required" name="fecha" type="text" id="fecha">
-        </div>
-        <div class="row">
-          <div class="form-group col-sm-6 col-md-6">
-            <label>Entrada:</label>
-            <input type="text" name="Entrada" id="Entrada" class="time form-control ui-timepicker-input" placeholder="00:00:00" required="" autocomplete="off">
-            
-          </div>
-          <div class="form-group col-sm-6 col-md-6">
-            <label>Salida:</label>
-            <input type="text" name="Salida" id="Salida" class="time form-control ui-timepicker-input" placeholder="00:00:00" required="" autocomplete="off">
-          </div>
-        </div>
- 
-        <div class="row">
-          <div class="form-group col-sm-6 col-md-6">
-            <label for="asistentes">Asistentes:</label>
-            <input id="asistentes" class="form-control" placeholder="Cantidad de Asistentes" required="required" name="asistentes" type="text">
-          </div>
-          <div class="col-sm-6 col-md-6">
-            <label for="catering">Catering:</label>
-            <div class="">
-              <select name="catering" class="selectpicker form-control">
-                <option value="0">Sin Catering</option>
-                                <option value="1">Con Catering</option>
-              </select>
-            </div>
-          </div>
-        </div>
- 
-        <div class="row">
-          <h3 class="text-primary text-center">Datos del Contacto</h3>
-          <div class="form-group">
-            <label for="apellidonombre">Apellido, Nombre:</label>
-            <div class="input-group">
-              <span class="input-group-addon" id="celu"><i class="glyphicon glyphicon-user"></i></span>
-              <input class="form-control" placeholder="Apellido y Nombre" required="required" name="apellidonombre" type="text" id="apellidonombre">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">E-Mail:</label>
-            <div class="input-group">
-              <span class="input-group-addon" id="celu"><i class="glyphicon glyphicon-envelope"></i></span>
-              <input class="form-control" placeholder="E-Mail" required="required" name="email" type="email" id="email">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="telefono">Nº Celular:</label>
-            <small>( <strong class="text-danger">Carcteristica y Numero</strong> todo junto sin espacios ni punto )</small>
-            <div class="input-group">
-              <span class="input-group-addon" id="celu"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input id="telefono" class="form-control" placeholder="381155XX.." required="required" name="telefono" type="text">
-            </div>
-          </div>
- 
-          <div class="form-group">
-            <label for="objetivos">Objetivos:</label> 
-            <br>
-            <textarea name="objetivos" rows="5" class="form-control" style="resize: none;"></textarea>
-          </div>
- 
-          <div class="form-group">
-            <label for="destinatarios">Destinatarios:</label> 
-            <br>
-            <textarea name="destinatarios" rows="5" class="form-control" style="resize: none;"></textarea>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
- 
-  
- 
- 
- 
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12">
-      <input class="btn btn-primary" id="btn_submit" type="submit" value="Reservar">
-      <a href="http://agenda.innovacioneducativa.gob.ar/admin/eventos/create" class="btn btn-default">Cancel</a>
-    </div>
-  </div>
- </form> 
-</div>
-</div>-->
+    <div class="row">  
+   
+        <div class="col-sm-6 col-md-12">
+            <!-- FORM ============ -->
+          
+            <form name="reservaForm" ng-submit="submitForm()" ng-controller="ReservasCtrl" novalidate>
 
-
- <!-- <div class="container"> 
-    <div class="row"> 
-        <div class="col-md-12">
-            <form name="FormReservas" role="form" ng-submit="postcreate.create()">
-                <div class="row">
-                    <div class="col-md-12">
-                      <legend>Datos de la Reserva</legend>
-                    </div>
- 
-                <div class="form-group">
-                  <label for="">Evento</label>
-                  <input type="text" class="form-control" ng-model="user.nombre" value="user.nombre" placeholder="Nombre del Evento" required >    
+                <!-- NAME -->
+                <h3>Datos de la reserva</h3>
+                <hr>
+                <div class="form-group" ">
+                    <label>Evento:</label>
+                    <input type="text" name="name" class="form-control" ng-model="user.name" placeholder="Nombre del Evento" required>
                 </div>
+              
+                <!-- USERNAME -->
                 <div class="form-group">
-                  <label for="">Organizador</label>
-                  <input type="text" class="form-control" ng-model="user.apellido" value="user.apellido" placeholder="Nombre del Organizador" required> 
-                </div>
-                <div class="form-group">
-                        <label for="">Correo</label>
-                        <input type="mail" class="form-control" ng-model="user.correo" value="user.correo" placeholder="Ingrese un E-mail de contacto" required> 
-                </div>
-                <div class="form-group">
-                        <label for="">Teléfono</label>
-                        <input type="text" class="form-control" ng-model="user.tel" value="user.tel" placeholder="Ingrese su Teléfono sin puntos ni guiones" required>  
-                </div>
-                <div class="form-group">
-                        <label for="">Dirección</label>
-                        <input type="email" class="form-control" ng-model="user.dir" placeholder=""  value="user.dir"    >
+                    <label>Organizador:</label>
+                    <input type="text" name="username" class="form-control" ng-model="user.username" placeholder="Nombre del organizador del Evento" required>
+                    <!-- <p ng-show="userForm.username.$error.minlength" class="help-block">Username is too short.</p>
+                    <p ng-show="userForm.username.$error.maxlength" class="help-block">Username is too long.</p> -->
                 </div>
                 
+                    <!-- <div class="form-group">
+                      <label for="fecha">Fecha:</label>
+                      <input class="dtfecha form-control" placeholder="Fecha del Evento" required="required" name="fecha" type="text" id="fecha">
+                    </div> -->
+
+                    <div class="col-md-12">
+                        <p class="input-group">
+                          <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                          <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                          
+                        </p>
+                    </div>
+
+
+                    <div class="row">
+                      <div class='form-group col-sm-6 col-md-6'>
+                        <label>Entrada:</label>
+                        <input type='text' name='Entrada' id='Entrada' class='time form-control' placeholder='00:00:00' required>
+                        
+                      </div>
+                      <div class='form-group col-sm-6 col-md-6'>
+                        <label>Salida:</label>
+                        <input type='text' name='Salida' id='Salida' class='time form-control' placeholder='00:00:00' required>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class='form-group col-sm-6 col-md-6'>
+                        <label for="asistentes">Asistentes:</label>
+                        <input id="asistentes" class="form-control" placeholder="Cantidad de Asistentes" required="required" name="asistentes" type="text">
+                      </div>
+                      <div class='col-sm-6 col-md-6'>
+                        <label for="catering">Catering:</label>
+                        <div class="">
+                          <select name="catering" class="selectpicker form-control">
+                            <option value="0" >Sin Catering</option>
+                            <option value="1" >Con Catering</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                <h3>Datos del Contacto</h3>
+                <hr>
+                <div class="form-group">
+                    <label for="apellidonombre">Apellido, Nombre:</label>
+                    <div class="input-group">
+                      <span class="input-group-addon" id="celu"><i class="glyphicon glyphicon-user"></i></span>
+                      <input class="form-control" placeholder="Apellido y Nombre" required="required" name="apellidonombre" type="text" id="apellidonombre">
+                    </div>
+                </div>
+                <!-- EMAIL -->
+                
+                <div class="form-group">
+                    <label for="email">E-Mail:</label>
+                    <div class="input-group">
+                      <span class="input-group-addon" id="celu"><i class="glyphicon glyphicon-envelope"></i></span>
+                      <input class="form-control" placeholder="E-Mail" required="required" name="email" type="email" id="email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">N&ordm; Celular:</label>
+                    <small>( <strong class="text-danger">Carcteristica y Numero</strong> todo junto sin espacios ni punto )</small>
+                    <div class="input-group">
+                      <span class="input-group-addon" id="celu"><i class="glyphicon glyphicon-earphone"></i></span>
+                      <input id="telefono" class="form-control" placeholder="381155XX.." required="required" name="telefono" type="text">
+                    </div>
+                </div>
+
+                
+
+                  <div class="form-group">
+                    <label for="objetivos">Objetivos:</label> 
+                    <br>
+                    <textarea name="objetivos" rows="5" class="form-control" style="resize: none;"></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="destinatarios">Destinatarios:</label> 
+                    <br>
+                    <textarea name="destinatarios" rows="5" class="form-control" style="resize: none;"></textarea>
+                  </div>
+                <div class="row text-center">
+                    
+                    <button texttype="submit" class="btn btn-primary btn-lg btn-block">Reservar</button>
                     
                 </div>
-                    
-                <div class="col-md-4">
-                        <button class="btn btn-primary btn-lg" type="submit">
-                          Enviar
-                        </button>
- 
- <a href="" class="btn btn-lg btn-warning btn-block">Enviar</a>  </div>
-            </div>
-          </form>
-      </div>
-    </div>
- </div>   
- -->
-<!-- <div class="container"> 
-    <div class="row"> 
-        <div class="col-md-12">
+                <br>
+            </form>
 
-<form class="form-horizontal">
-    <div class="form-group">
-        <label class="control-label col-xs-3">Email:</label>
-        <div class="col-xs-9">
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
         </div>
+ <!-- <div class="col-sm-6">
+    <div class="row">
+         <div class="col-xs-3">
+            <h3>Form</h3>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td ng-class="{ success: userForm.$valid, danger: userForm.$invalid }">Valid</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.$pristine, danger: !userForm.$pristine }">Pristine</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.$dirty }">Dirty</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> 
+         <div class="col-xs-3">
+            <h3>Name</h3>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td ng-class="{ success: userForm.name.$valid, danger: userForm.name.$invalid }">Valid</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.name.$pristine, danger: !userForm.name.$pristine }">Pristine</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.name.$dirty }">Dirty</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.name.$touched }">Touched</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> 
+         <div class="col-xs-3">
+            <h3>Email</h3>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td ng-class="{ success: userForm.email.$valid, danger: userForm.email.$invalid }">Valid</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.email.$pristine, danger: !userForm.email.$pristine }">Pristine</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.email.$dirty }">Dirty</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.email.$touched }">Touched</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> 
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-3">Password:</label>
-        <div class="col-xs-9">
-            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-        </div>
+    </div> -->
+    
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-3">Confirmar Password:</label>
-        <div class="col-xs-9">
-            <input type="password" class="form-control" placeholder="Confirmar Password">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-3">Nombre:</label>
-        <div class="col-xs-9">
-            <input type="text" class="form-control" placeholder="Nombre">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-3">Apellido:</label>
-        <div class="col-xs-9">
-            <input type="text" class="form-control" placeholder="Apellido">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-3" >Telefono:</label>
-        <div class="col-xs-9">
-            <input type="tel" class="form-control" placeholder="Telefono">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-3">F. Nacimiento:</label>
-        <div class="col-xs-3">
-            <select class="form-control">
-                <option>Dia</option>
-            </select>
-        </div>
-        <div class="col-xs-3">
-            <select class="form-control">
-                <option>Mes</option>
-            </select>
-        </div>
-        <div class="col-xs-3">
-            <select class="form-control">
-                <option>Año</option>
-            </select>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-3">Dirección:</label>
-        <div class="col-xs-9">
-            <textarea rows="3" class="form-control" placeholder="Dirección"></textarea>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-3">Genero:</label>
-        <div class="col-xs-2">
-            <label class="radio-inline">
-                <input type="radio" name="genderRadios" value="male"> Maculino
-            </label>
-        </div>
-        <div class="col-xs-2">
-            <label class="radio-inline">
-                <input type="radio" name="genderRadios" value="female"> Femenino
-            </label>
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-xs-offset-3 col-xs-9">
-            <label class="checkbox-inline">
-                <input type="checkbox" value="news"> Enviar noticias.
-            </label>
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-xs-offset-3 col-xs-9">
-            <label class="checkbox-inline">
-                <input type="checkbox" value="agree">  Accepto <a href="#">Terminos y condiciones</a>.
-            </label>
-        </div>
-    </div>
-    <br>
-    <div class="form-group">
-        <div class="col-xs-offset-3 col-xs-9">
-            <input type="submit" class="btn btn-primary" value="Enviar">
-            <input type="reset" class="btn btn-default" value="Limpiar">
-        </div>
-    </div>
-</form>
-
-</div>
-</div>
-</div> -->
-
-
-<form name="formReservas" role="form" ng-submit="postcreate.create()"><input name="_token" type="hidden" value="  fmdX8KeGKQdU2yMuPvKm3T9rKcIAce1m5C49MRoy">
-  <div class="col-xs-12 col-sm-12 col-md-12">
-    <div class="cont-form-material">
-      <div class="form-material">
-      <h3 class="text-primary text-center">Datos de la reserva</h3>
-        <div class="form-group">
-          <label for="evento">Evento:</label>
-          <input class="form-control" placeholder="Nombre del Evento" required="required" name="evento" type="text" id="evento">
-        </div>
-        <div class="form-group">
-          <label for="organizador">Organizador:</label>
-          <input class="form-control" placeholder="Nombre del Organizador" required="required" name="organizador" type="text" id="organizador">
-        </div>
-        <div class="form-group">
-          <label for="fecha">Fecha:</label>
-          <input class="dtfecha form-control" placeholder="Fecha del Evento" required="required" name="fecha" type="text" id="fecha">
-        </div>
-        <div class="row">
-          <div class='form-group col-sm-6 col-md-6'>
-            <label>Entrada:</label>
-            <input type='text' name='Entrada' id='Entrada' class='time form-control' placeholder='00:00:00' required>
-            
-          </div>
-          <div class='form-group col-sm-6 col-md-6'>
-            <label>Salida:</label>
-            <input type='text' name='Salida' id='Salida' class='time form-control' placeholder='00:00:00' required>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class='form-group col-sm-6 col-md-6'>
-            <label for="asistentes">Asistentes:</label>
-            <input id="asistentes" class="form-control" placeholder="Cantidad de Asistentes" required="required" name="asistentes" type="text">
-          </div>
-          <div class='col-sm-6 col-md-6'>
-            <label for="catering">Catering:</label>
-            <div class="">
-              <select name="catering" class="selectpicker form-control">
-                <option value="0" >Sin Catering</option>
-                <option value="1" >Con Catering</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <h3 class="text-primary text-center">Datos del Contacto</h3>
-          <div class="form-group">
-            <label for="apellidonombre">Apellido, Nombre:</label>
-            <div class="input-group">
-              <span class="input-group-addon" id="celu"><i class="glyphicon glyphicon-user"></i></span>
-              <input class="form-control" placeholder="Apellido y Nombre" required="required" name="apellidonombre" type="text" id="apellidonombre">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">E-Mail:</label>
-            <div class="input-group">
-              <span class="input-group-addon" id="celu"><i class="glyphicon glyphicon-envelope"></i></span>
-              <input class="form-control" placeholder="E-Mail" required="required" name="email" type="email" id="email">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="telefono">N&ordm; Celular:</label>
-            <small>( <strong class="text-danger">Carcteristica y Numero</strong> todo junto sin espacios ni punto )</small>
-            <div class="input-group">
-              <span class="input-group-addon" id="celu"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input id="telefono" class="form-control" placeholder="381155XX.." required="required" name="telefono" type="text">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="objetivos">Objetivos:</label> 
-            <br>
-            <textarea name="objetivos" rows="5" class="form-control" style="resize: none;"></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="destinatarios">Destinatarios:</label> 
-            <br>
-            <textarea name="destinatarios" rows="5" class="form-control" style="resize: none;"></textarea>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- <div class="col-xs-12 col-sm-12 col-md-6">
-    <div class="cont-form-material">
-      <div class="form-material">
-        <div class="input_group_material checkbox-material">
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="1" value="1">
-              <label for="1" >Aula 1<br><small>35 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="2" value="2">
-              <label for="2" >Aula 2<br><small>50 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="3" value="3">
-              <label for="3" >Aula 3<br><small>35 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="4" value="4">
-              <label for="4" >Aula 4<br><small>50 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="5" value="5">
-              <label for="5" >Aula 5<br><small>50 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="6" value="6">
-              <label for="6" >Aula 6<br><small>50 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="7" value="7">
-              <label for="7" >Aula 7<br><small>150 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="8" value="8">
-              <label for="8" >Aula 8<br><small>70 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="9" value="9">
-              <label for="9" >Aula 9<br><small>50 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="10" value="10">
-              <label for="10" >Digital 1<br><small>150 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="11" value="11">
-              <label for="11" >Digital 2<br><small>50 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="12" value="12">
-              <label for="12" >Auditorio<br><small>150 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="13" value="13">
-              <label for="13" >Microcine<br><small>40 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="14" value="14">
-              <label for="14" >Sala de Reunion<br><small>40 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="15" value="15">
-              <label for="15" >Biblioteca<br><small>0 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="16" value="16">
-              <label for="16" >Sala Exposicion 1<br><small>0 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="17" value="17">
-              <label for="17" >Sala Exposicion 2<br><small>0 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="18" value="18">
-              <label for="18" >Microbiologia<br><small>0 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="19" value="19">
-              <label for="19" >Qu&iacute;mica/Biolog&iacute;a<br><small>0 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="20" value="20">
-              <label for="20" >F&iacute;sica/Matem&aacute;tica<br><small>0 p</small></label>
-            </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-              <input type="checkbox" name="aulas[]" id="21" value="21">
-              <label for="21" >Patio<br><small>0 p</small></label>
-            </div>
-                  </div>
-      </div>
-    </div>
-  </div> -->
-
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12">
-      <input class="btn btn-primary" id="btn_submit" type="submit" value="Reservar">
-    </div>
-  </div>
-</form>
-
-</div>
-
 </div>

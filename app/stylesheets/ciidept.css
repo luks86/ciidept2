@@ -6,11 +6,15 @@ html, body{
   height: 100%;
 }
 
+.fondo { 
+  background-image: url('/img/ciidept_fondo.jpg'); 
+}
 .video_intro{
   display: block;
-  height: 350px;
+  height: 340px;
   z-index: 999;
   position: absolute;
+  text-align: center;
 
 } 
 
@@ -26,7 +30,8 @@ html, body{
 .video_intro a{
   display: inline;
   top: 90px;
-  
+  text-align: center;
+
 }  
 
 /* #video_background { 
@@ -64,7 +69,6 @@ html, body{
 .fondo_foto {
 padding: 10px;
 margin-top: 15px;
-
 background: rgba(255,255,255,0.5) ;
 }
 
@@ -170,12 +174,21 @@ time.icon:hover, time.icon:focus
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
 }
-
+.eventos_texto a:link, a:hover{
+  text-decoration: none;
+}
+.eventos_texto h2{
+  margin-left: 18px;
+}
 .reservas_texto {
   background: rgba(255,255,255,0.5) ;
   padding: 10px 10px 10px 10px;
   top: 15px;
   height:auto ;
+}
+
+.botones_nav{
+  padding-top: 84px;
 }
 
 
