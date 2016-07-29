@@ -4,7 +4,10 @@
 /*********************/
   angular
     .module('ciidept.services', ['ngResource'])
-    .constant('BaseUrl', 'http://www.ciidept.edu.ar/api')
+/*    .constant('BaseUrl', 'http://www.ciidept.edu.ar/api')
+*/    .constant('BaseUrl', 'http://localhost/laravelproyect/public/api')
+
+    
     .constant('BaseUrl2', 'http://ciidept.servicesit.com.ar/api')
 
     .factory('Eventos',Eventos)
@@ -14,6 +17,7 @@
     .factory('ImagenesNoticias', ImagenesNoticias)
     .factory('EnlacesCiidept', EnlacesCiidept)
     .factory('ReservasCiidept', ReservasCiidept);
+
 
  function Eventos($resource, BaseUrl)
   {

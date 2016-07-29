@@ -93,5 +93,19 @@ angular
     $scope.id=$routeParams.id;
     console.log($scope.id);
   }
+
+  /*function EventoCtrl($scope, $routeParams){
+    $scope.id=$routeParams.id;
+    console.log($scope.id);
+  }*/
+
 })();
+
+
+//
+/*function PostDetailCtrl ($routeParams, Post, Comment) {
+  this.post = Post.query({ id: $routeParams.postId });
+  this.comments = Comment.query({ postId: $routeParams.post
+Id });*/
+/*}*/
  

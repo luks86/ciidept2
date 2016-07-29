@@ -27,6 +27,11 @@
         controller: 'HomeCtrl'
       })
 
+      .when('/noticia/:id', {
+        templateUrl: 'templates/noticias-id.tpl.html',
+        controller: 'HomeCtrl'
+      })
+
       .when('/proyectos', {
         templateUrl: 'templates/listado-proyectos.tpl.html',
         controller: 'HomeCtrl'
@@ -43,6 +48,9 @@
         controllerAs: 'reservar'
 
       })
+
+
+
 
       .otherwise({ reditrectTo : '/' });
 

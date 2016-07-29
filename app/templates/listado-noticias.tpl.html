@@ -28,11 +28,12 @@
 		    			</div>
 			    
 			    		<div class="row-content">
-			      			<a href="#"> 
+			      			<a ng-href="/noticia/{{ noticia.id }}"> 
 			      			<h4 class="list-group-item-heading"> {{noticia.title}}</h4>
 			      			</a>
 
-			      			<p class="list-group-item-text" ng-bind-html="noticia.abstract"></p>
+			      			<p class="list-group-item-text" ng-bind-html="noticia.abstract">
+			      			</p>
 			    		</div>
 			  		</div>
 			  		<div class="list-group-separator"></div>

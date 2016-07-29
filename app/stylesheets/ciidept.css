@@ -2,8 +2,12 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
 
 html, body{ 
-  background: #fff !important;
-  height: 100%;
+   background: #fff !important;
+    
+/*   background: radial-gradient(ellipse at center,#00BCD4 30%,rgb(54, 89, 154) 75%);
+   */  /* background: radial-gradient(ellipse at center,#ffffff 0,#00BCD4 46%); */
+/*   background: #3F51B5;
+   */  height: 100%;
 }
 
 .fondo { 
@@ -176,6 +180,7 @@ time.icon:hover, time.icon:focus
 }
 .eventos_texto a:link, a:hover{
   text-decoration: none;
+
 }
 .eventos_texto h2{
   margin-left: 18px;
