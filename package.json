@@ -48,10 +48,12 @@
     "gulp-uncss": "^1.0.6",
     "gulp-useref": "^3.1.0",
     "gulp-useref-plus": "0.0.8",
+    "gulp-util": "^3.0.7",
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.2.0",
     "minimatch": "^3.0.2",
     "nib": "^1.0.3",
+    "run-sequence": "^1.2.2",
     "tough-cookie": "^2.3.1",
     "wiredep": "^1.8.2"
   }

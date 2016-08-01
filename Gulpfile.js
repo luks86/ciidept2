@@ -14,11 +14,12 @@ var gulp = require('gulp'),
     uglify    = require('gulp-uglify'),
     uncss     = require('gulp-uncss'),
     concat    = require('gulp-concat'),
-    nano      = require('gulp-cssnano'),
+    cssnano      = require('gulp-cssnano'),
     cleanCSS  = require('gulp-clean-css'),
     rev       = require('gulp-rev'),
     minify    = require('gulp-minify'),
     del       = require('del'),
+    gutil       = require('gulp-util'),
     angularFilesort = require('gulp-angular-filesort'),
     templateCache = require('gulp-angular-templatecache'),
     reload      = browserSync.reload;
@@ -101,7 +102,10 @@ gulp.task('watch', function() {
 gulp.task('default', ['serve','jshint','css','watch','inject','templates','wiredep']);
 
 /***************************PRODUCCION***********************************************/
-
+//borra anterior dist
+gulp.task('clean:dist', function () {
+  return del('dist/**/*');
+});
 // Servidor 
 gulp.task('serve:dist', function() {
 
@@ -115,12 +119,23 @@ gulp.task('serve:dist', function() {
 });
 // Comprime los archivos CSS y JS enlazados en el index.html
 // y los minifica.
-gulp.task('compress', function() {
-  return gulp.src('./app/*.html')
-        .pipe(useref())
-        .pipe(gulpif('*.js', uglify({mangle: false })))
-        .pipe(gulpif('*.css', cleanCSS()))
-        .pipe(gulp.dest('./dist'));
+// gulp.task('compress', function() {
+//   return gulp.src('./app/index.html')
+//         .pipe(useref())
+//         .pipe(gulpif('*.js', uglify({mangle: false })))
+//         .pipe(gulpif('*.css', cleanCSS()))
+//         .pipe(gulp.dest('./dist'));
+// });
+
+gulp.task('compress', ['inject'], function () {
+  return gulp.src('index.html', {cwd: './app'})
+    .pipe(useref())
+    .pipe(gulpif('**/*.js', uglify({
+      mangle: true
+    })
+    .on('error', gutil.log)))
+    .pipe(gulpif('**/*.css', cssnano()))
+    .pipe(gulp.dest('./dist'));
 });
 // Elimina el CSS que no es utilizado para reducir el peso del archivo
 gulp.task('uncss', function() {
@@ -134,16 +149,19 @@ gulp.task('uncss', function() {
 // Copia el contenido de los estáticos e index.html al directorio
 // de producción sin tags de comentarios
 gulp.task('copy', function() {
- gulp.src('./app/index.html')
-        .pipe(gulp.dest('./dist'));
+return gulp.src('index.html', {cwd: './app'})
+    .pipe(useref())
+    .pipe(gulp.dest('./dist'));
+ 
+  
+});
+// Copia el contenido de los estáticos e index.html al directorio
+// de producción sin tags de comentarios
+gulp.task('copy2', function() {
   gulp.src('./app/img/*')
     .pipe(gulp.dest('./dist/img'));
   gulp.src('./app/lib/fontawesome/fonts/**')
     .pipe(gulp.dest('./dist/fonts'));
-  gulp.src('./app/lib/areas-icon/**')
-    .pipe(gulp.dest('./dist/css'));  
-  gulp.src('./app/lib/angular-i18n/angular-locale_es-ar.js/**')
-    .pipe(gulp.dest('./dist/js'));
     gulp.src('./app/stylesheets/fonts/**')
     .pipe(gulp.dest('./dist/css/fonts'));    
    gulp.src('./app/lib/bootstrap/fonts/**')
@@ -152,6 +170,5 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('./dist/fonts'));  
   
 });
-
-gulp.task('build', ['templates','compress', 'uncss','copy']);
+gulp.task('build', ['clean:dist','templates','compress', 'uncss','copy2']);
 
