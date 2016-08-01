@@ -6,14 +6,14 @@
     .controller('HomeCtrl',  HomeCtrl)
     .controller('EventoCtrl',  EventoCtrl)
     .controller('ReservasCtrl',  ReservasCtrl);
+ 
+angular    
+  .module('wizard.controllers', [])   
+  .controller('WizardCtrl',  WizardCtrl); 
+      
+  function WizardCtrl($scope,$http) {  
 
-angular
-  .module('wizard.controllers', [])
-  .controller('WizardCtrl',  WizardCtrl);
-
-  function WizardCtrl($scope,$http) {
-
-  $scope.template = {'nav': 'templates/menu-nav.tpl.html',
+  $scope.template = {'nav': 'templates/menu-nav.tpl.html',    
                     'step1': 'templates/listado-eventos.tpl.html',
                     'step2': 'templates/detalles.tpl.html',
                     'step3': 'templates/plan-pagos.tpl.html',
