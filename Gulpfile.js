@@ -170,5 +170,5 @@ gulp.task('copy2', function() {
     .pipe(gulp.dest('./dist/fonts'));  
   
 });
-gulp.task('build', ['clean:dist','templates','compress', 'uncss','copy2']);
+gulp.task('build', ['templates','compress', 'uncss','copy2']);
 
