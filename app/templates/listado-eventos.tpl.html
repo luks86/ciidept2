@@ -17,6 +17,9 @@
 			 </ul>	   --> 
 			<div class="list-group " ng-repeat="evento in eventos">
 	  			<div class="list-group-item">
+	  			<span>
+		    				{{evento.date}}
+		    		</span>
 	    			<div class="row-picture">
 	      				<img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
 	    			</div>
@@ -54,12 +57,14 @@
   			 
 		</div>
 		<div class="col-md-3">
-              	<a href="/" class="btn btn-raised btn-block">Home</a>
-                    <a href="/noticias" class="btn btn-raised btn-block">Noticias</a>
-                    <a href="/proyectos" class="btn btn-raised btn-block">Proyectos</a>
-                    <a href="/enlaces" class="btn btn-raised btn-block">Enlaces</a>
-                    <a href="/reservas" class="btn btn-raised btn-block">Contacto</a>
-            </div>
+                	<div class="botones_nav">
+                	<a href="/" class="btn btn-raised btn-primary btn-primary btn-block">Home</a>
+                    <a href="/noticias" class="btn btn-raised btn-primary btn-block">Noticias</a>
+                    <a href="/proyectos" class="btn btn-raised btn-primary btn-block">Proyectos</a>
+                    <a href="/enlaces" class="btn btn-raised btn-primary btn-block">Enlaces</a>
+                    <a href="/reservas" class="btn btn-raised btn-primary btn-block">Reservas</a>
+                    </div>
+	        </div>
 	</div>
 </div>
 		<!-- <div class="media material-media">

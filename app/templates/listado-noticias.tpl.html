@@ -9,6 +9,10 @@
 
       <div class="row"> 
 	        <div class="col-md-9 eventos_texto fondo">
+				<ul class="breadcrumb bread_style">
+			  <li><a href="/">Home</a></li>
+			  <li class="active"><a href="/noticias">Noticias</a></li>
+			</ul>
 				<!-- <ul>
 				 	<li ng-repeat="evento in eventos">
 				 		{{evento.id}}
@@ -28,11 +32,12 @@
 		    			</div>
 			    
 			    		<div class="row-content">
-			      			<a href="#"> 
+			      			<a href="/noticias/{{ noticia.id }}"> 
 			      			<h4 class="list-group-item-heading"> {{noticia.title}}</h4>
 			      			</a>
 
-			      			<p class="list-group-item-text" ng-bind-html="noticia.abstract"></p>
+			      			<p class="list-group-item-text" ng-bind-html="noticia.abstract">
+			      			</p>
 			    		</div>
 			  		</div>
 			  		<div class="list-group-separator"></div>

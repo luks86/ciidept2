@@ -4,7 +4,9 @@
 /*********************/
   angular
     .module('ciidept.services', ['ngResource'])
-    .constant('BaseUrl', 'http://www.ciidept.edu.ar/api')
+/*    .constant('BaseUrl', 'http://www.ciidept.edu.ar/api')
+*/    /*.constant('BaseUrl', 'http://localhost/laravelproyect/public/api')*/
+    .constant('BaseUrl', 'http://www.ciidept.edu.ar/api_ciidept/public/api')
     .constant('BaseUrl2', 'http://ciidept.servicesit.com.ar/api')
 
     .factory('Eventos',Eventos)
@@ -13,7 +15,9 @@
     .factory('ProyectosCiidept', ProyectosCiidept)
     .factory('ImagenesNoticias', ImagenesNoticias)
     .factory('EnlacesCiidept', EnlacesCiidept)
+    .factory('NoticiaCiidept', NoticiaCiidept)
     .factory('ReservasCiidept', ReservasCiidept);
+
 
  function Eventos($resource, BaseUrl)
   {
@@ -45,7 +49,10 @@
         { get: { method: 'GET', isArray: true }
     });
   }
-
+ function NoticiaCiidept($resource, BaseUrl)
+  {
+    return $resource(BaseUrl + '/noticias/:id', {id: '@_id'},{'query': {method: 'GET', isArray: false }});
+  }
    function ImagenesNoticias($resource, BaseUrl)
   {
     return $resource(BaseUrl + '/imagenes', //la url donde queremos consumir

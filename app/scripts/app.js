@@ -27,6 +27,13 @@
         controller: 'HomeCtrl'
       })
 
+      .when('/noticias/:id', {
+        templateUrl: 'templates/noticias-id.tpl.html',
+        controller: 'HomeCtrl'
+        /*controllerAs: 'id_noti'*/
+
+      })
+
       .when('/proyectos', {
         templateUrl: 'templates/listado-proyectos.tpl.html',
         controller: 'HomeCtrl'
@@ -44,6 +51,9 @@
 
       })
 
+
+
+
       .otherwise({ reditrectTo : '/' });
 
   } 
@@ -51,7 +61,7 @@
   angular
 /*    .module('ciidept', ['ngRoute','ciidept.controllers','ui.bootstrap', 'ngSanitize','angularVideoBg','ui-bootstrap','angular-animate','angular-touch'])
 */    
-      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.templates','ui.bootstrap', 'ngSanitize','angularVideoBg','ngAnimate','ngTouch'])
+      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.templates','ciidept.templates','ui.bootstrap', 'ngSanitize','angularVideoBg','ngAnimate','ngTouch'])
       .config(config);
 
    
