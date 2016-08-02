@@ -1,6 +1,6 @@
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
 
+<<<<<<< HEAD
 html, body{ 
    background: #fff !important;
     
@@ -9,26 +9,29 @@ html, body{
 /*   background: #3F51B5;
    */  height: 100%;
 }
+=======
+>>>>>>> a3c0f1102bdac3ca88bb4dcabf652bdcba59984a
 
 .fondo { 
   background-image: url('/img/ciidept_fondo.jpg'); 
 }
 .video_intro{
-  display: block;
+  display: block; 
   height: 340px;
   z-index: 999;
-  position: absolute;
-  text-align: center;
+  position: absolute; 
+  text-align: center;  
 
 } 
 
 .video_intro h3{
     font-family: 'Open Sans', sans-serif;
-    color: #fff;
-    font-size: 2.5rem;
+    color: #000;
+    font-size:2.5rem;
     text-align: center;
     font-weight: normal;
     opacity: 1.7;
+    color:#FAFAFA;
 }  
 
 .video_intro a{
@@ -39,7 +42,7 @@ html, body{
 }  
 
 /* #video_background { 
-  position: absolute; 
+  position: absolute;   dsfdsfdsf ds
   bottom: 0px; 
   right: 0px; 
   min-width: 100%; 
@@ -97,7 +100,7 @@ time.icon
 
 time.icon * {
     display: block;
-    width: 100%;
+    width: 100%; 
     font-size: 1.6em;
     font-weight: bold;
     font-style: normal;
@@ -190,6 +193,10 @@ time.icon:hover, time.icon:focus
   padding: 10px 10px 10px 10px;
   top: 15px;
   height:auto ;
+}
+
+.bread_style{
+  margin-top: 20px;
 }
 
 .botones_nav{

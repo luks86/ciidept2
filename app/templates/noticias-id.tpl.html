@@ -8,7 +8,12 @@
        </div>
 
       <div class="row"> 
-	        <div class="col-md-9 eventos_texto fondo">
+	        <ul class="breadcrumb bread_style" style="margin-bottom: 5px;">
+			  <li><a href="javascript:void(0)">Home</a></li>
+			  <li><a href="javascript:void(0)">Library</a></li>
+			  <li class="active">Data</li>
+			</ul>
+	        <div class="col-md-9 fondo">
 				<!-- <ul>
 				 	<li ng-repeat="evento in eventos">
 				 		{{evento.id}}
@@ -21,16 +26,16 @@
 
 				    <div class="card-height-indicator"></div>
 
-				    <div class="card-content" ng-repeat="noticia in noticias">
+				    <div class="card-content" >
 
 				        <div class="card-image">
-				            <img src="http://ciidept.edu.ar/uploads/image/{{noticia.name}}" alt="Cargando...">
-				            <h3 class="card-image-headline">{{noticia.title}}</h3>
+				            <img src="http://ciidept.edu.ar/uploads/image/{{idnoticias.name}}">
+				            <h3 class="card-image-headline">{{idnoticias.title}}</h3>
 				        </div>
 
 				        <div class="card-body">
 				            
- 				            <p ng-bind-html="noticia.body"></p>
+ 				            <p ng-bind-html="idnoticias.body"></p>
 				     	</div>
 
 				        <!-- <footer class="card-footer">
