@@ -93,7 +93,7 @@ gulp.task('templates', function() {
 });
 gulp.task('watch', function() {
   gulp.watch(['./app/**/*.html'], ['html','templates']);
-  gulp.watch(['./app/stylesheets/**/*'], ['css', 'inject']);
+  gulp.watch(['./app/stylesheets/**/*'], ['css', 'inject']); 
    gulp.watch(['./app/scripts/**/*.js', './Gulpfile.js'], ['inject']);
   gulp.watch(['./bower.json'], ['wiredep']);
 });
