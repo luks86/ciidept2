@@ -14,10 +14,13 @@
   transition: all 0.5s;
   
   &:hover
-     -webkit-filter: grayscale(0);
-     filter: grayscale(0);
-     background: rgba(255,255,255,1)
-     
+       -webkit-filter: grayscale(0);
+       filter: grayscale(0);
+       -ms-transform: scale(1.1) /* IE 9 */
+       -webkit-transform: scale(1.1) /* Safari */
+       transform: scale(1.1)
+       background: rgba(255,255,255,1)
+       
   & h4
      text-align:center
      font-weight:normal
@@ -25,11 +28,12 @@
      background: rgba(0, 187, 211, 0.73)
      font-family:'Ubuntu Condensed', sans-serif
      padding: 10px
-     text-shadow: -1px 2px 6px rgba(150, 150, 154, 1)
+     text-shadow: 1px 1px 3px #888
      text-transform: uppercase
   & img 
   	 width: 75%  
   	 margin:0 auto
+     
   	 
      
      
@@ -43,7 +47,7 @@
 } 
 
 .video_intro h3{
-      font-family: 'Ubuntu Condensed', sans-serif;
+    font-family: 'Ubuntu Condensed', sans-serif;
     text-align: center;
     font-weight: normal;
     color: #fafafa;
@@ -58,7 +62,7 @@
 
 .video_intro a{
   display: inline;
-  top: 90px;
+  // top: 90px;
   text-align: center;
 
 }  
@@ -200,3 +204,62 @@ time.icon:hover, time.icon:focus
   80%  { transform: rotate(6deg)  skewY(-2deg); }
   100% { transform: rotate(0deg)  skewY(0deg); }
 }
+
+ @media only screen and (max-width: 960px)     {
+    .link-home
+       { padding: 20px 
+               background: rgba(255,255,255,0.8)
+               margin-top:10px  
+               border-radius: 12px
+               -webkit-transition: all 0.5s
+               transition: all 0.5s}
+      
+      &:hover
+          { -webkit-filter: grayscale(0);
+                     filter: grayscale(0);
+                     background: rgba(255,255,255,1)}
+           
+      & h4
+         text-align:center
+         font-weight:normal
+         color: #fafafa
+         background: rgba(0, 187, 211, 0.73)
+         font-family:'Ubuntu Condensed', sans-serif
+         padding: 10px
+         text-shadow: 1px 1px 3px #888
+         text-transform: uppercase
+         font-size:18px
+         
+      & img 
+         width: 75%  
+         margin:0 auto
+
+     
+     
+      .video_intro{
+        display: block; 
+        height: auto;
+        z-index: 999;
+        position: absolute; 
+        text-align: center;  
+
+      } 
+
+      .video_intro h3{
+          font-family: 'Ubuntu Condensed', sans-serif;
+          text-align: center;
+          font-weight: normal;
+          color: #fafafa;
+          background: rgba(0, 187, 211, 0.73);
+          padding: 10px;
+          display: block;
+          width: 100%;
+          text-shadow: -1px 2px 6px rgba(150, 150, 154, 1);
+          margin-top:20px;
+          font-size:18px;
+          
+      }  
+ }
+
+
+ 
