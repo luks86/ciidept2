@@ -59,15 +59,43 @@
           </div>
       </div>
 
-
+<div class="borde-banner-top"></div>
       <div class="container">
-    <!-- <video autoplay="autoplay" loop="loop" id="video_background" preload="auto" volume="50"/>
-        <source src="/img/CIIDEPT-INSTITUCIONAL.mp4" type="video/mp4" />
-     -->
-    
-
-        <div class="row">
+      <div class="row">
+      <div class="col-md-12">
+      <div class="home-noticia-cont">
+       <div class="row">
+         <div class="col-md-6">
+            <img src="http://ciidept.edu.ar/uploads/image/{{noticia[0].name}}" alt="" class="img-responsive home-noticia-img">
+         </div>
+         <div class="col-md-6">
+           <h2 class="home-noticia-titulo">{{noticia[0].title}}</h2>
+          <div class="home-noticia-des" ng-bind-html="noticia[0].abstract"></div>
+          <div class="home-noticia-opciones clearfix">
+            <a class="btn btn-warning pull-right" href="/noticias/{{ noticia[0].id }}"> Leer más</a>
+          </div>
+         </div>
+       </div>
         
+         
+          
+        </div>
+      </div>
+      </div>
+</div>
+<div class="borde-banner-top"></div>
+<div class="container">
+       <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <div class="home-ultimas-noticias">
+            <h2>Últimas Noticias</h2>
+            <ul class="list-unstyled" >
+              <li ng-repeat="not in noticias" class="home-noticias-list"><a href="/noticias/{{not.id}}">{{not.title}}</a> </li>
+            </ul>
+              
+            </div>
+            
+          </div>
             <div class="col-md-3">
            
 
@@ -81,17 +109,15 @@
                 </time>
 
             </div>
-            <!-- <div class="col-md-9 texto_ciidept">
+            <div class="col-md-9 texto_ciidept">
               <p>
                 Desde el CIIDEPT trabajamos para mejorar la calidad educativa de la mano de las nuevas tecnologías. Esperamos que este espacio se constituya en la plataforma virtual de encuentro e intercambio de nuestra institución. <br>
             
                 El propósito de este proyecto es que alumnos, docentes, investigadores y la comunidad escolar íntegra dispongan de un sitio para debatir, aprender, enseñar, compartir experiencias e intercambiar información en todos sus formatos, dentro del amplio arco de nuestros intereses académicos, didácticos, políticos y culturales.   
               </p>
-              <p ng-repeat="noticia in noticias">
-                {{noticia.section_id}}
-              </p>
+             
               
-            </div> -->
+            </div>
             
             <!-- <div class="col-md-3 texto_ciidept">
               
@@ -111,6 +137,9 @@
               
               </ul> -->
          </div> 
+</div>
+
+   
 
            <footer>
              <div class="row">
