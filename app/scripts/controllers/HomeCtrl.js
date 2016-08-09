@@ -6,7 +6,7 @@
     .controller('HomeCtrl',HomeCtrl);
 
 		  function HomeCtrl($scope, Eventos, EventosxDia, NoticiasCiidept, 
-		                    ImagenesNoticias, ProyectosCiidept, EnlacesCiidept, NoticiaCiidept, $routeParams, $http){
+		                    ImagenesNoticias, ProyectosCiidept, ProyectoCiidept, EnlacesCiidept, NoticiaCiidept, $routeParams, $http){
 
 		    $scope.dia=EventosxDia.query();
 		          
@@ -56,7 +56,23 @@
 		          $scope.proyectos = res;
 		          // console.log($scope.proyectos);
 		        });
+
+		         //// Proyectos por id's/////
+		    $scope.id=$routeParams.id;
+		    $scope.idproyecto=ProyectoCiidept.query({ id: $scope.id });
 		        
+		/*        console.log('99' + $scope.Noticia);
+		*/
+		          $scope.idproyecto.$promise.then(function(res){
+		        
+		          $scope.idproyectos= res;
+/*		         console.log('99' + res.body);
+*/		        
+		/*          console.log($scope.Noticias);
+		*/        });
+
+				//// FIN Proyectos por id's/////
+				///
 		    $scope.id=$routeParams.id;
 		    $scope.idnoticia=NoticiaCiidept.query({ id: $scope.id });
 		        
@@ -65,8 +81,8 @@
 		          $scope.idnoticia.$promise.then(function(res){
 		        
 		          $scope.idnoticias= res;
-		/*         console.log('99' + res.body);
-		*/        
+/*		         console.log('99' + res.body);
+*/		        
 		/*          console.log($scope.Noticias);
 		*/        });
 		    /*$scope.reserva = ReservasCiidept.query();

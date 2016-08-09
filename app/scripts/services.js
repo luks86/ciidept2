@@ -13,6 +13,7 @@
     .factory('EventosxDia',EventosxDia)
     .factory('NoticiasCiidept', NoticiasCiidept)
     .factory('ProyectosCiidept', ProyectosCiidept)
+    .factory('ProyectoCiidept', ProyectoCiidept)
     .factory('ImagenesNoticias', ImagenesNoticias)
     .factory('EnlacesCiidept', EnlacesCiidept)
     .factory('NoticiaCiidept', NoticiaCiidept)
@@ -51,7 +52,7 @@
   }
  function NoticiaCiidept($resource, BaseUrl)
   {
-    return $resource(BaseUrl + '/noticias/:id', {id: '@_id'},{'query': {method: 'GET', isArray: false }});
+    return $resource(BaseUrl + '/noticias/:id', {id: '@_id'},{'query': {method: 'GET', isArray: true }});
   }
    function ImagenesNoticias($resource, BaseUrl)
   {
@@ -71,6 +72,14 @@
         //ponemos isArray en true
         { get: { method: 'GET', isArray: true }
     });
+  }
+
+  function ProyectoCiidept($resource, BaseUrl)
+  {
+    return $resource(BaseUrl + '/proyectos/:id', {id: '@_id'},{'query': { method: 'GET', isArray: true }}); 
+    //aquí podemos pasar variables que queramos pasar a la consulta
+        //a la función get le decimos el método, y, si es un array lo que devuelve
+        //ponemos isArray en true
   }
 
    function EnlacesCiidept($resource, BaseUrl)

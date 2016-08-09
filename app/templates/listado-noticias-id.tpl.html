@@ -1,20 +1,22 @@
 <div class="container"> 
-      <div class="row">
+      <!-- <div class="row">
             <div class="col-md-12">
                 <div class="fondo_foto">
                     <img src="img/1-Logo_nuevo_ciidept-.png" alt="" class="img-responsive">
                 </div>
             </div>
-       </div>
-
-      <div class="row"> 
+       </div> -->
+<!-- 		
+       -->      
+       <div class="row"> 
+			
 	        <ul class="breadcrumb bread_style">
 			  <li><a href="/">Home</a></li>
 			  <li><a href="/noticias">Noticias</a></li>
-			  <li class="active"><a href="#">{{idnoticias.id}}</a></li>
+			  <li class="active"><a href="#">{{idnoticia[0].id}}</a></li>
 
 			</ul>
-	        <div class="col-md-9 fondo">
+	        <div class="col-md-12">
 				<!-- <ul>
 				 	<li ng-repeat="evento in eventos">
 				 		{{evento.id}}
@@ -27,18 +29,19 @@
 
 				    <div class="card-height-indicator"></div>
 
-				    <div class="card-content" >
+				    <div class="card-content noticia_card" >
 
 				        <div class="card-image">
-				            <img src="http://ciidept.edu.ar/uploads/image/{{idnoticia.name}}">
-				            <h3 class="card-image-headline">{{idnoticia.title}}</h3>
+				            <img src="http://ciidept.edu.ar/uploads/image/{{idnoticia[0].name}}">
+				             			           
+				              <h3 class="card-image-headline">{{idnoticia[0].title}}</h3>
 				        </div>
 
 				        <div class="card-body">
  				            
- 				            <p ng-bind-html="idnoticia.body"></p>
+ 				            <p ng-bind-html="idnoticia[0].body"></p>
 				     	 				     	
-				     	 </div>
+				     	</div>
 
 				        <!-- <footer class="card-footer">
 				            <button class="btn btn-flat">Share</button>
@@ -71,15 +74,18 @@
 							  		<div class="list-group-separator"></div>
 					  			</div> -->
 	  		</div>
-			<div class="col-md-3">
-                	<div class="botones_nav">
-                	<a href="/" class="btn btn-raised btn-primary btn-primary btn-block">Home</a>
-                    <a href="/noticias" class="btn btn-raised btn-primary btn-block">Noticias</a>
-                    <a href="/proyectos" class="btn btn-raised btn-primary btn-block">Proyectos</a>
-                    <a href="/enlaces" class="btn btn-raised btn-primary btn-block">Enlaces</a>
-                    <a href="/reservas" class="btn btn-raised btn-primary btn-block">Reservas</a>
-                    </div>
-	        </div>
+			<!-- <div class="col-md-3">
+			                	<div class="botones_nav">
+			                	<a href="/" class="btn btn-raised btn-primary btn-primary btn-block">Home</a>
+			                    <a href="/noticias" class="btn btn-raised btn-primary btn-block">Noticias</a>
+			                    <a href="/proyectos" class="btn btn-raised btn-primary btn-block">Proyectos</a>
+			                    <a href="/enlaces" class="btn btn-raised btn-primary btn-block">Enlaces</a>
+			                    <a href="/reservas" class="btn btn-raised btn-primary btn-block">Reservas</a>
+			                    </div>
+				        </div> -->
 		</div>
 </div>
+
+
+
 
