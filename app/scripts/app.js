@@ -48,6 +48,11 @@
         templateUrl: 'templates/listado-enlaces.tpl.html',
         controller: 'HomeCtrl'
       })
+
+       /*.when('/nav', {
+        templateUrl: 'templates/menu-nav-ciidept.tpl.html',
+        controller: 'HomeCtrl'
+      })*/
       
       .when('/reservas', {
         templateUrl: 'templates/reservas.tpl.html',

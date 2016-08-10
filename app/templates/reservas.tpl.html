@@ -1,4 +1,9 @@
+<section>
+    
+<div ng-controller="HomeCtrl" ng-include="template.nav"></div>
+
 <div class="container">
+
     <div class="row">  
         <ul class="breadcrumb bread_style eventos_texto">
             <li><a href="/">Home</a></li>
@@ -6,39 +11,24 @@
         </ul>
         <div class="col-sm-6 col-md-12">
             <!-- FORM ============ -->
-          
-            <form name="reservaForm" ng-controller="ReservasCtrl" novalidate>
+                
+                <form name="reservaForm" metod="POST" action="" ng-controller="ReservasCtrl" novalidate>
+
 
                 <!-- NAME -->
                 <h3>Datos de la reserva</h3>
                 <hr>
                 <div class="form-group" ">
                     <label>Evento:</label>
-                    <input type="text" name="name" class="form-control" ng-model="user.name" placeholder="Nombre del Evento" required>
+                    <input class='form-control' type="text" name="name" ng-model="user.name" placeholder="Nombre del Evento" required>
                 </div>
               
                 <!-- USERNAME -->
                 <div class="form-group">
                     <label>Organizador:</label>
-                    <input type="text" name="username" class="form-control" ng-model="user.username" placeholder="Nombre del organizador del Evento" required>
-                    <!-- <p ng-show="userForm.username.$error.minlength" class="help-block">Username is too short.</p>
-                    <p ng-show="userForm.username.$error.maxlength" class="help-block">Username is too long.</p> -->
+                    <input class='form-control' type="text" name="username" ng-model="user.username" placeholder="Nombre del organizador del Evento" required>
+                    
                 </div>
-                
-                    <!-- <div class="form-group">
-                      <label for="fecha">Fecha:</label>
-                      <input class="dtfecha form-control" placeholder="Fecha del Evento" required="required" name="fecha" type="text" id="fecha">
-                    </div> -->
-
-                    <div class="col-md-12">
-                        <p class="input-group">
-                          <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
-                          <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
-                          
-                        </p>
-                    </div>
-
-
                     <div class="row">
                       <div class='form-group col-sm-6 col-md-6'>
                         <label>Entrada:</label>
@@ -176,3 +166,4 @@
     
     </div>
 </div>
+</section>
