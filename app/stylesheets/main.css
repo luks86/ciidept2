@@ -47,13 +47,16 @@ html {
   font-family: 'Ubuntu Condensed', sans-serif;
   text-align: center;
   font-weight: normal;
-  color: #fafafa;
-  background: rgba(0,187,211,0.73);
+  color: #00bcd4;
+  background: rgba(255,255,255,0.73);
   padding: 20px;
   display: block;
   width: 100%;
-  text-shadow: -1px 2px 6px #96969a;
+  text-shadow: -1px 2px 6px #e0f7fa;
   margin-top: 20px;
+  border-radius: 2px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 .video_intro a {
   display: inline;
@@ -72,7 +75,7 @@ html {
 .home-noticias-list {
   padding: 10px;
   font-size: 1em;
-  text-align: center;
+  text-align: right;
   min-height: 70px;
 }
 .home-noticias-list a {

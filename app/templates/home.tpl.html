@@ -90,7 +90,12 @@
             <div class="home-ultimas-noticias">
             <h2>Últimas Noticias</h2>
             <ul class="list-unstyled" >
-              <li ng-repeat="not in noticias" class="home-noticias-list"><a href="/noticias/{{not.id}}">{{not.title}}</a> </li>
+              <li ng-repeat="not in noticias | limitTo: 5 " class="home-noticias-list">
+              
+              <a href="/noticias/{{not.id}}">
+              <img class="img-circle pull-left shadow-z-3" src="http://ciidept.edu.ar/uploads/image/{{not.name}}" alt="icon" width="40" height="40">{{not.title}}</a>
+
+              </li>
             </ul>
               
             </div>
