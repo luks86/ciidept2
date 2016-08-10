@@ -12,21 +12,21 @@
      <link rel="shortcut icon" type="image/png" href="favicon.png"/>
     <!-- build:css css/style.min.css -->
     <!-- bower:css -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css"/> -->
+    
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="lib/bootstrap-material-design/dist/css/material.css" />
     <link rel="stylesheet" href="lib/bootstrap-material-design/dist/css/ripples.css" />
     <!-- endbower -->
     <!-- inject:css -->
    
-  
     <link rel="stylesheet" href="/stylesheets/main.css">
    
-  
     <!-- endinject --> 
     <!-- Material Design fonts -->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
     <!-- endbuild -->    
@@ -65,12 +65,18 @@ III. Anatomía de una aplicación AngularJS.
     <script src="lib/angular/angular.js"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
-    <script src="lib/bootstrap-material-design/dist/js/material.js"></script>
-    <script src="lib/bootstrap-material-design/dist/js/ripples.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.iife.js"></script> -->
+
+<!--     <script src="lib/bootstrap-material-design/dist/js/material.js"></script>
+ -->   
+     <script src="lib/js/material.js"></script>
+   
+ <script src="lib/bootstrap-material-design/dist/js/ripples.js"></script>
     <script src="lib/angular-sanitize/angular-sanitize.js"></script>
     <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="lib/angular-resource/angular-resource.js"></script>
     <script src="lib/angular-video-bg/angular-video-bg.min.js"></script>
+    
     <script src="lib/angular-animate/angular-animate.js"></script>
     <script src="lib/angular-touch/angular-touch.js"></script>
     <!-- endbower -->
@@ -90,7 +96,9 @@ III. Anatomía de una aplicación AngularJS.
    
     <!-- endinject --> 
     <!-- endbuild -->   
-
+    <script>
+      $.material.init();
+    </script>
 
 
     

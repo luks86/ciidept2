@@ -217,7 +217,18 @@ div.card-body {
   padding-top: 84px;
 }
 .menu_ciidept {
-  margin-top: 30px;
+  font-weight: bold;
+  margin-top: 10px;
+  background-color: rgba(0,187,211,0.73) !important;
+}
+.menu_ciidept .navbar-brand {
+  color: #000 !important;
+}
+.menu_ciidept .navbar-nav {
+  margin-left: 13px !important;
+}
+.menu_ciidept li:hover {
+  background: rgba(255,255,255,0.3);
 }
 @-webkit-keyframes swing {
   0% {

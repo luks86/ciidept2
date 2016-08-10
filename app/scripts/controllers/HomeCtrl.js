@@ -8,6 +8,8 @@
 		  function HomeCtrl($scope, Eventos, EventosxDia, NoticiasCiidept, 
 		                    ImagenesNoticias, ProyectosCiidept, ProyectoCiidept, EnlacesCiidept, NoticiaCiidept, $routeParams, $http){
 
+		    $scope.template = {'nav': 'templates/menu-nav-ciidept.tpl.html'};
+
 		    $scope.dia=EventosxDia.query();
 		          
 		          $scope.dia.$promise.then(function(res){
