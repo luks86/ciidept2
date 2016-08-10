@@ -35,9 +35,9 @@
                 <!--  -->
              <div class="col-md-3 col-xs-6 col-sm-6">
             <div class="link-home">
-              <a href="/enlaces">
-                 <img src="img/enlaces-logo.svg" alt="" class="img-responsive">
-                 <h4>Enlaces</h4>
+              <a href="/agenda">
+                 <img src="img/calendar.svg" alt="" class="img-responsive">
+                 <h4>Agenda</h4>
               </a>
             </div>
              
@@ -93,28 +93,61 @@
               <li ng-repeat="not in noticias | limitTo: 5 " class="home-noticias-list">
               
               <a href="/noticias/{{not.id}}">
-              <img class="img-circle pull-left shadow-z-3" src="http://ciidept.edu.ar/uploads/image/{{not.name}}" alt="icon" width="40" height="40">{{not.title}}</a>
-
+              <img class="img-circle pull-left shadow-z-3" src="http://ciidept.edu.ar/uploads/image/{{not.name}}" alt="icon" width="40" height="40">{{not.title}}
+              <span class="home-noticias-btn">Leer más</span>
+              </a>
+            
               </li>
+
             </ul>
-              
+              <a href="/noticias" class="btn btn-block btn-info">Más noticias</a>
             </div>
             
           </div>
-            <div class="col-md-3">
-           
-
-                <time datetime="2014-09-20" class="icon">
+          <div class="col-md-8 col-sm-6">
+            <div class="home-ultimas-noticias">
+            <h2>Agenda de Eventos</h2>
+          
+             <div class="row">
+               <div class="col-md-4">
+                  <time datetime="2014-09-20" class="icon">
                     <em>Lunes</em>
                     <strong>Junio</strong>
                     <span>27</span>                   
-                    <p> Cantidad de eventos: {{dias.length}}</p>
-                    <a href="/eventos" class="btn btn-raised btn-info btn-xs">Ver Eventos</a>
+                    
                                
                 </time>
+                <a href="/eventos/hoy" class="btn btn-lg btn-success btn-block" style="margin-top:31px">Eventos para hoy <br> 15</a>
+                <a href="/eventos" class="btn btn-lg btn-primary btn-block">Ver Agenda <br> Completa</a>
+               </div>
+               <div class="col-md-8">
+               <div class="list-group">
+  <div class="list-group-item" ng-repeat="evento in eventos | limitTo: 5">
+    <div class="row-action-primary">
+      <i class="material-icons">&#xE916;</i>
+    </div>
+    <div class="row-content">
+   
+      <h4 class="list-group-item-heading evento-title" ng-bind-html="evento.title"></h4>
+   
+      <p class="list-group-item-text" ng-bind-html="evento.date"></p>
+    </div>
+    <div class="list-group-separator"></div>
+  
+  </div>
+  
+  
+</div>
+               </div>
+             </div>
+               
 
-            </div>
-            <div class="col-md-9 texto_ciidept">
+          
+            
+          </div>
+          </div>
+            
+            <!-- <div class="col-md-9 texto_ciidept">
               <p>
                 Desde el CIIDEPT trabajamos para mejorar la calidad educativa de la mano de las nuevas tecnologías. Esperamos que este espacio se constituya en la plataforma virtual de encuentro e intercambio de nuestra institución. <br>
             
@@ -122,7 +155,7 @@
               </p>
              
               
-            </div>
+            </div> -->
             
             <!-- <div class="col-md-3 texto_ciidept">
               
@@ -143,8 +176,9 @@
               </ul> -->
          </div> 
 </div>
+<div class="borde-banner-top"></div>
 
-   
+    <iframe ng-src="http://i-tecno.com/map3d/" style="height:960px !important; width:100%; " id="framemapa" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
 
            <footer>
              <div class="row">

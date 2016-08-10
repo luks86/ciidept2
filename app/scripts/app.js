@@ -28,7 +28,7 @@
       })
 
       .when('/noticias/:id', {
-        templateUrl: 'templates/noticias-id.tpl.html',
+        templateUrl: 'templates/listado-noticias-id.tpl.html',
         controller: 'HomeCtrl'
         /*controllerAs: 'id_noti'*/
 
@@ -39,6 +39,11 @@
         controller: 'HomeCtrl'
       })
 
+      .when('/proyectos/:id', {
+        templateUrl: 'templates/listado-proyectos-id.tpl.html',
+        controller: 'HomeCtrl'
+      })
+
       .when('/enlaces', {
         templateUrl: 'templates/listado-enlaces.tpl.html',
         controller: 'HomeCtrl'
@@ -46,9 +51,7 @@
       
       .when('/reservas', {
         templateUrl: 'templates/reservas.tpl.html',
-        controller: 'ReservasCtrl',
-        controllerAs: 'reservar'
-
+        controller: 'ReservasCtrl'
       })
 
 

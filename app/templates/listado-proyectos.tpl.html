@@ -1,15 +1,11 @@
 <div class="container"> 
-      <div class="row">
-            <div class="col-md-12">
-                <div class="fondo_foto">
-                    <img src="img/1-Logo_nuevo_ciidept-.png" alt="" class="img-responsive">
-                </div>
-            </div>
-       </div>
-
-      <div class="row"> 
-	        <div class="col-md-9 eventos_texto">
-				<h2>Proyectos</h2>		
+      
+	<div class="row"> 
+	        <div class="col-md-12 eventos_texto">
+				<ul class="breadcrumb bread_style">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><a href="#">Proyectos</a></li>
+                 </ul>		
 				<div class="list-group " ng-repeat="proyecto in proyectos">
 		  			<div class="list-group-item">
 		  			<span>
@@ -20,7 +16,7 @@
 		    			</div>
 			    
 			    		<div class="row-content">
-			      			<a href="#">
+			      			<a href="/proyectos/{{ proyecto.id }}">
 			      			<h4 class="list-group-item-heading"> {{proyecto.title}}</h4>
 							</a>
 			      			<p class="list-group-item-text" ng-bind-html="proyecto.abstract"></p>
@@ -29,16 +25,16 @@
 			  		<div class="list-group-separator"></div>
 	  			</div>
 	  		</div>
-			<div class="col-md-3">
+			<!-- <div class="col-md-3">
 			<div class="botones_nav">
-                
-                	<a href="/" class="btn btn-raised btn-primary btn-primary btn-block">Home</a>
-                    <a href="/noticias" class="btn btn-raised btn-primary btn-block">Noticias</a>
-                    <a href="/proyectos" class="btn btn-raised btn-primary btn-block">Proyectos</a>
-                    <a href="/enlaces" class="btn btn-raised btn-primary btn-block">Enlaces</a>
-                    <a href="/reservas" class="btn btn-raised btn-primary btn-block">Reservas</a>
-                    </div>
-	        </div>
+			                
+			                	<a href="/" class="btn btn-raised btn-primary btn-primary btn-block">Home</a>
+			                    <a href="/noticias" class="btn btn-raised btn-primary btn-block">Noticias</a>
+			                    <a href="/proyectos" class="btn btn-raised btn-primary btn-block">Proyectos</a>
+			                    <a href="/enlaces" class="btn btn-raised btn-primary btn-block">Enlaces</a>
+			                    <a href="/reservas" class="btn btn-raised btn-primary btn-block">Reservas</a>
+			                    </div>
+				        </div> -->
 		</div>
 </div>
 		
