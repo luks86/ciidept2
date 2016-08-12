@@ -43,6 +43,12 @@ html {
   position: absolute;
   text-align: center;
 }
+#framemapa {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 .video_intro h3 {
   font-family: 'Ubuntu Condensed', sans-serif;
   text-align: center;

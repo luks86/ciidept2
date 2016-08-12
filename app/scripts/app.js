@@ -53,10 +53,19 @@
         templateUrl: 'templates/menu-nav-ciidept.tpl.html',
         controller: 'HomeCtrl'
       })*/
-      
+      .when('/agenda', {
+        templateUrl: 'templates/listado-agenda.tpl.html',
+        controller: 'HomeCtrl'
+      })
+
+      .when('/plano-ciidept', {
+        templateUrl: 'templates/plano-ciidept.tpl.html',
+        controller: 'HomeCtrl'
+      })
+
       .when('/reservas', {
         templateUrl: 'templates/reservas.tpl.html',
-        controller: 'ReservasCtrl'
+        controller: 'HomeCtrl'
       })
 
       .otherwise({ reditrectTo : '/' });

@@ -1,8 +1,9 @@
- <div class="video_intro">
-          <video-bg video-id="'-a2IRgh2wrU'" class="filtro-gris hidden-xs" >
-          </video-bg> 
-          <div class="container">
-          <div class="row">  
+ 
+<div class="video_intro">
+    <video-bg video-id="'-a2IRgh2wrU'" class="filtro-gris hidden-xs" >
+    </video-bg> 
+        <div class="container">
+            <div class="row">  
        
             
             <div class="col-md-8 col-md-offset-2 col-xs-12"> 
@@ -56,35 +57,32 @@
           </div>
            </div>
             </div>
-          </div>
+        </div>
       </div>
 
 <div class="borde-banner-top"></div>
-      <div class="container">
-      <div class="row">
-      <div class="col-md-12">
-      <div class="home-noticia-cont">
-       <div class="row">
-         <div class="col-md-6">
-            <img src="http://ciidept.edu.ar/uploads/image/{{noticia[0].name}}" alt="" class="img-responsive home-noticia-img">
-         </div>
-         <div class="col-md-6">
-           <h2 class="home-noticia-titulo">{{noticia[0].title}}</h2>
-          <div class="home-noticia-des" ng-bind-html="noticia[0].abstract"></div>
-          <div class="home-noticia-opciones clearfix">
-            <a class="btn btn-warning pull-right" href="/noticias/{{ noticia[0].id }}"> Leer más</a>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="home-noticia-cont">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="http://ciidept.edu.ar/uploads/image/{{noticia[0].name}}" alt="" class="img-responsive home-noticia-img">
+                </div>
+                <div class="col-md-6">
+                <h2 class="home-noticia-titulo">{{noticia[0].title}}</h2>
+                <div class="home-noticia-des" ng-bind-html="noticia[0].abstract"></div>
+                <div class="home-noticia-opciones clearfix">
+                  <a class="btn btn-warning pull-right" href="/noticias/{{ noticia[0].id }}"> Leer más</a>
+                </div>
+                </div>
+              </div>
+            </div>
           </div>
-         </div>
-       </div>
-        
-         
-          
         </div>
-      </div>
-      </div>
-</div>
+    </div>
 <div class="borde-banner-top"></div>
-<div class="container">
+  <div class="container">
        <div class="row">
           <div class="col-md-4 col-sm-6">
             <div class="home-ultimas-noticias">
@@ -123,43 +121,40 @@
                 <a href="/eventos" class="btn btn-lg btn-primary btn-block">Ver Agenda <br> Completa</a>
                </div>
                <div class="col-md-8">
-               <div class="list-group">
-  <div class="list-group-item" ng-repeat="evento in eventos | limitTo: 5">
-    <div class="row-action-primary">
-      <i class="material-icons">&#xE916;</i>
-    </div>
-    <div class="row-content">
-   
-      <h4 class="list-group-item-heading evento-title" ng-bind-html="evento.title"></h4>
-   
-      <p class="list-group-item-text" ng-bind-html="evento.date"></p>
-    </div>
-    <div class="list-group-separator"></div>
-  
-  </div>
-  
-  
-</div>
-               </div>
+                 <div class="list-group">
+                    <div class="list-group-item" ng-repeat="evento in eventos | limitTo: 5">
+                      <div class="row-action-primary">
+                        <i class="material-icons">&#xE916;</i>
+                      </div>
+                      <div class="row-content">
+                     
+                        <h4 class="list-group-item-heading evento-title" ng-bind-html="evento.title"></h4>
+                     
+                        <p class="list-group-item-text" ng-bind-html="evento.date"></p>
+                      </div>
+                      <div class="list-group-separator"></div>
+                    </div>
+                  </div>
+              </div>
              </div>
-              
+            </div>
           </div>
-          </div>
-         </div> 
-</div>
+        </div> 
+      </div>
+
 <div class="borde-banner-top"></div>
+     <iframe ng-src="http://i-tecno.com/map3d/" id="framemapa" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
 
-    <iframe ng-src="http://i-tecno.com/map3d/" style="height:960px !important; width:100%; " id="framemapa" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
-
+ <!-- <div class="container">
+    <div class="row"> 
+ 
            <footer>
              <div class="row">
                <div class="col-md-12 ">
-<!--                 <img src="img/1-Logo_nuevo_ciidept.png" alt="" class="img-responsive">
-               -->              </div>
-               <div class="row">
-                 <h2></h2>
                </div>
                
              </div>
-           </footer> 
-    </div>
+           </footer>
+     </div>
+  </div>
+    -->
