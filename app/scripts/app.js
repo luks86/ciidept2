@@ -59,9 +59,6 @@
         controller: 'ReservasCtrl'
       })
 
-
-
-
       .otherwise({ reditrectTo : '/' });
 
   } 
@@ -69,7 +66,7 @@
   angular
 /*    .module('ciidept', ['ngRoute','ciidept.controllers','ui.bootstrap', 'ngSanitize','angularVideoBg','ui-bootstrap','angular-animate','angular-touch'])
 */    
-      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.templates','ciidept.templates','ui.bootstrap', 'ngSanitize','angularVideoBg','ngAnimate','ngTouch'])
+      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.filters','ciidept.templates','ui.bootstrap', 'ui.bootstrap.datetimepicker','ngSanitize','angularVideoBg','ngAnimate','ngTouch'])
       .config(config);
 
    
