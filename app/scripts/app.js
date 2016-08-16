@@ -53,14 +53,20 @@
         templateUrl: 'templates/menu-nav-ciidept.tpl.html',
         controller: 'HomeCtrl'
       })*/
-      
-      .when('/reservas', {
-        templateUrl: 'templates/reservas.tpl.html',
-        controller: 'ReservasCtrl'
+      .when('/agenda', {
+        templateUrl: 'templates/listado-agenda.tpl.html',
+        controller: 'HomeCtrl'
       })
 
+      .when('/plano-ciidept', {
+        templateUrl: 'templates/plano-ciidept.tpl.html',
+        controller: 'HomeCtrl'
+      })
 
-
+      .when('/reservas', {
+        templateUrl: 'templates/reservas.tpl.html',
+        controller: 'HomeCtrl'
+      })
 
       .otherwise({ reditrectTo : '/' });
 
@@ -69,7 +75,7 @@
   angular
 /*    .module('ciidept', ['ngRoute','ciidept.controllers','ui.bootstrap', 'ngSanitize','angularVideoBg','ui-bootstrap','angular-animate','angular-touch'])
 */    
-      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.templates','ciidept.templates','ui.bootstrap', 'ngSanitize','angularVideoBg','ngAnimate','ngTouch'])
+      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.filters','ciidept.templates','ui.bootstrap', 'ui.bootstrap.datetimepicker','ngSanitize','angularVideoBg','ngAnimate','ngTouch'])
       .config(config);
 
    

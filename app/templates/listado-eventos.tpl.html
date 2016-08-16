@@ -1,78 +1,30 @@
- <div class="container"> 
-      <div class="row">
-            <div class="col-md-12">
-                <div class="fondo_foto">
-                    <img src="img/1-Logo_nuevo_ciidept-.png" alt="" class="img-responsive">
-                </div>
-            </div>
-       </div>
+ <section>
+ 
+ <div ng-controller="HomeCtrl" ng-include="template.nav"></div>
 
+ <div class="container"> 
       <div class="row"> 
         <div class="col-md-9 eventos_texto">
-			<!-- <ul>
-			 	<li ng-repeat="evento in eventos">
-			 		{{evento.id}}
-			 	</li>
-			 
-			 </ul>	   --> 
+			
+
 			<div class="list-group " ng-repeat="evento in eventos">
 	  			<div class="list-group-item">
 	  			<span>
 		    				{{evento.date}}
 		    		</span>
-	    			<div class="row-picture">
-	      				<img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
-	    			</div>
-		    
-		    		<div class="row-content">
+	    			<div class="row-content">
 		      			<h4 class="list-group-item-heading"> {{evento.title}}</h4>
 
 		      			<p class="list-group-item-text" ng-bind-html="evento.body"></p>
 		    		</div>
 		  		</div>
 		  		<div class="list-group-separator"></div>
-		  
 
-<!-- 		  <div class="list-group-separator"></div>
-		   -->		  <!-- <div class="list-group-item">
-		    <div class="row-action-primary checkbox">
-		      <label><input type="checkbox"></label>
-		    </div>
-		    <div class="row-content">
-		      <h4 class="list-group-item-heading">Tile with a checkbox in it</h4>
-		    
-		      <p class="list-group-item-text">Donec id elit non mi risus varius blandit.</p>
-		    </div>
-		  </div> -->
-		 <!--  <div class="list-group-separator"></div>
-		 		</div> -->
-			<!-- <ul>
-			 	<li ng-repeat="evento in eventos">
-			 		{{evento.id}}
-			 	</li>
-			 
-			 </ul>	   --> 
-			<!--   <h1>Prueba</h1>	 -->    	
   			</div>
   			 
 		</div>
-		<div class="col-md-3">
-                	<div class="botones_nav">
-                	<a href="/" class="btn btn-raised btn-primary btn-primary btn-block">Home</a>
-                    <a href="/noticias" class="btn btn-raised btn-primary btn-block">Noticias</a>
-                    <a href="/proyectos" class="btn btn-raised btn-primary btn-block">Proyectos</a>
-                    <a href="/enlaces" class="btn btn-raised btn-primary btn-block">Enlaces</a>
-                    <a href="/reservas" class="btn btn-raised btn-primary btn-block">Reservas</a>
-                    </div>
-	        </div>
+		
 	</div>
 </div>
-		<!-- <div class="media material-media">
-			<div class="media-left material-media__column material-media__column_vertical-middle">
-				<a href="#0"><img class="media-object material-media__object material-media__object_lg"  alt="avatar" src="http://stas-melnikov.ru/cliparts/stas.jpg"/></a>
-			</div>
-			<div class="media-body material-media__column material-media__column_vertical-middle">
-				<h4 class="media-heading material-media__title">Title media</h4>
-				<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-			</div>
-		</div> -->
+
+</section>

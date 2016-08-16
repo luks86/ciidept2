@@ -13,7 +13,8 @@
     "angular-video-bg": "^0.3.3",
     "angular-animate": "^1.5.8",
     "angular-touch": "^1.5.8",
-    "angular-ui-bootstrap": "^2.0.0"
-
+    "angular-ui-bootstrap": "^2.0.0",
+    "angular-bootstrap-datetimepicker": "^1.0.1",
+    "moment": "^2.14.1"
   }
 }

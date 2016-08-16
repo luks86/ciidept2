@@ -1,8 +1,9 @@
- <div class="video_intro">
-          <video-bg video-id="'-a2IRgh2wrU'" class="filtro-gris hidden-xs" >
-          </video-bg> 
-          <div class="container">
-          <div class="row">  
+ 
+<div class="video_intro">
+    <video-bg video-id="'-a2IRgh2wrU'" class="filtro-gris hidden-xs" >
+    </video-bg> 
+        <div class="container">
+            <div class="row">  
        
             
             <div class="col-md-8 col-md-offset-2 col-xs-12"> 
@@ -56,35 +57,32 @@
           </div>
            </div>
             </div>
-          </div>
+        </div>
       </div>
 
 <div class="borde-banner-top"></div>
-      <div class="container">
-      <div class="row">
-      <div class="col-md-12">
-      <div class="home-noticia-cont">
-       <div class="row">
-         <div class="col-md-6">
-            <img src="http://ciidept.edu.ar/uploads/image/{{noticia[0].name}}" alt="" class="img-responsive home-noticia-img">
-         </div>
-         <div class="col-md-6">
-           <h2 class="home-noticia-titulo">{{noticia[0].title}}</h2>
-          <div class="home-noticia-des" ng-bind-html="noticia[0].abstract"></div>
-          <div class="home-noticia-opciones clearfix">
-            <a class="btn btn-warning pull-right" href="/noticias/{{ noticia[0].id }}"> Leer más</a>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="home-noticia-cont">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="http://ciidept.edu.ar/uploads/image/{{noticia[0].name}}" alt="" class="img-responsive home-noticia-img">
+                </div>
+                <div class="col-md-6">
+                <h2 class="home-noticia-titulo">{{noticia[0].title}}</h2>
+                <div class="home-noticia-des" ng-bind-html="noticia[0].abstract"></div>
+                <div class="home-noticia-opciones clearfix">
+                  <a class="btn btn-warning pull-right" href="/noticias/{{ noticia[0].id }}"> Leer más</a>
+                </div>
+                </div>
+              </div>
+            </div>
           </div>
-         </div>
-       </div>
-        
-         
-          
         </div>
-      </div>
-      </div>
-</div>
+    </div>
 <div class="borde-banner-top"></div>
-<div class="container">
+  <div class="container">
        <div class="row">
           <div class="col-md-4 col-sm-6">
             <div class="home-ultimas-noticias">
@@ -109,11 +107,13 @@
             <h2>Agenda de Eventos</h2>
           
              <div class="row">
-               <div class="col-md-4">
+               <div class="col-md-4" ng-controller="fechaController">
                   <time datetime="2014-09-20" class="icon">
-                    <em>Lunes</em>
-                    <strong>Junio</strong>
-                    <span>27</span>                   
+                    <em> {{CurrentDate | date:'EEEE'}}</em>
+                    <strong>
+                   {{CurrentDate | date:'MMMM'}}
+                    </strong>
+                    <span>{{CurrentDate | date:'d'}}</span>                   
                     
                                
                 </time>
@@ -121,59 +121,25 @@
                 <a href="/eventos" class="btn btn-lg btn-primary btn-block">Ver Agenda <br> Completa</a>
                </div>
                <div class="col-md-8">
-               <div class="list-group">
-  <div class="list-group-item" ng-repeat="evento in eventos | limitTo: 5">
-    <div class="row-action-primary">
-      <i class="material-icons">&#xE916;</i>
-    </div>
-    <div class="row-content">
-   
-      <h4 class="list-group-item-heading evento-title" ng-bind-html="evento.title"></h4>
-   
-      <p class="list-group-item-text" ng-bind-html="evento.date"></p>
-    </div>
-    <div class="list-group-separator"></div>
-  
-  </div>
-  
-  
-</div>
-               </div>
+                 <div class="list-group">
+                    <div class="list-group-item" ng-repeat="evento in eventos | limitTo: 5">
+                      <div class="row-action-primary">
+                        <i class="material-icons">&#xE916;</i>
+                      </div>
+                      <div class="row-content">
+                     
+                        <h4 class="list-group-item-heading evento-title" ng-bind-html="evento.title"></h4>
+                     
+                        <p class="list-group-item-text" ng-bind-html="evento.date"></p>
+                      </div>
+                      <div class="list-group-separator"></div>
+                    </div>
+                  </div>
+              </div>
              </div>
-               
+            </div>
+          </div>
 
-          
-            
-          </div>
-          </div>
-            
-            <!-- <div class="col-md-9 texto_ciidept">
-              <p>
-                Desde el CIIDEPT trabajamos para mejorar la calidad educativa de la mano de las nuevas tecnologías. Esperamos que este espacio se constituya en la plataforma virtual de encuentro e intercambio de nuestra institución. <br>
-            
-                El propósito de este proyecto es que alumnos, docentes, investigadores y la comunidad escolar íntegra dispongan de un sitio para debatir, aprender, enseñar, compartir experiencias e intercambiar información en todos sus formatos, dentro del amplio arco de nuestros intereses académicos, didácticos, políticos y culturales.   
-              </p>
-             
-              
-            </div> -->
-            
-            <!-- <div class="col-md-3 texto_ciidept">
-              
-                    <a href="/" class="btn btn-raised btn-block">Home</a>
-                    
-                    <a href="/enlaces" class="btn btn-raised btn-block">Enlaces</a>
-                    <a href="/reservas" class="btn btn-raised btn-block">Contacto</a>
-            </div> -->
-            
-              <!-- <ul>
-                  <li ng-repeat="evento in eventos">
-                  {{evento.id}}
-                                 </li> 
-                   <li ng-repeat="noticia in noticias">
-                  {{noticia.section_id}}
-                                   </li>  
-              
-              </ul> -->
-         </div> 
-</div>
+        </div> 
+      </div>
 

@@ -3,7 +3,13 @@
 
   angular
     .module('ciidept.controllers')
-    .controller('HomeCtrl',HomeCtrl);
+    
+    .controller('HomeCtrl',HomeCtrl)
+
+   
+	.controller('fechaController', function ($scope) {
+     $scope.CurrentDate = new Date();
+	});
 
 		  function HomeCtrl($scope, Eventos, EventosxDia, NoticiasCiidept, 
 		                    ImagenesNoticias, ProyectosCiidept, ProyectoCiidept, EnlacesCiidept, NoticiaCiidept, $routeParams, $http){
@@ -97,4 +103,6 @@
 		/*          console.log($scope.eventos1);*/
 		 
 		  }
+
+
 })();
