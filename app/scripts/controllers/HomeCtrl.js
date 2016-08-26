@@ -21,17 +21,17 @@
 		       $scope.agenda=AgendaCiidept.get();
 		          
 		         $scope.agenda.$promise.then(function(res){
-		         $scope.agendas = res;
+		         $scope.agendas = res.data;
 		         console.log('la agenda con get en el servicio' + $scope.agendas);      
 		        });
 
 		    $scope.hoyagenda=AgendaCiideptHoy.get();
 		         
 		         $scope.hoyagenda.$promise.then(function(res){
-		         $scope.hoyagendas = res;
+		         $scope.hoyagendas = res.data;
 	          	 
-	          	 console.log($scope.hoyagendas);
-
+/*	          	 console.log($scope.hoyagendas);
+*/
 		        });
 
 		    // $scope.id=$routeParams.id;
@@ -44,7 +44,7 @@
 		        
 		    //     });
 
-			$scope.idTop=5;
+			$scope.idTop=5; //se pasa el N por aqui
 		    $scope.ultimosEventos=AgendaCiideptN.get({ id: $scope.idTop });
 	        $scope.ultimosEventos.$promise.then(function(res){
 	        $scope.ultimos= res.data;

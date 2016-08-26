@@ -118,7 +118,7 @@
                                
                 </time>
                  
-                 <a href="/agenda-hoy" class="btn btn-lg btn-success btn-block" style="margin-top:31px"> Eventos para hoy <br> 15</a>
+                 <a href="/agenda-hoy" class="btn btn-lg btn-success btn-block" style="margin-top:31px"> Eventos para hoy <br>10</a>
                 <a href="/agenda" class="btn btn-lg btn-primary btn-block">Ver Agenda <br> Completa</a>
                 </div>
                
@@ -130,9 +130,9 @@
                       </div>
                       <div class="row-content">
                      
-                        <h4 class="list-group-item-heading evento-title" >Evento: "{{agenda.evento}}"</h4>
+                        <h4 class="list-group-item-heading evento-title" ><strong>Evento: </strong>"{{agenda.evento}}"</h4>
                      
-                        <p class="list-group-item-text" > <strong>Organizador:</strong>{{agenda.organizador}} - <strong>Inicia:</strong><{{agenda.entrada | limitTo: 5 }}-<strong>Finaliza:</strong>{{agenda.salida | limitTo: 5}}</p>
+                        <p class="list-group-item-text" > <strong>Organizador: </strong>{{agenda.organizador}} - <strong>Inicia: </strong>{{agenda.entrada | limitTo: 5 }} - <strong>Finaliza: </strong>{{agenda.salida | limitTo: 5}}</p>
                       </div>
                       <div class="list-group-separator"></div>
                     </div>
