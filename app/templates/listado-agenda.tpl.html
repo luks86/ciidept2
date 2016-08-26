@@ -11,10 +11,10 @@
                     <li><a href="/">Home</a></li>
                     <li class="active"><a href="#">Agenda</a></li>
                   </ul>
-                 <div class="list-group noticias_texto" ng-repeat="agenda in agendas">
+                 <div class="list-group noticias_texto" ng-repeat="ag in agendas">
 		  			<div class="list-group-item">
 		    			<span>
-		    				{{agenda.fecha}}
+		    				{{ag.fecha}}
 		    			</span>
 		    			<div class="row-picture">
 		    				<i class="material-icons">&#xE916;</i>
@@ -22,10 +22,10 @@
  -->		    			</div>
 			    
 			    		<div class="row-content">
- 			      			<a href="/agenda/{{ agenda.id }}"> 
- 			      				<h4 class="list-group-item-heading">Evento: {{agenda.evento}} </h4>
+ 			      			<a href="/agenda/{{ ag.id }}"> 
+ 			      				<h4 class="list-group-item-heading">Evento: {{ag.evento}} </h4>
  			      			</a>
- 			      			 <p class="list-group-item-text" > <strong>Organizador:</strong>{{agenda.organizador}} - <strong>Inicia:</strong><{{agenda.entrada | limitTo: 5 }}-<strong>Finaliza:</strong>{{agenda.salida | limitTo: 5}}</p>	
+ 			      			 <p class="list-group-item-text" > <strong>Organizador:</strong>{{ag.organizador}} - <strong>Inicia:</strong>{{ag.entrada | limitTo: 5 }}-<strong>Finaliza:</strong>{{ag.salida | limitTo: 5}}</p>	
 			      				<!-- <p class="list-group-item-text">Organizador: {{ agenda.organizador}}
 			      				</p> -->
 			    		</div>

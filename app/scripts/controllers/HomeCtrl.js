@@ -18,50 +18,39 @@
 */
 		    $scope.template = {'nav': 'templates/menu-nav-ciidept.tpl.html'};
 
-		    $scope.agenda=AgendaCiidept.query();
+		       $scope.agenda=AgendaCiidept.get();
 		          
 		         $scope.agenda.$promise.then(function(res){
 		         $scope.agendas = res;
-		          // console.log($scope.dias.length);
-
+		         console.log('la agenda con get en el servicio' + $scope.agendas);      
 		        });
 
-		    $scope.hoyagenda=AgendaCiideptHoy.query();
-		          
+		    $scope.hoyagenda=AgendaCiideptHoy.get();
+		         
 		         $scope.hoyagenda.$promise.then(function(res){
 		         $scope.hoyagendas = res;
-		          // console.log($scope.dias.length);
+	          	 
+	          	 console.log($scope.hoyagendas);
 
 		        });
 
-		    $scope.id=$routeParams.id;
-		    $scope.idagenda=AgendaCiideptId.query({ id: $scope.id });
+		    // $scope.id=$routeParams.id;
+		    // $scope.idagenda=AgendaCiideptId.query({ id: $scope.id });
 		        
 		
-		          $scope.idagenda.$promise.then(function(res){
+		    //       $scope.idagenda.$promise.then(function(res){
 		        
-		          $scope.idagendas= res;
+		    //       $scope.idagendas= res;
 		        
-		        });
+		    //     });
 
-			$scope.id=$routeParams.id;
-		    $scope.Nagenda=AgendaCiideptN.query({ id: $scope.id });
-		        
-		
-		          $scope.Nagenda.$promise.then(function(res){
-		        
-		          $scope.Nagendas= res;
-		        
-		        });
+			$scope.idTop=5;
+		    $scope.ultimosEventos=AgendaCiideptN.get({ id: $scope.idTop });
+	        $scope.ultimosEventos.$promise.then(function(res){
+	        $scope.ultimos= res.data;
+	        console.log('Ultimos eventos para home: ' + $scope.ultimos);
+	        });
 
-
-
-				/*$scope.eventos1 = Eventos.query();
-				console.log($scope.eventos1);
-		          $scope.eventos1.$promise.then(function(res){
-		          $scope.eventos = res;
-		          
-		        });*/
 
 		    $scope.noticia = NoticiasCiidept.query();
 		          

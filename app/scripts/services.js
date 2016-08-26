@@ -8,12 +8,10 @@
 */    /*.constant('BaseUrl', 'http://localhost/laravelproyect/public/api')*/
     .constant('BaseUrl', 'http://www.ciidept.edu.ar/api_ciidept/public/api')
     .constant('BaseUrl2', 'http://agenda.innovacioneducativa.gob.ar/api/v1')
-
     .factory('AgendaCiidept', AgendaCiidept)
     .factory('AgendaCiideptHoy', AgendaCiideptHoy)
     .factory('AgendaCiideptN', AgendaCiideptN)    
     .factory('AgendaCiideptId', AgendaCiideptId)
-
     .factory('NoticiasCiidept', NoticiasCiidept)
     .factory('ProyectosCiidept', ProyectosCiidept)
     .factory('ProyectoCiidept', ProyectoCiidept)
@@ -24,27 +22,20 @@
 
 function AgendaCiidept($resource, BaseUrl2)
   {
-    return $resource(BaseUrl2 + '/agenda', //la url donde queremos consumir
-        {}, //aquí podemos pasar variables que queramos pasar a la consulta
-        //a la función get le decimos el método, y, si es un array lo que devuelve
-        //ponemos isArray en true
-        { get: { method: 'GET', isArray: true }
-    });
+    return $resource(BaseUrl2 + '/agenda', {},{'query': {method: 'GET', isArray: true }});
   }
 
  function AgendaCiideptHoy($resource, BaseUrl2)
   {
-    return $resource(BaseUrl2 + '/agenda/hoy', //la url donde queremos consumir
-        {}, //aquí podemos pasar variables que queramos pasar a la consulta
-        //a la función get le decimos el método, y, si es un array lo que devuelve
-        //ponemos isArray en true
-        { get: { method: 'GET', isArray: true }
-    });
-  }
+
+    return $resource(BaseUrl2 + '/agenda/hoy', {},{'query': {method: 'GET', isArray: true }});
+
+/*    return $resource(BaseUrl2 + '/agenda/hoy', {}, {method: 'GET', isArray: false });
+*/  }
 
   function AgendaCiideptN($resource, BaseUrl2)
   {
-    return $resource(BaseUrl2 + '/agenda/top/:id', {id: '@_id'},{'query': {method: 'GET', isArray: true }});
+    return $resource(BaseUrl2 + '/agenda/top/:id', {id: '@_id'}, {});
   }
 
   function AgendaCiideptId($resource, BaseUrl2)

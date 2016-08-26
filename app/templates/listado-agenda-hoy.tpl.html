@@ -11,21 +11,21 @@
                     <li><a href="/">Home</a></li>
                     <li class="active"><a href="#">Agenda</a></li>
                   </ul>
-                 <div class="list-group noticias_texto" ng-repeat="agenda in hoyagendas">
-		  			<div class="list-group-item">
+                 <div class="list-group noticias_texto">
+		  			<div class="list-group-item" ng-repeat="agenda in hoyagendas">
 		    			<span>
 		    				{{agenda.fecha}}
 		    			</span>
 		    			<div class="row-picture">
-		    				<i class="material-icons">&#xE916;</i>
-<!-- 		    				<img class="circle" src="http://ciidept.edu.ar/img/ic_event_black_24dp_2x.png" alt="icon">
- -->		    			</div>
+<!-- 		    				<i class="material-icons">&#xE916;</i>
+ -->		    				<img class="circle" src="http://ciidept.edu.ar/img/ic_event_black_24dp_2x.png" alt="icon">
+		    			</div>
 			    
 			    		<div class="row-content">
  			      			<a href="/agenda/{{ agenda.id }}"> 
- 			      				<h4 class="list-group-item-heading">Evento: {{agenda.evento}} </h4>
+ 			      				<h4 class="list-group-item-heading"><strong>Evento: </strong> {{agenda.evento}} </h4>
  			      			</a>
- 			      			 <p class="list-group-item-text" > <strong>Organizador:</strong>{{agenda.organizador}} - <strong>Inicia:</strong><{{agenda.entrada | limitTo: 5 }}-<strong>Finaliza:</strong>{{agenda.salida | limitTo: 5}}</p>	
+ 			      			 <p class="list-group-item-text" > <strong>Organizador: </strong>{{agenda.organizador}} - <strong>Inicia: </strong>{{agenda.entrada | limitTo: 5 }} - <strong>Finaliza: </strong>{{agenda.salida | limitTo: 5}}</p>	
 			      				<!-- <p class="list-group-item-text">Organizador: {{ agenda.organizador}}
 			      				</p> -->
 			    		</div>

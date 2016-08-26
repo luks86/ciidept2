@@ -14,17 +14,17 @@
 
       .when('/agenda', {
         templateUrl: 'templates/listado-agenda.tpl.html',
-        controller: 'HomeCtrl '
+        controller: 'HomeCtrl'
       })
 
       .when('/agenda/:id', {
         templateUrl: 'templates/listado-agenda-id.tpl.html',
-        controller: 'HomeCtrl '
+        controller: 'HomeCtrl'
       })
 
-      .when('/agenda/hoy', {
+      .when('/agenda-hoy', {
         templateUrl: 'templates/listado-agenda-hoy.tpl.html',
-        controller: 'HomeCtrl '
+        controller: 'HomeCtrl'
       })
 
 
@@ -86,7 +86,7 @@
   angular
 /*    .module('ciidept', ['ngRoute','ciidept.controllers','ui.bootstrap', 'ngSanitize','angularVideoBg','ui-bootstrap','angular-animate','angular-touch'])
 */    
-      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.filters','ciidept.templates','ui.bootstrap', 'ui.bootstrap.datetimepicker','ui.bootstrap.timepicker','ngSanitize','angularVideoBg','ngAnimate','ngTouch'])
+      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.filters','ciidept.templates','ngSanitize','angularVideoBg','ngAnimate','ngTouch'])
       .config(config);
 
    
