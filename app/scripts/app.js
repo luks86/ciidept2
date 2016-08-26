@@ -12,13 +12,24 @@
         controller: 'HomeCtrl'
       })
 
-      .when('/evento/:id', {
-        templateUrl: 'templates/home.tpl.html',
-        controller: 'EventoCtrl'
+      .when('/agenda', {
+        templateUrl: 'templates/listado-agenda.tpl.html',
+        controller: 'HomeCtrl '
       })
 
-      .when('/eventos', {
-        templateUrl: 'templates/listado-eventos.tpl.html',
+      .when('/agenda/:id', {
+        templateUrl: 'templates/listado-agenda-id.tpl.html',
+        controller: 'HomeCtrl '
+      })
+
+      .when('/agenda/hoy', {
+        templateUrl: 'templates/listado-agenda-hoy.tpl.html',
+        controller: 'HomeCtrl '
+      })
+
+
+      .when('/agenda/top/:id', {
+        templateUrl: 'templates/listado-agenda-N.tpl.html',
         controller: 'HomeCtrl'
       })
 
@@ -53,10 +64,10 @@
         templateUrl: 'templates/menu-nav-ciidept.tpl.html',
         controller: 'HomeCtrl'
       })*/
-      .when('/agenda', {
+     /* .when('/agenda', {
         templateUrl: 'templates/listado-agenda.tpl.html',
         controller: 'HomeCtrl'
-      })
+      })*/
 
       .when('/plano-ciidept', {
         templateUrl: 'templates/plano-ciidept.tpl.html',
@@ -75,7 +86,7 @@
   angular
 /*    .module('ciidept', ['ngRoute','ciidept.controllers','ui.bootstrap', 'ngSanitize','angularVideoBg','ui-bootstrap','angular-animate','angular-touch'])
 */    
-      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.filters','ciidept.templates','ui.bootstrap', 'ui.bootstrap.datetimepicker','ngSanitize','angularVideoBg','ngAnimate','ngTouch'])
+      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.filters','ciidept.templates','ui.bootstrap', 'ui.bootstrap.datetimepicker','ui.bootstrap.timepicker','ngSanitize','angularVideoBg','ngAnimate','ngTouch'])
       .config(config);
 
    

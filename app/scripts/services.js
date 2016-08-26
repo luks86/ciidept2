@@ -7,10 +7,13 @@
 /*    .constant('BaseUrl', 'http://www.ciidept.edu.ar/api')
 */    /*.constant('BaseUrl', 'http://localhost/laravelproyect/public/api')*/
     .constant('BaseUrl', 'http://www.ciidept.edu.ar/api_ciidept/public/api')
-    .constant('BaseUrl2', 'http://ciidept.servicesit.com.ar/api')
+    .constant('BaseUrl2', 'http://agenda.innovacioneducativa.gob.ar/api/v1')
 
-    .factory('Eventos',Eventos)
-    .factory('EventosxDia',EventosxDia)
+    .factory('AgendaCiidept', AgendaCiidept)
+    .factory('AgendaCiideptHoy', AgendaCiideptHoy)
+    .factory('AgendaCiideptN', AgendaCiideptN)    
+    .factory('AgendaCiideptId', AgendaCiideptId)
+
     .factory('NoticiasCiidept', NoticiasCiidept)
     .factory('ProyectosCiidept', ProyectosCiidept)
     .factory('ProyectoCiidept', ProyectoCiidept)
@@ -19,10 +22,9 @@
     .factory('NoticiaCiidept', NoticiaCiidept)
     .factory('ReservasCiidept', ReservasCiidept);
 
-
- function Eventos($resource, BaseUrl)
+function AgendaCiidept($resource, BaseUrl2)
   {
-    return $resource(BaseUrl + '/eventos', //la url donde queremos consumir
+    return $resource(BaseUrl2 + '/agenda', //la url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta
         //a la función get le decimos el método, y, si es un array lo que devuelve
         //ponemos isArray en true
@@ -30,8 +32,27 @@
     });
   }
 
+ function AgendaCiideptHoy($resource, BaseUrl2)
+  {
+    return $resource(BaseUrl2 + '/agenda/hoy', //la url donde queremos consumir
+        {}, //aquí podemos pasar variables que queramos pasar a la consulta
+        //a la función get le decimos el método, y, si es un array lo que devuelve
+        //ponemos isArray en true
+        { get: { method: 'GET', isArray: true }
+    });
+  }
 
-  function EventosxDia($resource, BaseUrl)
+  function AgendaCiideptN($resource, BaseUrl2)
+  {
+    return $resource(BaseUrl2 + '/agenda/top/:id', {id: '@_id'},{'query': {method: 'GET', isArray: true }});
+  }
+
+  function AgendaCiideptId($resource, BaseUrl2)
+  {
+    return $resource(BaseUrl2 + '/agenda/:N', {N: '@_id'},{'query': {method: 'GET', isArray: true }});
+  }  
+
+  /*function EventosxDia($resource, BaseUrl)
   {
     return $resource(BaseUrl + '/eventos_dia', //la url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta
@@ -39,7 +60,7 @@
         //ponemos isArray en true
         { get: { method: 'GET', isArray: true }
     });
-  }
+  }*/
 
   function NoticiasCiidept($resource, BaseUrl)
   {
@@ -50,10 +71,12 @@
         { get: { method: 'GET', isArray: true }
     });
   }
+
  function NoticiaCiidept($resource, BaseUrl)
   {
     return $resource(BaseUrl + '/noticias/:id', {id: '@_id'},{'query': {method: 'GET', isArray: true }});
   }
+
    function ImagenesNoticias($resource, BaseUrl)
   {
     return $resource(BaseUrl + '/imagenes', //la url donde queremos consumir
@@ -103,4 +126,22 @@
   }
 
 
+
+  /* function AgendaCiidept($resource, BaseUrl2)
+  {
+    return $resource(BaseUrl2 + '/login', //la url donde queremos consumir
+        {}, //aquí podemos pasar variables que queramos pasar a la consulta
+        //a la función get le decimos el método, y, si es un array lo que devuelve
+        //ponemos isArray en true
+        { 
+          save:{
+          method: "POST",
+          headers : {"Content-Type": "application/x-www-form-urlencoded"}, 
+          transformRequest: function(data) {
+              return $httpParamSerializerJQLike(data);
+          }
+}
+          get: { method: 'POST', isArray: true }
+    });
+  }*/
 })();

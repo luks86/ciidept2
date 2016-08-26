@@ -13,19 +13,18 @@
                  <div class="list-group noticias_texto" ng-repeat="noticia in noticias">
 		  			<div class="list-group-item">
 		    			<span>
-		    				{{noticia.publish_date}}
+		    				 {{ noticia.date | limitTo:10}}
 		    			</span>
 		    			<div class="row-picture">
 		    				<img class="circle" src="http://ciidept.edu.ar/uploads/image/{{noticia.name}}" alt="icon">
 		    			</div>
 			    
 			    		<div class="row-content">
-			      			<a href="/noticias/{{ noticia.id }}"> 
-			      			<h4 class="list-group-item-heading"> {{noticia.title}}</h4>
-			      			</a>
-
-			      			<p class="list-group-item-text" ng-bind-html="noticia.abstract">
-			      			</p>
+			      			<a href="/noticias/{{ noticia.id }}"> </a>
+			      				<h4 class="list-group-item-heading"> {{noticia.title}}</h4>
+			      				<p class="list-group-item-text" ng-bind-html="noticia.abstract">
+			      				</p>
+			      			
 			    		</div>
 			  		</div>
 			  		<div class="list-group-separator"></div>

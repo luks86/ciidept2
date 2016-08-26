@@ -11,25 +11,57 @@
      $scope.CurrentDate = new Date();
 	});
 
-		  function HomeCtrl($scope, Eventos, EventosxDia, NoticiasCiidept, 
+		  function HomeCtrl($scope, AgendaCiidept, AgendaCiideptHoy, AgendaCiideptN, AgendaCiideptId, NoticiasCiidept, 
 		                    ImagenesNoticias, ProyectosCiidept, ProyectoCiidept, EnlacesCiidept, NoticiaCiidept, $routeParams, $http){
 
+/*		    function HomeCtrl($scope, NoticiasCiidept, ImagenesNoticias, ProyectosCiidept, ProyectoCiidept, EnlacesCiidept, NoticiaCiidept, $routeParams, $http){
+*/
 		    $scope.template = {'nav': 'templates/menu-nav-ciidept.tpl.html'};
 
-		    $scope.dia=EventosxDia.query();
+		    $scope.agenda=AgendaCiidept.query();
 		          
-		          $scope.dia.$promise.then(function(res){
-		          $scope.dias = res;
+		         $scope.agenda.$promise.then(function(res){
+		         $scope.agendas = res;
 		          // console.log($scope.dias.length);
 
 		        });
 
-				$scope.eventos1 = Eventos.query();
+		    $scope.hoyagenda=AgendaCiideptHoy.query();
+		          
+		         $scope.hoyagenda.$promise.then(function(res){
+		         $scope.hoyagendas = res;
+		          // console.log($scope.dias.length);
+
+		        });
+
+		    $scope.id=$routeParams.id;
+		    $scope.idagenda=AgendaCiideptId.query({ id: $scope.id });
+		        
+		
+		          $scope.idagenda.$promise.then(function(res){
+		        
+		          $scope.idagendas= res;
+		        
+		        });
+
+			$scope.id=$routeParams.id;
+		    $scope.Nagenda=AgendaCiideptN.query({ id: $scope.id });
+		        
+		
+		          $scope.Nagenda.$promise.then(function(res){
+		        
+		          $scope.Nagendas= res;
+		        
+		        });
+
+
+
+				/*$scope.eventos1 = Eventos.query();
 				console.log($scope.eventos1);
 		          $scope.eventos1.$promise.then(function(res){
 		          $scope.eventos = res;
 		          
-		        });
+		        });*/
 
 		    $scope.noticia = NoticiasCiidept.query();
 		          

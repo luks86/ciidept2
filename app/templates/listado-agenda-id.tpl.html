@@ -1,0 +1,36 @@
+<section>
+
+	<div ng-controller="HomeCtrl" ng-include="template.nav"></div>
+	
+<div class="container"> 
+    <div class="row"> 
+      	<div class="col-md-12">
+                  <ul class="breadcrumb bread_style">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><a href="#">Agenda</a></li>
+                  </ul>
+                 <div class="list-group noticias_texto" ng-repeat="agenda in agendas">
+		  			<div class="list-group-item">
+		    			<span>
+
+		    			</span>
+		    			<!-- <div class="row-picture">
+		    				<img class="circle" src="http://ciidept.edu.ar/uploads/image/{{noticia.name}}" alt="icon">
+		    			</div> -->
+			    
+			    		<div class="row-content">
+			      			<a href="/agenda/{{ agenda.id }}"> 
+			      			<h4 class="list-group-item-heading">     </h4>
+			      			</a>
+
+			      			<p class="list-group-item-text">
+			      			</p>
+			    		</div>
+			  		</div>
+			  		<div class="list-group-separator"></div>
+	  			</div>
+	  	</div>
+	</div>
+</div>
+
+</section>

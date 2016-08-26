@@ -12,24 +12,20 @@
         <div class="col-sm-6 col-md-12">
             <!-- FORM ============ -->
                 
-                <form role="form" name="reservaForm" metod="POST" novalidate>
-
-
+                <form role="form" name="reservaForm" ng-submit="" novalidate>
+                <fieldset>
                 <!-- NAME -->
                 <h3>Datos de la reserva</h3>
                 <hr>
                 <div class="form-group" ">
-                    <!-- <label>Evento:</label> -->
-                    <input class="form-control" type="text" name="name" ng-model="user.name" placeholder="Nombre del Evento" required>
-                    <span class="form-highlight"></span>
-                    <span class="form-bar"></span>
-                    <label for="exampleInputPassword1">Evento</label>
+                    <label>Evento:</label>
+                    <input class="form-control" type="text" name="evento" ng-model="user.evento" placeholder="Nombre del Evento" required>
                 </div>
               
                 <!-- USERNAME -->
                 <div class="form-group">
                     <label>Organizador:</label>
-                    <input class='form-control' type="text" name="username" ng-model="user.username" placeholder="Nombre del organizador del Evento" required>
+                    <input class='form-control' type="text" name="username" ng-model="user.organizador" placeholder="Nombre del organizador del Evento" required>
                     
                 </div>
 
@@ -39,16 +35,17 @@
                         <label>Fecha:</label>
                         
                         <div class="dropdown">
-                    <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#"
-                       href="#">
+                        <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#"
+                            href="#">
                         <div class="input-group">
-                            <input type="text" class="form-control" data-ng-model="data.dateDropDownInput" data-date-time-input="YYYY-MM-DD HH:mm a">
+                            <input type="text" class="form-control" data-ng-model="user.fecha" data-date-time-input="YYYY-MM-DD">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                         </div>
-                    </a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                        <datetimepicker data-ng-model="data.dateDropDownInput"
-                                        data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }"></datetimepicker>
+                        </a>
+                        <!-- data-ng-model="data.dateDropDownInput" -->
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <datetimepicker data-ng-model="user.fecha" data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }">
+                        </datetimepicker>
                     </ul>
                 </div>     
                 
@@ -58,29 +55,31 @@
                     <div class="row">
                       <div class='form-group col-sm-6 col-md-6'>
                         <label>Entrada:</label>
-                        <input class='form-control' type='text' name='Entrada' id='Entrada'  placeholder='00:00:00' required>
+                        
+                        <input class='form-control' type='text' name='Entrada' id='Entrada' ng-model="user.entrada" placeholder='00:00:00' required>
                         
                       </div>
                       <div class='form-group col-sm-6 col-md-6'>
                         <label>Salida:</label>
-                        <input type='text' name='Salida' id='Salida' class='form-control' placeholder='00:00:00' required>
+                        <input type='text' name='Salida' id='Salida' class='form-control' ng-model="user.salida" placeholder='00:00:00' required>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class='form-group col-sm-6 col-md-6'>
                         <label for="asistentes">Asistentes:</label>
-                        <input id="asistentes" class="form-control" placeholder="Cantidad de Asistentes" required="required" name="asistentes" type="text">
+                        <input id="asistentes" class="form-control" placeholder="Cantidad de Asistentes" ng-model="user.asistentes"  name="asistentes" type="text" required>
                       </div>
-                      <div class='col-sm-6 col-md-6'>
+
+                      <div class='form-group col-sm-6 col-md-6'>
                         <label for="catering">Catering:</label>
-                        <div class="">
-                          <select name="catering" class="selectpicker form-control">
+                          <select name="catering" ng-model="user.catering" class="selectpicker form-control">
                             <option value="0" >Sin Catering</option>
                             <option value="1" >Con Catering</option>
                           </select>
-                        </div>
+                    
                       </div>
+
                     </div>
                 <h3>Datos del Contacto</h3>
                 <hr>
@@ -88,7 +87,7 @@
                     <label for="apellidonombre">Apellido, Nombre:</label>
                     <div class="input-group">
                       <span class="input-group-addon" id="celu"><i class="glyphicon glyphicon-user"></i></span>
-                      <input class="form-control" placeholder="Apellido y Nombre" required="required" name="apellidonombre" type="text" id="apellidonombre">
+                      <input class="form-control" ng-model="user.apellidonombre" placeholder="Apellido y Nombre"  name="apellidonombre" type="text" id="apellidonombre" required>
                     </div>
                 </div>
                 <!-- EMAIL -->
@@ -97,7 +96,7 @@
                     <label for="email">E-Mail:</label>
                     <div class="input-group">
                       <span class="input-group-addon" id="celu"><i class="glyphicon glyphicon-envelope"></i></span>
-                      <input class="form-control" placeholder="E-Mail" required="required" name="email" type="email" id="email">
+                      <input class="form-control" ng-model="user.email" placeholder="E-Mail"  name="email" type="email" id="email" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -105,90 +104,30 @@
                     <small>( <strong class="text-danger">Carcteristica y Numero</strong> todo junto sin espacios ni punto )</small>
                     <div class="input-group">
                       <span class="input-group-addon" id="celu"><i class="glyphicon glyphicon-earphone"></i></span>
-                      <input id="telefono" class="form-control" placeholder="381155XX.." required="required" name="telefono" type="text">
+                      <input id="telefono" class="form-control"  ng-model="user.telefono" placeholder="381155XX.." name="telefono" type="text" required>
                     </div>
                 </div>
-
-                
 
                   <div class="form-group">
                     <label for="objetivos">Objetivos:</label> 
                     <br>
-                    <textarea name="objetivos" rows="5" class="form-control" style="resize: none;"></textarea>
+                    <textarea name="objetivos" ng-model="user.objetivos" rows="5" class="form-control"></textarea>
                   </div>
 
                   <div class="form-group">
                     <label for="destinatarios">Destinatarios:</label> 
                     <br>
-                    <textarea name="destinatarios" rows="5" class="form-control" style="resize: none;"></textarea>
+                    <textarea name="destinatarios" ng-model="user.destinatarios" rows="5" class="form-control"></textarea>
                   </div>
-                <div class="row text-center">
-                    
-                    <button texttype="submit" class="btn btn-primary btn-lg btn-block">Reservar</button>
-                    
-                </div>
+                    <div class="row text-center">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Reservar</button>
+                    </div>
+                    </fieldset>
                 <br>
             </form>
 
         </div>
- <!-- <div class="col-sm-6">
-    <div class="row">
-         <div class="col-xs-3">
-            <h3>Form</h3>
-            <table class="table table-bordered">
-                <tbody>
-                    <tr>
-                        <td ng-class="{ success: userForm.$valid, danger: userForm.$invalid }">Valid</td>
-                    </tr>
-                    <tr>
-                        <td ng-class="{ success: userForm.$pristine, danger: !userForm.$pristine }">Pristine</td>
-                    </tr>
-                    <tr>
-                        <td ng-class="{ success: userForm.$dirty }">Dirty</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div> 
-         <div class="col-xs-3">
-            <h3>Name</h3>
-            <table class="table table-bordered">
-                <tbody>
-                    <tr>
-                        <td ng-class="{ success: userForm.name.$valid, danger: userForm.name.$invalid }">Valid</td>
-                    </tr>
-                    <tr>
-                        <td ng-class="{ success: userForm.name.$pristine, danger: !userForm.name.$pristine }">Pristine</td>
-                    </tr>
-                    <tr>
-                        <td ng-class="{ success: userForm.name.$dirty }">Dirty</td>
-                    </tr>
-                    <tr>
-                        <td ng-class="{ success: userForm.name.$touched }">Touched</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div> 
-         <div class="col-xs-3">
-            <h3>Email</h3>
-            <table class="table table-bordered">
-                <tbody>
-                    <tr>
-                        <td ng-class="{ success: userForm.email.$valid, danger: userForm.email.$invalid }">Valid</td>
-                    </tr>
-                    <tr>
-                        <td ng-class="{ success: userForm.email.$pristine, danger: !userForm.email.$pristine }">Pristine</td>
-                    </tr>
-                    <tr>
-                        <td ng-class="{ success: userForm.email.$dirty }">Dirty</td>
-                    </tr>
-                    <tr>
-                        <td ng-class="{ success: userForm.email.$touched }">Touched</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div> 
-    </div>
-    </div> -->
+ 
     
     </div>
 </div>
