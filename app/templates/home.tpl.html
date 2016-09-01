@@ -118,13 +118,13 @@
                                
                 </time>
                  
-                 <a href="/agenda-hoy" class="btn btn-lg btn-success btn-block" style="margin-top:31px"> Eventos para hoy <br>10</a>
+                 <a ng-controller="AgendaCtrl" href="/agenda-hoy" class="btn btn-lg btn-success btn-block" style="margin-top:31px"> Eventos para hoy <br><strong>{{ hoyagendas.length }}</strong></a>
                 <a href="/agenda" class="btn btn-lg btn-primary btn-block">Ver Agenda <br> Completa</a>
                 </div>
                
-               <div class="col-md-8">
+               <div class="col-md-8" ng-controller="AgendaCtrl">
                  <div class="list-group">
-                    <div class="list-group-item" ng-repeat=" agenda in ultimos | limitTo: 5">
+                    <div class="list-group-item" ng-repeat=" agenda in hoyagendas | limitTo: 5">
                       <div class="row-action-primary">
                         <i class="material-icons">&#xE916;</i>
                       </div>

@@ -43,16 +43,6 @@ function AgendaCiidept($resource, BaseUrl2)
     return $resource(BaseUrl2 + '/agenda/:N', {N: '@_id'},{'query': {method: 'GET', isArray: true }});
   }  
 
-  /*function EventosxDia($resource, BaseUrl)
-  {
-    return $resource(BaseUrl + '/eventos_dia', //la url donde queremos consumir
-        {}, //aquí podemos pasar variables que queramos pasar a la consulta
-        //a la función get le decimos el método, y, si es un array lo que devuelve
-        //ponemos isArray en true
-        { get: { method: 'GET', isArray: true }
-    });
-  }*/
-
   function NoticiasCiidept($resource, BaseUrl)
   {
     return $resource(BaseUrl + '/noticias', //la url donde queremos consumir
@@ -118,7 +108,7 @@ function AgendaCiidept($resource, BaseUrl2)
 
 
 
-  /* function AgendaCiidept($resource, BaseUrl2)
+ /*  function AgendaCiidept($resource, BaseUrl2)
   {
     return $resource(BaseUrl2 + '/login', //la url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta
@@ -131,7 +121,7 @@ function AgendaCiidept($resource, BaseUrl2)
           transformRequest: function(data) {
               return $httpParamSerializerJQLike(data);
           }
-}
+        }
           get: { method: 'POST', isArray: true }
     });
   }*/

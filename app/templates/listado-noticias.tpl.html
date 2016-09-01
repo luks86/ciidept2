@@ -11,6 +11,7 @@
                     <li class="active"><a href="/noticias">Noticias</a></li>
                   </ul>
                  <div class="list-group noticias_texto" ng-repeat="noticia in noticias">
+		  			
 		  			<div class="list-group-item">
 		    			<span>
 		    				 {{ noticia.date | limitTo:10}}
@@ -20,12 +21,12 @@
 		    			</div>
 			    
 			    		<div class="row-content">
-			      			<a href="/noticias/{{ noticia.id }}"> </a>
+			      			<a href="/noticias/{{ noticia.id }}">
 			      				<h4 class="list-group-item-heading"> {{noticia.title}}</h4>
-			      				<p class="list-group-item-text" ng-bind-html="noticia.abstract">
-			      				</p>
-			      			
-			    		</div>
+			      			</a>
+			      			<p class="list-group-item-text" ng-bind-html="noticia.abstract">
+			      			</p>
+			      		</div>
 			  		</div>
 			  		<div class="list-group-separator"></div>
 	  			</div>

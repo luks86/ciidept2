@@ -283,6 +283,7 @@ div.card-body {
 }
 .form-group .form-control {
   border: 1px solid #a7a7a7 !important;
+  background: #fafafa;
   background-image: none !important;
   padding: 0px 7px !important;
 /* background-size: 0 2px,100% 1px; */
@@ -402,8 +403,8 @@ label .additional,
 .has-error .form-control { border-color: #f45858; }
 .has-error .form-control-feedback { color: #f45858; }*/
 .bg-footer {
-  background: #45cddf;
-  color: #000;
+  background: rgba(0,0,0,0.83);
+  color: #f5f5f5;
 }
 .bg-footer a {
   color: #fff;

@@ -17,6 +17,7 @@
                 <!-- NAME -->
                 <h3>Datos de la reserva</h3>
                 <hr>
+
                 <div class="form-group" ">
                     <label>Evento:</label>
                     <input class="form-control" type="text" name="evento" ng-model="user.evento" placeholder="Nombre del Evento" required>
@@ -25,31 +26,26 @@
                 <!-- USERNAME -->
                 <div class="form-group">
                     <label>Organizador:</label>
-                    <input class='form-control' type="text" name="username" ng-model="user.organizador" placeholder="Nombre del organizador del Evento" required>
+                    <input class='form-control' type="text" name="organizador" ng-model="user.organizador" placeholder="Nombre del organizador del Evento" required>
                     
                 </div>
 
                <div class="row">
                     
-                    <div class='form-group col-sm-6 col-md-4'>
+                    <div class='form-group col-sm-6 col-md-6' ng-controller="DatepickerPopupCtrl">
                         <label>Fecha:</label>
                         
-                        <div class="dropdown">
-                        <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#"
-                            href="#">
-                        <div class="input-group">
-                            <input type="text" class="form-control" data-ng-model="user.fecha" data-date-time-input="YYYY-MM-DD">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                        </div>
-                        </a>
-                        <!-- data-ng-model="data.dateDropDownInput" -->
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                        <datetimepicker data-ng-model="user.fecha" data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }">
-                        </datetimepicker>
-                    </ul>
-                </div>     
-                
-                </div>            
+                        <pre>Fecha seleccionada: <em>{{dt | date:'fullDate' }}</em></pre>
+                        <div class="col-md-8" >
+                            <div class="input-group">
+                                <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                                
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                </span>
+                            </div>
+                        </div>     
+                    </div>            
                 
                 </div>
                     <div class="row">

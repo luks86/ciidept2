@@ -12,27 +12,6 @@
         controller: 'HomeCtrl'
       })
 
-      .when('/agenda', {
-        templateUrl: 'templates/listado-agenda.tpl.html',
-        controller: 'HomeCtrl'
-      })
-
-      .when('/agenda/:id', {
-        templateUrl: 'templates/listado-agenda-id.tpl.html',
-        controller: 'HomeCtrl'
-      })
-
-      .when('/agenda-hoy', {
-        templateUrl: 'templates/listado-agenda-hoy.tpl.html',
-        controller: 'HomeCtrl'
-      })
-
-
-      .when('/agenda/top/:id', {
-        templateUrl: 'templates/listado-agenda-N.tpl.html',
-        controller: 'HomeCtrl'
-      })
-
       .when('/noticias', {
         templateUrl: 'templates/listado-noticias.tpl.html', 
         controller: 'HomeCtrl'
@@ -60,33 +39,43 @@
         controller: 'HomeCtrl'
       })
 
-       /*.when('/nav', {
-        templateUrl: 'templates/menu-nav-ciidept.tpl.html',
-        controller: 'HomeCtrl'
-      })*/
-     /* .when('/agenda', {
-        templateUrl: 'templates/listado-agenda.tpl.html',
-        controller: 'HomeCtrl'
-      })*/
-
       .when('/plano-ciidept', {
         templateUrl: 'templates/plano-ciidept.tpl.html',
         controller: 'HomeCtrl'
       })
 
+      .when('/agenda', {
+        templateUrl: 'templates/listado-agenda.tpl.html',
+        controller: 'AgendaCtrl'
+      })
+
+      .when('/agenda/:id', {
+        templateUrl: 'templates/listado-agenda-id.tpl.html',
+        controller: 'AgendaCtrl'
+      })
+
+      .when('/agenda-hoy', {
+        templateUrl: 'templates/listado-agenda-hoy.tpl.html',
+        controller: 'AgendaCtrl'
+      })
+
+
+      .when('/agenda/top/:id', {
+        templateUrl: 'templates/listado-agenda-N.tpl.html',
+        controller: 'AgendaCtrl'
+      })
+
       .when('/reservas', {
         templateUrl: 'templates/reservas.tpl.html',
-        controller: 'HomeCtrl'
+        controller: 'FormularioCtrl'
       })
 
       .otherwise({ reditrectTo : '/' });
 
   } 
-
-  angular
-/*    .module('ciidept', ['ngRoute','ciidept.controllers','ui.bootstrap', 'ngSanitize','angularVideoBg','ui-bootstrap','angular-animate','angular-touch'])
-*/    
-      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.filters','ciidept.templates','ngSanitize','angularVideoBg','ngAnimate','ngTouch'])
+  
+  angular   
+      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.filters','ciidept.templates','ui.bootstrap','ngSanitize','angularVideoBg','ngAnimate','ngTouch'])
       .config(config);
 
    
