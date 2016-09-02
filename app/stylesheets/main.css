@@ -68,6 +68,14 @@ html {
   display: inline;
   text-align: center;
 }
+.home-noticia-cont img {
+  width: 100% !important;
+  margin: 0px !important;
+  height: 270px !important;
+}
+.home-noticia-cont h4 {
+  background-color: rgba(0,0,0,0.5);
+}
 .home-noticia-cont {
   padding: 10px;
   margin: 20px auto;
@@ -405,6 +413,16 @@ label .additional,
 .bg-footer {
   background: rgba(0,0,0,0.83);
   color: #f5f5f5;
+}
+.full button span {
+  background-color: #32cd32;
+  border-radius: 32px;
+  color: #000;
+}
+.partially button span {
+  background-color: #ffa500;
+  border-radius: 32px;
+  color: #000;
 }
 .bg-footer a {
   color: #fff;

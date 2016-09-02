@@ -4,10 +4,13 @@
   angular
     .module('ciidept.controllers')
     .controller('HomeCtrl',HomeCtrl)
+	
 	.controller('fechaController', function ($scope) {
      
      $scope.CurrentDate = new Date();
 	});
+
+
 
 		  
 		 	function HomeCtrl($scope, NoticiasCiidept, 

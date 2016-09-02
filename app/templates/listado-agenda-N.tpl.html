@@ -21,9 +21,9 @@
 		    			</div>
 			    
 			    		<div class="row-content">
- 			      			<a href="/agenda/{{ agenda.id }}"> 
+ 			      			<!-- <a href="/agenda/{{ agenda.id }}"> --> 
  			      				<h4 class="list-group-item-heading">Evento: {{agenda.evento}}  </h4>
- 			      			</a>	
+ 			      			<!-- </a> -->	
 			      				<p class="list-group-item-text">Organizador: {{ agenda.organizador}}
 			      				</p>
 			    		</div>
@@ -33,5 +33,6 @@
 	  		</div>
 		</div>
 	</div>
+    <div ng-controller="FooterCtrl" ng-include="template.footer" ></div>    
 
 </section>

@@ -58,7 +58,7 @@
            </div>
             </div>
         </div>
-      </div>
+  </div>
 
 <div class="borde-banner-top"></div>
     <div class="container">
@@ -66,14 +66,32 @@
           <div class="col-md-12">
             <div class="home-noticia-cont">
               <div class="row">
-                <div class="col-md-6">
-                  <img src="http://ciidept.edu.ar/uploads/image/{{noticia[0].name}}" alt="" class="img-responsive home-noticia-img">
+                
+                <div ng-controller="CarouselCtrl">                
+                <div class="col-md-6" >
+                  <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                      <div uib-slide ng-repeat="slid in noticias | limitTo: 5" ng-repeat="slide in slides track by slide.id" index="slide.id">
+                        <a href="/noticias/{{ slid.id }}">
+                        <img class="home-noticia-cont" src="http://ciidept.edu.ar/uploads/image/{{slid.name}}">
+                        </a>
+                        <div class="carousel-caption">
+                        <h4>{{slid.title}}</h4>
+                          <!-- <h4>Slide {{slide.id}}</h4> -->
+<!--                         <p ng-bind-html="slid.abstract"></p>  
+ -->                     </div>
+                      </div>
+                  </div>
+<!--                   <img src="http://ciidept.edu.ar/uploads/image/{{noticia[0].name}}" alt="" class="img-responsive home-noticia-img">
+ -->                
                 </div>
+
                 <div class="col-md-6">
-                <h2 class="home-noticia-titulo">{{noticia[0].title}}</h2>
-                <div class="home-noticia-des" ng-bind-html="noticia[0].abstract"></div>
-                <div class="home-noticia-opciones clearfix">
-                  <a class="btn btn-warning pull-right" href="/noticias/{{ noticia[0].id }}"> Leer más</a>
+                  <h2 class="home-noticia-titulo">{{noticia[0].title}}</h2>
+                  <div class="home-noticia-des" ng-bind-html="noticia[0].abstract">
+                  </div>
+                    <div class="home-noticia-opciones clearfix">
+                      <a class="btn btn-warning pull-right" href="/noticias/{{ noticia[0].id }}"> Leer más</a>
+                    </div>
                 </div>
                 </div>
               </div>
@@ -122,26 +140,16 @@
                 <a href="/agenda" class="btn btn-lg btn-primary btn-block">Ver Agenda <br> Completa</a>
                 </div>
                
-               <div class="col-md-8" ng-controller="AgendaCtrl">
-                 <div class="list-group">
-                    <div class="list-group-item" ng-repeat=" agenda in hoyagendas | limitTo: 5">
-                      <div class="row-action-primary">
-                        <i class="material-icons">&#xE916;</i>
-                      </div>
-                      <div class="row-content">
-                     
-                        <h4 class="list-group-item-heading evento-title" ><strong>Evento: </strong>"{{agenda.evento}}"</h4>
-                     
-                        <p class="list-group-item-text" > <strong>Organizador: </strong>{{agenda.organizador}} - <strong>Inicia: </strong>{{agenda.entrada | limitTo: 5 }} - <strong>Finaliza: </strong>{{agenda.salida | limitTo: 5}}</p>
-                      </div>
-                      <div class="list-group-separator"></div>
-                    </div>
+                 <div class="col-md-8" ng-controller="AgendaCtrl" >
+                   <div class="fb-page" data-href="https://www.facebook.com/ciidept/" data-tabs="timeline" data-small-header="false" data-height="415px" data-width="500px" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ciidept/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ciidept/">Ciidept</a></blockquote>
                   </div>
-              </div>
+                    
+                </div>
              </div>
             </div>
           </div>
 
         </div> 
       </div>
+    <div ng-controller="FooterCtrl" ng-include="template.footer" ></div>    
 

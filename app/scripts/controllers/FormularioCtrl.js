@@ -1,9 +1,7 @@
-
-var angularJsApp= angular.module('ciidept',[]);
-
-angularJsApp.controller('FormularioCtrl', function ($scope ,$http) {
-
-'use strict';
+angular
+.module('ciidept.controllers')
+.controller('FormularioCtrl', function ($scope, $http) {
+  'use strict';
     $scope.useremail ="juan41285@gmail.com";
     $scope.password ="@piTIC2016";
 
@@ -18,5 +16,5 @@ angularJsApp.controller('FormularioCtrl', function ($scope ,$http) {
             console.log('data',status);
             console.log('headers',status);
         });
-
+   
 });

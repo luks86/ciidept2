@@ -75,7 +75,7 @@
   } 
   
   angular   
-      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.filters','ciidept.templates','ui.bootstrap','ngSanitize','angularVideoBg','ngAnimate','ngTouch'])
+      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.filters','ciidept.templates','ui.bootstrap', 'ui.bootstrap.datepicker', 'ui.bootstrap.carousel' , 'ngSanitize','angularVideoBg','ngAnimate','ngTouch'])
       .config(config);
 
    
