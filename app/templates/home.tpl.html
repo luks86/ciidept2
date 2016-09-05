@@ -14,51 +14,48 @@
                
            
                <div class="row">  
-            <div class="col-md-3 col-xs-6 col-sm-6">
-            <div class="link-home">
-              <a href="/noticias">
-                 <img src="img/noticias-logo.svg" alt="" class="img-responsive">
-                 <h4>Noticias</h4>
-              </a>
-            </div>
-             
-            </div>
-            <!--  -->
-             <div class="col-md-3 col-xs-6 col-sm-6">
-            <div class="link-home">
-              <a href="/proyectos">
-                 <img src="img/proyectos-logo.svg" alt="" class="img-responsive">
-                 <h4>Proyectos</h4>
-              </a>
-            </div>
-             
-            </div>
+                  <div class="col-md-3 col-xs-6 col-sm-6">
+                    <div class="link-home">
+                        <a href="/noticias">
+                          <img src="img/noticias-logo.svg" alt="" class="img-responsive">
+                          <h4>Noticias</h4>
+                        </a>
+                    </div>
+               
+                  </div>
+              
+                  <div class="col-md-3 col-xs-6 col-sm-6">
+                    <div class="link-home">
+                      <a href="/proyectos">
+                      <img src="img/proyectos-logo.svg" alt="" class="img-responsive">
+                      <h4>Proyectos</h4>
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-3 col-xs-6 col-sm-6">
+                    <div class="link-home">
+                      <a href="/agenda">
+                      <img src="img/calendar.svg" alt="" class="img-responsive">
+                      <h4>Agenda</h4>
+                      </a>
+                    </div>
+                  </div>
                 <!--  -->
-             <div class="col-md-3 col-xs-6 col-sm-6">
-            <div class="link-home">
-              <a href="/agenda">
-                 <img src="img/calendar.svg" alt="" class="img-responsive">
-                 <h4>Agenda</h4>
-              </a>
-            </div>
-             
-            </div>
-              <!--  -->
-             <div class="col-md-3 col-xs-6 col-sm-6">
-            <div class="link-home">
-              <a href="/reservas">
-                 <img src="img/reservas-logos.svg" alt="" class="img-responsive">
-                 <h4>Reservas</h4>
-              </a>
-            </div>
-             
-            </div>
+                  <div class="col-md-3 col-xs-6 col-sm-6">
+                    <div class="link-home">
+                      <a href="/reservas">
+                      <img src="img/reservas-logos.svg" alt="" class="img-responsive">
+                      <h4>Reservas</h4>
+                      </a>
+                    </div>
+                  </div>
           
-          </div>
-           </div>
+                </div>
+              </div>
             </div>
         </div>
-  </div>
+</div>
 
 <div class="borde-banner-top"></div>
     <div class="container">
@@ -73,12 +70,13 @@
                       <div uib-slide ng-repeat="slid in noticias | limitTo: 5" ng-repeat="slide in slides track by slide.id" index="slide.id">
                         <a href="/noticias/{{ slid.id }}">
                         <img class="home-noticia-cont" src="http://ciidept.edu.ar/uploads/image/{{slid.name}}">
-                        </a>
+                        
                         <div class="carousel-caption">
                         <h4>{{slid.title}}</h4>
+                         </a>
                           <!-- <h4>Slide {{slide.id}}</h4> -->
 <!--                         <p ng-bind-html="slid.abstract"></p>  
- -->                     </div>
+ -->                    </div>
                       </div>
                   </div>
 <!--                   <img src="http://ciidept.edu.ar/uploads/image/{{noticia[0].name}}" alt="" class="img-responsive home-noticia-img">
@@ -86,6 +84,12 @@
                 </div>
 
                 <div class="col-md-6">
+                  <div class="ribbon-wrapper-green">
+                    <div class="ribbon-green">EVENTO DESTACADO</div>
+                    </div>
+                    </div>
+                <!-- <img src="/img/destacado3.png"> -->
+                
                   <h2 class="home-noticia-titulo">{{noticia[0].title}}</h2>
                   <div class="home-noticia-des" ng-bind-html="noticia[0].abstract">
                   </div>
@@ -140,7 +144,7 @@
                 <a href="/agenda" class="btn btn-lg btn-primary btn-block">Ver Agenda <br> Completa</a>
                 </div>
                
-                 <div class="col-md-8" ng-controller="AgendaCtrl" >
+                 <div class="col-md-8 col-xs-12" ng-controller="AgendaCtrl" >
                    <div class="fb-page" data-href="https://www.facebook.com/ciidept/" data-tabs="timeline" data-small-header="false" data-height="415px" data-width="500px" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ciidept/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ciidept/">Ciidept</a></blockquote>
                   </div>
                     

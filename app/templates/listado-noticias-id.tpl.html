@@ -23,9 +23,9 @@
 				        </div>
 
 				        <div class="card-body">
- 				            
- 				            <p ng-bind-html="idnoticia[0].body"></p>
-				     	 				     	
+				        	<span class="label label-default">{{idnoticia[0].date | limitTo: 10 | date:'fullDate' }}</span><br>
+							<strong><br><p class="text-justify" ng-bind-html="idnoticia[0].abstract"></p></strong>
+							<p class="text-justify" ng-bind-html="idnoticia[0].body"></p>
 				     	</div>
 
 				    </div>
