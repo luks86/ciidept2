@@ -12,9 +12,22 @@
         <div class="col-sm-6 col-md-12">
             <!-- FORM ============ -->
                 
-                <form role="form" name="reservaForm" ng-submit="" novalidate>
+              <form ng-controller="FormularioCtrl" class="form-horizontal " ng-submit="EnviarDatos()">
+                
+                <input name="token" type="hidden" ng-model="user.token">
+                <br>
+                email: <input name="email" type="text" ng-model="user.email">
+                <br>
+                password: <input name="password" type="text" ng-model="user.password">
+                <br>
+                <input type="submit" value="Enviar">
+              </form>
+
+
+              <!--
+
+                 <form role="form" name="reservaForm" ng-submit="" novalidate>
                 <fieldset>
-                <!-- NAME -->
                 <h3>Datos de la reserva</h3>
                 <hr>
 
@@ -23,7 +36,6 @@
                     <input class="form-control" type="text" name="evento" ng-model="user.evento" placeholder="Nombre del Evento" required>
                 </div>
               
-                <!-- USERNAME -->
                 <div class="form-group">
                     <label>Organizador:</label>
                     <input class='form-control' type="text" name="organizador" ng-model="user.organizador" placeholder="Nombre del organizador del Evento" required>
@@ -32,7 +44,8 @@
 
                <div class="row">
                     
-                    <div class='form-group col-sm-6 col-md-6' ng-controller="DatepickerPopupCtrl">
+                  <div ng-controller="DatepickerPopupCtrl">
+                    <div class='form-group col-sm-6 col-md-6'>
                         <label>Fecha:</label>
                         
                         <pre>Fecha seleccionada: <em>{{dt | date:'fullDate' }}</em></pre>
@@ -45,7 +58,8 @@
                                 </span>
                             </div>
                         </div>     
-                    </div>            
+                    </div> 
+                  </div>           
                 
                 </div>
                     <div class="row">
@@ -86,7 +100,6 @@
                       <input class="form-control" ng-model="user.apellidonombre" placeholder="Apellido y Nombre"  name="apellidonombre" type="text" id="apellidonombre" required>
                     </div>
                 </div>
-                <!-- EMAIL -->
                 
                 <div class="form-group">
                     <label for="email">E-Mail:</label>
@@ -120,9 +133,9 @@
                     </div>
                     </fieldset>
                 <br>
-            </form>
+            </form>-->
 
-        </div>
+        </div> 
  
     
     </div>

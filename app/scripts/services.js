@@ -17,8 +17,8 @@
     .factory('ProyectoCiidept', ProyectoCiidept)
     .factory('ImagenesNoticias', ImagenesNoticias)
     .factory('EnlacesCiidept', EnlacesCiidept)
-    .factory('NoticiaCiidept', NoticiaCiidept)
-    .factory('ReservasCiidept', ReservasCiidept);
+    .factory('NoticiaCiidept', NoticiaCiidept);
+    /*.factory('ReservasCiidept', ReservasCiidept);*/
 
 function AgendaCiidept($resource, BaseUrl2)
   {
@@ -96,7 +96,7 @@ function AgendaCiidept($resource, BaseUrl2)
     });
   }
 
-  function ReservasCiidept($resource, BaseUrl2)
+ /* function ReservasCiidept($resource, BaseUrl2)
   {
     return $resource(BaseUrl2 + '/reservar', //la url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta
@@ -105,7 +105,7 @@ function AgendaCiidept($resource, BaseUrl2)
         { get: { method: 'POST', isArray: true }
     });
   }
-
+*/
 
 
  /*  function AgendaCiidept($resource, BaseUrl2)
