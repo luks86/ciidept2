@@ -24,7 +24,7 @@
               </form> -->
 
 
-              <form ng-controller="FormularioCtrl" name="reservaForm" ng-submit="EnviarDatos()" novalidate>
+              <form ng-controller="FormularioCtrl" name="reservaForm"  novalidate>
                 <fieldset>
                 <h3>Datos de la reserva</h3>
                 <hr>
@@ -50,7 +50,7 @@
                         <pre><em> {{ dt | date:'fullDate' }}</em></pre>
                           <div class="col-md-8" > 
                              <div class="input-group">
-                                <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Cerrar" />                                
+                                <input type="text" class="form-control" uib-datepicker-popup ng-model="user.dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Cerrar" />                                
                                 <span class="input-group-btn">
                                     <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"> </i></button>
                                 </span>

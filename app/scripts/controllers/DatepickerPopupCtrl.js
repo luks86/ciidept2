@@ -5,12 +5,12 @@ angular
   'use strict';
 
   $scope.today = function() {
-    $scope.dt = new Date();
+    $scope.user.dt = new Date();
   };
   $scope.today();
 
   $scope.clear = function() {
-    $scope.dt = null;
+    $scope.user.dt = null;
   };
 
   $scope.inlineOptions = {

@@ -169,12 +169,12 @@ function FormularioCtrl($scope, $http)
   'use strict';
 
   $scope.today = function() {
-    $scope.dt = new Date();
+    $scope.user.dt = new Date();
   };
   $scope.today();
 
   $scope.clear = function() {
-    $scope.dt = null;
+    $scope.user.dt = null;
   };
 
   $scope.inlineOptions = {
@@ -214,7 +214,7 @@ function FormularioCtrl($scope, $http)
   };
 
   $scope.setDate = function(year, month, day) {
-    $scope.dt = new Date(year, month, day);
+    $scope.user.dt = new Date(year, month, day);
   };
 
   $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
@@ -270,8 +270,7 @@ function FormularioCtrl($scope, $http)
   $scope.user = {};
 
   
-
-      $scope.EnviarDatos = function(){
+ $scope.EnviarDatos = function(){
           
           $http({
                   method  : 'POST',
@@ -293,7 +292,7 @@ function FormularioCtrl($scope, $http)
                                 salida:$scope.user.salida,
                                 evento:$scope.user.evento,
                                 organizador:$scope.user.organizador,
-                                fecha:$scope.dt, 
+                                fecha:$scope.user.dt, 
                                 apellidonombre:$scope.user.apellidonombre,
                                 asistentes:$scope.user.asistentes,
                                 catering:$scope.user.catering,
@@ -331,9 +330,10 @@ function FormularioCtrl($scope, $http)
 
                     });  
             });
-
+}
+     
       
-     };
+     
 }
 
 })();
