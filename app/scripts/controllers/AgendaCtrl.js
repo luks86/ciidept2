@@ -25,10 +25,10 @@
 */
 		        });
 
-			$scope.idTop=5; //se pasa el N por aqui
+			$scope.idTop=10; //se pasa el N por aqui
 		    $scope.ultimosEventos=AgendaCiideptN.get({ id: $scope.idTop });
 	        $scope.ultimosEventos.$promise.then(function(res){
-	        $scope.ultimos= res.data;
+	        $scope.ultimos = res.data;
 /*	        console.log('Ultimos eventos para home: ' + $scope.ultimos);
 */	        });
 		  }

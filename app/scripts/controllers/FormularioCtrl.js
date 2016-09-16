@@ -7,7 +7,7 @@
     .controller('ContactoCtrl', ContactoCtrl);
 
 
-function ContactoCtrl ($scope, $http)
+function ContactoCtrl($scope, $http)
 {
   
   $scope.mensaje = true;
@@ -169,12 +169,13 @@ function FormularioCtrl($scope, $http)
   'use strict';
 
   $scope.today = function() {
-    $scope.user.dt = new Date();
+    $scope.dt = new Date();
   };
+  
   $scope.today();
 
   $scope.clear = function() {
-    $scope.user.dt = null;
+    $scope.dt = null;
   };
 
   $scope.inlineOptions = {
@@ -214,7 +215,9 @@ function FormularioCtrl($scope, $http)
   };
 
   $scope.setDate = function(year, month, day) {
-    $scope.user.dt = new Date(year, month, day);
+    $scope.dt = new Date(year, month, day);
+ /*$scope.dt = new Date(day, month, year);*/
+
   };
 
   $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
@@ -280,8 +283,8 @@ function FormularioCtrl($scope, $http)
               })
 
                 .success(function(data){
-                console.log(data);
-/*                $scope.user={fecha:$scope.dt}
+/*                console.log(data);
+*//*                $scope.user={fecha:$scope.dt}
 
 */                
                 /*console.log($scope.dt);*/
@@ -302,22 +305,6 @@ function FormularioCtrl($scope, $http)
                                 destinatarios:$scope.user.destinatarios,
                                 };
 
-                
-                /*$scope.user={
-                                entrada:"10:00",  
-                                salida:"12:00",
-                                evento:"Evento Prueba",
-                                organizador:"Evento Prueba",
-                                fecha:"2016-09-08", 
-                                apellidonombre:"ape1lidonombre",
-                                asistentes:"30",
-                                catering:"0",
-                                email:"lucas.laime86@gmail.com",
-                                telefono:"155580098",
-                                objetivos:"Hola soy un objetivo",
-                                destinatarios:"Hola soy los destinatarios",
-                                };
-*/
                     $http({
                       method  : 'POST',
                       url     : 'http://agenda.innovacioneducativa.gob.ar/api/v1/agenda?token='+ data.token,

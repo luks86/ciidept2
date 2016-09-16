@@ -24,7 +24,7 @@
               </form> -->
 
 
-              <form ng-controller="FormularioCtrl" name="reservaForm"  novalidate>
+               <form ng-controller="FormularioCtrl" ng-submit="EnviarDatos()">
                 <fieldset>
                 <h3>Datos de la reserva</h3>
                 <hr>
@@ -42,24 +42,24 @@
 
 
 <!--                   <div ng-controller="DatepickerPopupCtrl"> 
- -->                    <div class='form-group col-sm-6 col-md-6'>
-                        <label>Fecha:</label>
+ -->            <div class='form-group col-sm-6 col-md-6'>
+                  <label>Fecha:</label>
                         
 <!--                         <input class="form-control" type="hidden" name="fecha" ng-model="user.fecha" value="{{dt}}">
  -->
-                        <pre><em> {{ dt | date:'fullDate' }}</em></pre>
-                          <div class="col-md-8" > 
+<!--                         <pre><em> {{ user.dt | date:'fullDate' }}</em></pre>
+ -->                          <!-- <div class="col-md-8" >  -->
                              <div class="input-group">
                                 <input type="text" class="form-control" uib-datepicker-popup ng-model="user.dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Cerrar" />                                
                                 <span class="input-group-btn">
-                                    <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"> </i></button>
+                                  <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"> </i></button>
                                 </span>
-                             </div>
-                        </div>     
-                    </div> 
+                             <!-- </div> -->
+                              </div>     
+                  </div> 
                   <!-- </div> -->     
-                  <input class="form-control" type="hidden" name="fecha" ng-model="user.fecha" value="{{dt | date:'dd-MM-yyyy' }}">
-          
+<!--                   <input class="form-control" type="hidden" name="fecha" ng-model="user.fecha" value="{{user.dt | date:'dd-MM-yyyy' }}">
+ -->         
                     <div class="row">
                       <div class='form-group col-sm-6 col-md-6'>
                         <label>Entrada:</label>
@@ -85,8 +85,16 @@
                             <option value="0" >Sin Catering</option>
                             <option value="1" >Con Catering</option>
                           </select>
-                    
                       </div>
+
+                      <!-- <div class='form-group col-sm-6 col-md-6'>
+                        <label for="proyector">Proyector:</label>
+                          <select name="proyector" ng-model="user.proyector" class="selectpicker form-control">
+                            <option value="0">Sin Proyector</option>
+                            <option value="1">Con Proyector</option>
+                          </select>
+                    
+                      </div> -->
 
                     </div>
                 <h3>Datos del Contacto</h3>
