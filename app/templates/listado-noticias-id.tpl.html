@@ -12,8 +12,8 @@
 				
 				<div class="card">
 
-				    <div class="card-height-indicator"></div>
-
+<!-- 				    <div class="card-height-indicator"></div>
+ -->
 				    <div class="card-content noticia_card" >
 
 				        <div class="card-image">
@@ -26,6 +26,7 @@
 				        	<span class="label label-default">{{idnoticia[0].date | limitTo: 10 | date:'fullDate' }}</span><br>
 							<strong><br><p class="text-justify" ng-bind-html="idnoticia[0].abstract"></p></strong>
 							<p class="text-justify" ng-bind-html="idnoticia[0].body"></p>
+
 				     	</div>
 
 				    </div>
@@ -35,7 +36,9 @@
 	  		</div>
 		</div>
 </div>
-    <div ng-controller="FooterCtrl" ng-include="template.footer" ></div>    
+<div class="row">
+    <div ng-controller="FooterCtrl" ng-include="template.footer" ></div> 
+  </div>  
 </section>
 
 

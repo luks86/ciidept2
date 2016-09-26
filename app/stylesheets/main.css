@@ -239,8 +239,12 @@ a:hover {
   padding: 5px;
   margin-left: 21px;
 }
-div.card-image {
-  height: 36% !important;
+.card-image {
+  height: 400px !important;
+}
+p > img {
+  display: block;
+  margin: 0 auto;
 }
 .ribbon-wrapper-green {
   width: 120px;
@@ -289,9 +293,6 @@ div.card-image {
 }
 .ribbon-green:after {
   right: 0;
-}
-div.card-body {
-  height: auto;
 }
 .reservas_texto {
   background: rgba(255,255,255,0.5);

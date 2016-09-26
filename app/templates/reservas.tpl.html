@@ -24,7 +24,7 @@
               </form> -->
 
 
-               <form ng-controller="FormularioCtrl" ng-submit="EnviarDatos()">
+               <form ng-controller="FormularioCtrl" ng-submit="EnviarDatos()" ng-show="msj">
                 <fieldset>
                 <h3>Datos de la reserva</h3>
                 <hr>
@@ -140,6 +140,22 @@
                     </fieldset>
                 <br>
             </form>
+
+            <div ng-show="msj_ok" class="ng-hide">
+              <div class="fondo-mensaje">
+                <div class="sus-ok ">
+                  <button type="button" ng-click="limpiarMsj()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
+                  <span class="mdi-navigation-check"></span><p>Su formulario fue enviado correctamente. Si es necesario nos pondremos en contacto con usted!. Muchas Gracias</p>
+                </div>
+              </div>  
+            </div>
+
+            <div ng-show="msj_mal" class="ng-hide">
+              <div class="sus-error well">
+                <button type="button" ng-click="limpiarMsj()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
+                <span class="mdi-navigation-cancel"></span><p>El formulario no pudo ser enviado, Reinicie su navegador e intente nuevamente</p>
+              </div>
+            </div>
 
         </div> 
  
