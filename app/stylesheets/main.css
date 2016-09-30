@@ -242,6 +242,12 @@ a:hover {
 .card-image {
   height: 400px !important;
 }
+.card-body h3 {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  color: #fff;
+}
 p > img {
   display: block;
   margin: 0 auto;
