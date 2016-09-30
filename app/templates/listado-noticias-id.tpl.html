@@ -23,10 +23,18 @@
 				        </div>
 
 				        <div class="card-body">
-				        	<span class="label label-default">{{idnoticia[0].date | limitTo: 10 | date:'fullDate' }}</span><br>
+				        	<span class="label label-default">{{ idnoticia[0].date | limitTo: 10 | date:'fullDate' }}</span><br>
 							<strong><br><p class="text-justify" ng-bind-html="idnoticia[0].abstract"></p></strong>
 							<p class="text-justify" ng-bind-html="idnoticia[0].body"></p>
 
+							<ul ng-controller="GalleryCtrl">
+							  <li style="display:inline-block;" ng-repeat="image in images">
+							    <a ng-click="openLightboxModal($index)">
+
+									<img class="img-thumbnail" style="width: 75px; height: 75px;" ng-src="{{image.thumbUrl}}">
+								</a>							      
+							  </li>
+							</ul>
 				     	</div>
 
 				    </div>
@@ -36,9 +44,9 @@
 	  		</div>
 		</div>
 </div>
-<div class="row">
+
     <div ng-controller="FooterCtrl" ng-include="template.footer" ></div> 
-  </div>  
+   
 </section>
 
 

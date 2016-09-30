@@ -39,6 +39,8 @@ III. Anatomía de una aplicación AngularJS.
   <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet'>
+  <link rel="stylesheet" href="lib/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css">
+  <link rel='stylesheet' href='lib/angular-loading-bar/build/loading-bar.min.css' type='text/css' media='all' />
 
   </head>
   <body > 
@@ -83,7 +85,8 @@ III. Anatomía de una aplicación AngularJS.
     <script src="lib/angular-route/angular-route.js"></script>
     <script src="lib/angular-sanitize/angular-sanitize.js"></script>
     <script src="lib/angular-ui-bootstrap/index.js"></script>
-
+    <script src="lib/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js"></script>
+    <script type='text/javascript' src='lib/angular-loading-bar/build/loading-bar.min.js'></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->
@@ -92,6 +95,10 @@ III. Anatomía de una aplicación AngularJS.
     <script src="/scripts/controllers.js"></script>
    
     <script src="/scripts/controllers/HomeCtrl.js"></script>
+   
+    <script src="/scripts/app.js"></script>
+   
+    <script src="/scripts/controllers/GalleryCtrl.js"></script>
    
     <script src="/scripts/controllers/FormularioCtrl.js"></script>
    
@@ -106,8 +113,6 @@ III. Anatomía de una aplicación AngularJS.
     <script src="/scripts/services.js"></script>
    
     <script src="/scripts/filters.js"></script>
-   
-    <script src="/scripts/app.js"></script>
    
     <script src="/scripts/angular-locale_es-ar.js"></script>
    
