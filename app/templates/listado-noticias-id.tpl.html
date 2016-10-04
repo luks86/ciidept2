@@ -33,21 +33,20 @@
 							  <li style="display:inline-block;" ng-repeat="image in images">
 							    <a ng-click="openLightboxModal($index)">
 
-									<img class="img-thumbnail" style="width: 75px; height: 75px;" ng-src="{{image.thumbUrl}}">
+								<img class="img-thumbnail" style="width: 75px; height: 75px;" ng-src="{{image.thumbUrl}}">
+							
 								</a>							      
 							  </li>
 							</ul>
 				     	</div>
 
 				    </div>
-
 				</div>
-
-	  		</div>
+			</div>
 		</div>
 </div>
 
-    <div ng-controller="FooterCtrl" ng-include="template.footer" ></div> 
+    <div ng-controller="FooterCtrl" ng-include="template.footer"></div> 
    
 </section>
 

@@ -4,6 +4,7 @@
 
   function config ($routeProvider, $locationProvider) {
    
+/*cfpLoadingBarProvider.includeSpinner = true;*/
  $locationProvider.html5Mode(true);
 
     $routeProvider
@@ -72,11 +73,9 @@
 
       .otherwise({ reditrectTo : '/' });
 
-  } 
-  
-
+  }
   angular   
-      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.filters','ciidept.templates','ui.bootstrap','ui.bootstrap.datepicker', 'ui.bootstrap.carousel' , 'ngSanitize','angularVideoBg','bootstrapLightbox','angular-loading-bar','ngAnimate','ngTouch'])
+      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.filters','ciidept.templates','ui.bootstrap','ui.bootstrap.datepickerPopup', 'ui.bootstrap.carousel' , 'ngSanitize','angularVideoBg','bootstrapLightbox','angular-loading-bar','ngAnimate','ngTouch'])
       .config(config);
 
    

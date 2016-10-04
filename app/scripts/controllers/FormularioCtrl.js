@@ -11,7 +11,7 @@
 
 
 
-function FormularioCtrl($scope, $http)
+function FormularioCtrl($scope,$http)
 {
   
   'use strict';
