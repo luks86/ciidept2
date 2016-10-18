@@ -43,6 +43,16 @@ html {
   position: absolute;
   text-align: center;
 }
+@media (max-width: 992px) {
+  .video_intro {
+    display: block;
+    height: auto;
+    padding-bottom: 20px;
+    z-index: 999;
+    position: absolute;
+    text-align: center;
+  }
+}
 #framemapa {
   overflow: hidden;
   height: 100%;
@@ -63,6 +73,8 @@ html {
   border-radius: 2px;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 .video_intro a {
   display: inline;
@@ -86,6 +98,11 @@ a:focus {
 .home-noticia-cont {
   padding: 10px;
   margin: 20px auto;
+}
+@media (max-width: 992px) {
+  .home-noticia-cont {
+    margin-top: 10px;
+  }
 }
 .home-noticia-titulo {
   border-bottom: 1px solid rgba(255,152,0,0.31);

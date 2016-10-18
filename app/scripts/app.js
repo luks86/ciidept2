@@ -75,7 +75,7 @@
 
   }
   angular   
-      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.filters','ciidept.templates','ui.bootstrap','ui.bootstrap.datepickerPopup', 'ui.bootstrap.carousel' , 'ngSanitize','angularVideoBg','bootstrapLightbox','angular-loading-bar','ngAnimate','ngTouch'])
+      .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.filters','ciidept.templates','ui.bootstrap','ui.bootstrap.datepicker', 'ui.bootstrap.carousel' , 'ngSanitize','angularVideoBg','bootstrapLightbox','angular-loading-bar','ngAnimate','ngTouch'])
       .config(config);
 
    
