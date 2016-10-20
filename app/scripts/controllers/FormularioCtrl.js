@@ -126,12 +126,14 @@ function FormularioCtrl($scope,$http)
   
   $scope.msj_ok = false;
    
-  $scope.limpiarMsj = function()
-    {
-      $scope.user = {};
-      $scope.msj = true;
-      $scope.msj_mal = false;
-      $scope.msj_ok = false;
+  $scope.limpiarMsj = function(){
+    $scope.user = {};
+  
+    $scope.msj = true;
+
+    $scope.msj_mal = false;
+  
+    $scope.msj_ok = false;
     }
   
  $scope.EnviarDatos = function(){
@@ -144,19 +146,17 @@ function FormularioCtrl($scope,$http)
               })
 
                 .success(function(data){
-/*                console.log(data);
-*//*                $scope.user={fecha:$scope.dt}
+             
+                var aux =moment($scope.user.dt);
+                
+                console.log(aux.format('YYYY-MM-DD'));
 
-*/                
-                /*console.log($scope.dt);*/
-/*                console.log($scope.user.fecha);
-*/
                 $scope.user={
                                 entrada:$scope.user.entrada,  
                                 salida:$scope.user.salida,
                                 evento:$scope.user.evento,
                                 organizador:$scope.user.organizador,
-                                fecha:$scope.user.dt, 
+                                fecha:aux.format('YYYY/MM/DD'), 
                                 apellidonombre:$scope.user.apellidonombre,
                                 asistentes:$scope.user.asistentes,
                                 catering:$scope.user.catering,
@@ -175,27 +175,26 @@ function FormularioCtrl($scope,$http)
 
                     .success(function(data){
                     console.log(data.success);
+
                     if (data.success == true) {
                     //si hubo error en la base de datos
                       $scope.user = {};
                       $scope.msj_ok = true;
                       $scope.msj = false;
                       $scope.msj_mal = false;
-                  }
-                  else
-                  {
-                      $scope.user = {};
+                    }
+                    
+                    })
+                    .error(function (error, status){
+                      console.log("No se envio nada"); 
+                      
                       $scope.msj_ok = false;
                       $scope.msj = false;
                       $scope.msj_mal = true;
-
-                  }
-
                     });  
+
             });
 }
-     
-      
      
 }
 
