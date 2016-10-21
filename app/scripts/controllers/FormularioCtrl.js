@@ -11,7 +11,7 @@
 
 
 
-function FormularioCtrl($scope,$http)
+function FormularioCtrl($scope,$http, $log)
 {
   
   'use strict';
@@ -19,25 +19,16 @@ function FormularioCtrl($scope,$http)
   $scope.today = function() {
     $scope.dt = new Date();
   };
-  
   $scope.today();
 
   $scope.clear = function() {
     $scope.dt = null;
   };
 
-  $scope.inlineOptions = {
+  $scope.options = {
     customClass: getDayClass,
     minDate: new Date(),
     showWeeks: true
-  };
-
-  $scope.dateOptions = {
-    dateDisabled: disabled,
-    formatYear: 'yy',
-    maxDate: new Date(2020, 5, 22),
-    minDate: new Date(),
-    startingDay: 1
   };
 
   // Disable weekend selection
@@ -48,41 +39,18 @@ function FormularioCtrl($scope,$http)
   }
 
   $scope.toggleMin = function() {
-    $scope.inlineOptions.minDate = $scope.inlineOptions.minDate ? null : new Date();
-    $scope.dateOptions.minDate = $scope.inlineOptions.minDate;
+    $scope.options.minDate = $scope.options.minDate ? null : new Date();
   };
 
   $scope.toggleMin();
 
-  $scope.open1 = function() {
-    $scope.popup1.opened = true;
-  };
-
-  $scope.open2 = function() {
-    $scope.popup2.opened = true;
-  };
-
   $scope.setDate = function(year, month, day) {
     $scope.dt = new Date(year, month, day);
- /*$scope.dt = new Date(day, month, year);*/
-
-  };
-
-  $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-  $scope.format = $scope.formats[0];
-  $scope.altInputFormats = ['M!/d!/yyyy'];
-
-  $scope.popup1 = {
-    opened: false
-  };
-
-  $scope.popup2 = {
-    opened: false
   };
 
   var tomorrow = new Date();
   tomorrow.setDate(tomorrow.getDate() + 1);
-  var afterTomorrow = new Date();
+  var afterTomorrow = new Date(tomorrow);
   afterTomorrow.setDate(tomorrow.getDate() + 1);
   $scope.events = [
     {
@@ -113,11 +81,48 @@ function FormularioCtrl($scope,$http)
     return '';
   }
 
+    ////////////TIMER PICKER///////////////
+
+ $scope.mytime = new Date();
+  $scope.mytime2 = new Date();
 
 
+  $scope.hstep = 1;
+  $scope.mstep = 1;
 
+  $scope.options = {
+    hstep: [1, 2, 3],
+    mstep: [1, 5, 10, 15, 25, 30]
+  };
+
+  $scope.ismeridian = true;
+
+
+  $scope.toggleMode = function() {
+    $scope.ismeridian = ! $scope.ismeridian;
+  };
+
+  $scope.update = function() {
+    var d = new Date();
+    d.setHours( 14 );
+    d.setMinutes( 0 );
+    $scope.mytime = d;
+  };
+
+  $scope.changed = function () {
+    $log.log('Time changed to: ' + $scope.mytime);
+  };
+
+  $scope.clear = function() {
+    $scope.mytime = null;
+    $scope.mytime2 = null;
+  };
+
+  // Envio POST de los datos del formulario
   $scope.DatosLogeo = {email:'juan41285@gmail.com',password:'@piTIC2016'};
 
+  
+  // variables de los mensajes de envio exitoso o de fallo
   $scope.user = {};
   
   $scope.msj = true;
@@ -148,12 +153,19 @@ function FormularioCtrl($scope,$http)
                 .success(function(data){
              
                 var aux =moment($scope.user.dt);
-                
+                var entrada = moment($scope.mytime); 
+                var salida = moment($scope.mytime2); 
+
                 console.log(aux.format('YYYY-MM-DD'));
+                console.log(entrada.format('HH:mm'));
+                console.log(salida.format('HH:mm'));
+                /*console.log($scope.mytime);
+                console.log($scope.mytime2);
+*/
 
                 $scope.user={
-                                entrada:$scope.user.entrada,  
-                                salida:$scope.user.salida,
+                                entrada:entrada.format('HH:mm'),
+                                salida:salida.format('HH:mm'),
                                 evento:$scope.user.evento,
                                 organizador:$scope.user.organizador,
                                 fecha:aux.format('YYYY/MM/DD'), 

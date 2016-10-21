@@ -143,6 +143,9 @@ a:focus {
 .home-noticias-list:nth-child(even) {
   background-color: #00bcd4;
 }
+.selector_horas .form-group .form-control {
+  margin-left: 15px;
+}
 /***********************************************************/
 time.icon {
   font-size: 1em;
