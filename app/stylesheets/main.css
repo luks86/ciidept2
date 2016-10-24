@@ -523,6 +523,9 @@ label .additional,
 .bg-footer {
   background: rgba(0,0,0,0.83);
   color: #f5f5f5;
+/*position: absolute;
+  bottom: 0;
+  width: 100%;*/
 }
 .full button span {
   background-color: #32cd32;
