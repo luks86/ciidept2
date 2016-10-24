@@ -67,7 +67,7 @@ function AgendaCiidept($resource, BaseUrl2)
   }
 
 
-    function ProyectosCiidept($resource, BaseUrl)
+  /*  function ProyectosCiidept($resource, BaseUrl)
   {
     return $resource(BaseUrl + '/proyectos', //la url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta
@@ -83,7 +83,7 @@ function AgendaCiidept($resource, BaseUrl2)
     //aquí podemos pasar variables que queramos pasar a la consulta
         //a la función get le decimos el método, y, si es un array lo que devuelve
         //ponemos isArray en true
-  }
+  }*/
 
    function EnlacesCiidept($resource, BaseUrl)
   {

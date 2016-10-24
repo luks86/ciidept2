@@ -146,6 +146,12 @@ a:focus {
 .selector_horas .form-group .form-control {
   margin-left: 15px;
 }
+.autoridades_img {
+  margin: 0 auto;
+}
+.info_autoridades {
+  text-align: center;
+}
 /***********************************************************/
 time.icon {
   font-size: 1em;

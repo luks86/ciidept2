@@ -130,7 +130,9 @@ function FormularioCtrl($scope,$http, $log)
   $scope.msj_mal = false;
   
   $scope.msj_ok = false;
-   
+  
+  $scope.msj_info = true;
+
   $scope.limpiarMsj = function(){
     $scope.user = {};
   
@@ -139,6 +141,8 @@ function FormularioCtrl($scope,$http, $log)
     $scope.msj_mal = false;
   
     $scope.msj_ok = false;
+    
+    $scope.msj_info = false;
     }
   
  $scope.EnviarDatos = function(){
@@ -194,6 +198,7 @@ function FormularioCtrl($scope,$http, $log)
                       $scope.msj_ok = true;
                       $scope.msj = false;
                       $scope.msj_mal = false;
+                      $scope.msj_info = true;
                     }
                     
                     })

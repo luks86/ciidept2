@@ -117,7 +117,7 @@
                 </div>
                 <div class="form-group">
                     <label for="telefono">N&ordm; Celular:</label>
-                    <small>( <strong class="text-danger">Carcteristica y Numero</strong> todo junto sin espacios ni punto )</small>
+                    <small>( <strong class="text-danger">Carcteristica y Número</strong> todo junto sin espacios ni punto )</small>
                     <div class="input-group">
                       <span class="input-group-addon" id="celu"><i class="glyphicon glyphicon-earphone"></i></span>
                       <input id="telefono" class="form-control"  ng-model="user.telefono" placeholder="381155XX.." name="telefono" type="text" required>
@@ -159,7 +159,15 @@
                 <p>El formulario no pudo ser enviado, Reinicie su navegador e intente nuevamente</p>
               </div>
             </div>
-          
+            
+            <div ng-show="msj_info">
+              <div class="fondo-mensaje">
+                <div class="sus-ok">
+                  <button type="button" ng-click="limpiarMsj()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
+                  <p>Cabe aclarar que el envio del siguiente formulario es un pedido de reserva de alguna de nuestras instalaciones, el cúal quedará <strong>pendiente de aprobación</strong> del Área Administrativa del CIIDEPT, en caso de que se apruebe su pedido. Muchas Gracias</p>
+                </div>
+              </div>  
+            </div>          
 
         </div> 
  
