@@ -143,6 +143,15 @@ a:focus {
 .home-noticias-list:nth-child(even) {
   background-color: #00bcd4;
 }
+.selector_horas .form-group .form-control {
+  margin-left: 15px;
+}
+.autoridades_img {
+  margin: 0 auto;
+}
+.info_autoridades {
+  text-align: center;
+}
 /***********************************************************/
 time.icon {
   font-size: 1em;
@@ -520,6 +529,9 @@ label .additional,
 .bg-footer {
   background: rgba(0,0,0,0.83);
   color: #f5f5f5;
+/*position: absolute;
+  bottom: 0;
+  width: 100%;*/
 }
 .full button span {
   background-color: #32cd32;

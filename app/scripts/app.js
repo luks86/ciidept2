@@ -25,7 +25,14 @@
 
       })
 
-      .when('/proyectos', {
+      .when('/autoridades', {
+        templateUrl: 'templates/autoridades.tpl.html',
+        controller: 'HomeCtrl'
+        /*controllerAs: 'id_noti'*/
+
+      })
+
+      /*.when('/proyectos', {
         templateUrl: 'templates/listado-proyectos.tpl.html',
         controller: 'HomeCtrl'
       })
@@ -33,12 +40,12 @@
       .when('/proyectos/:id', {
         templateUrl: 'templates/listado-proyectos-id.tpl.html',
         controller: 'HomeCtrl'
-      })
+      })*/
 
-      .when('/enlaces', {
+      /*.when('/enlaces', {
         templateUrl: 'templates/listado-enlaces.tpl.html',
         controller: 'HomeCtrl'
-      })
+      })*/
 
       .when('/plano-ciidept', {
         templateUrl: 'templates/plano-ciidept.tpl.html',
@@ -75,6 +82,7 @@
 
   }
   angular   
+
       .module('ciidept', ['ngRoute','ciidept.controllers','ciidept.filters','ciidept.templates','ui.bootstrap','ngAnimate','ngTouch','ui.bootstrap.datepicker', 'ui.bootstrap.carousel' , 'ngSanitize','angularVideoBg','bootstrapLightbox','angular-loading-bar'])
       .config(config);
 

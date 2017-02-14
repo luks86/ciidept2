@@ -1,0 +1,46 @@
+<section>
+
+<div ng-controller="HomeCtrl" ng-include="template.nav"></div>
+
+<div class="container"> 
+      
+	
+      <div class="row"> 
+      	<div class="col-md-12">
+             	<ul class="breadcrumb bread_style">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><a href="#">Autoridades</a></li>
+                 </ul>
+
+                 <h2>Ministerio de Educación de la Provincia de Tucumán</h2>
+                 <div class="well info_autoridades">
+
+                 	<img class="autoridades_img img-responsive thumbnail" src="img/aut_01.jpg" alt="">
+                 	<span><strong>Ministro de Educación</strong></span><br>
+                 	<span>Dr. Juan Pablo Lichtmajer</span>
+				</div>
+               	<!-- <div class="list-group noticias_texto" ng-repeat="ag in agendas">
+		  			<div class="list-group-item">
+		    			<span>
+		    				{{ag.fecha}}
+		    			</span>
+		    			<div class="row-picture">
+		    				<i class="material-icons">&#xE916;</i>
+		    			</div>
+			    
+			    		<div class="row-content">
+ 			      			 
+ 			      				<h4 class="list-group-item-heading"><strong>Evento: </strong>{{ag.evento}} </h4>
+ 			      			
+ 			      			 <p class="list-group-item-text"> <strong>Organizador: </strong>{{ag.organizador}} - <strong>Inicia: </strong>{{ag.entrada | limitTo: 5 }} - <strong>Finaliza: </strong>{{ag.salida | limitTo: 5}}</p>	
+			    		</div>
+			  		</div>
+			  		<div class="list-group-separator"></div>
+	  			</div> -->
+
+	  		</div>
+		</div>
+	</div>
+    <div ng-controller="FooterCtrl" ng-include="template.footer" ></div>    
+
+</section>
