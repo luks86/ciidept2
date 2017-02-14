@@ -1,0 +1,154 @@
+<section>
+    
+<div ng-controller="HomeCtrl" ng-include="template.nav"></div>
+
+<div class="container">
+
+    <div class="row">  
+        <ul class="breadcrumb bread_style">
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="#">Reservas</a></li>
+        </ul>
+        <div class="col-sm-6 col-md-12">
+           
+               <form ng-controller="FormularioCtrl" ng-submit="EnviarDatos()" ng-hide="msj">
+                <fieldset>
+                <h3>Datos de la reserva</h3>
+                <hr>
+
+                <div class="form-group" ">
+                    <label>Evento:</label>
+                    <input class="form-control" type="text" name="evento" ng-model="user.evento" placeholder="Nombre del Evento" required>
+                </div>
+              
+                <div class="form-group">
+                    <label>Organizador:</label>
+                    <input class='form-control' type="text" name="organizador" ng-model="user.organizador" placeholder="Nombre del organizador del Evento" required>
+                    
+                </div>
+
+
+<!--                   <div ng-controller="DatepickerPopupCtrl"> 
+ -->            <div class='form-group col-sm-6 col-md-6'>
+                  <label>Fecha:</label>
+                        
+<!--                         <input class="form-control" type="hidden" name="fecha" ng-model="user.fecha" value="{{dt}}">
+ -->
+<!--                         <pre><em> {{ user.dt | date:'fullDate' }}</em></pre>
+ -->                          <!-- <div class="col-md-8" >  -->
+                             <div class="input-group">
+                                <input type="text" class="form-control" uib-datepicker-popup ng-model="user.dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Cerrar" />                                
+                                <span class="input-group-btn">
+                                  <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"> </i></button>
+                                </span>
+                             <!-- </div> -->
+                              </div>     
+                  </div> 
+                  <!-- </div> -->     
+<!--                   <input class="form-control" type="hidden" name="fecha" ng-model="user.fecha" value="{{user.dt | date:'dd-MM-yyyy' }}">
+ -->         
+                    <div class="row">
+                      <div class='form-group col-sm-6 col-md-6'>
+                        <label>Entrada:</label>
+                        
+                        <input class='form-control' type='text' name='Entrada' id='Entrada' ng-model="user.entrada" placeholder='00:00' required>
+                        
+                      </div>
+                      <div class='form-group col-sm-6 col-md-6'>
+                        <label>Salida:</label>
+                        <input type='text' name='Salida' id='Salida' class='form-control' ng-model="user.salida" placeholder='00:00' required>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class='form-group col-sm-6 col-md-6'>
+                        <label for="asistentes">Asistentes:</label>
+                        <input id="asistentes" class="form-control" placeholder="Cantidad de Asistentes" ng-model="user.asistentes"  name="asistentes" type="text" required>
+                      </div>
+
+                      <div class='form-group col-sm-6 col-md-6'>
+                        <label for="catering">Catering:</label>
+                          <select name="catering" ng-model="user.catering" class="selectpicker form-control">
+                            <option value="0" >Sin Catering</option>
+                            <option value="1" >Con Catering</option>
+                          </select>
+                      </div>
+
+                      <!-- <div class='form-group col-sm-6 col-md-6'>
+                        <label for="proyector">Proyector:</label>
+                          <select name="proyector" ng-model="user.proyector" class="selectpicker form-control">
+                            <option value="0">Sin Proyector</option>
+                            <option value="1">Con Proyector</option>
+                          </select>
+                    
+                      </div> -->
+
+                    </div>
+                <h3>Datos del Contacto</h3>
+                <hr>
+                <div class="form-group">
+                    <label for="apellidonombre">Apellido, Nombre:</label>
+                    <div class="input-group">
+                      <span class="input-group-addon" id="celu"><i class="glyphicon glyphicon-user"></i></span>
+                      <input class="form-control" ng-model="user.apellidonombre" placeholder="Apellido y Nombre"  name="apellidonombre" type="text" id="apellidonombre" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-Mail:</label>
+                    <div class="input-group">
+                      <span class="input-group-addon" id="celu"><i class="glyphicon glyphicon-envelope"></i></span>
+                      <input class="form-control" ng-model="user.email" placeholder="E-Mail"  name="email" type="email" id="email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">N&ordm; Celular:</label>
+                    <small>( <strong class="text-danger">Carcteristica y Numero</strong> todo junto sin espacios ni punto )</small>
+                    <div class="input-group">
+                      <span class="input-group-addon" id="celu"><i class="glyphicon glyphicon-earphone"></i></span>
+                      <input id="telefono" class="form-control"  ng-model="user.telefono" placeholder="381155XX.." name="telefono" type="text" required>
+                    </div>
+                </div>
+
+                  <div class="form-group">
+                    <label for="objetivos">Objetivos:</label> 
+                    <br>
+                    <textarea name="objetivos" ng-model="user.objetivos" rows="5" class="form-control"></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="destinatarios">Destinatarios:</label> 
+                    <br>
+                    <textarea name="destinatarios" ng-model="user.destinatarios" rows="5" class="form-control"></textarea>
+                  </div>
+                    <div class="row text-center">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Reservar</button>
+                    </div>
+                    </fieldset>
+                <br>
+            </form>
+
+            <div ng-hide="msj_ok">
+              <div class="fondo-mensaje">
+                <div class="sus-ok">
+                  <button type="button" ng-click="limpiarMsj()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
+                  <p>Su formulario fue enviado correctamente. Nos pondremos en contacto con usted!. Muchas Gracias</p>
+                </div>
+              </div>  
+            </div>
+
+            <div ng-hide="msj_mal">
+              <div class="sus-error well">
+                <button type="button" ng-click="limpiarMsj()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
+                <!-- <span class="mdi-navigation-cancel"></span> --><p>El formulario no pudo ser enviado, Reinicie su navegador e intente nuevamente</p>
+              </div>
+            </div>
+
+        </div> 
+ 
+    
+    </div>
+</div>
+    <div ng-controller="FooterCtrl" ng-include="template.footer"></div>    
+
+</section>

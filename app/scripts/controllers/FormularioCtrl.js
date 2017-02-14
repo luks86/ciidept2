@@ -120,18 +120,20 @@ function FormularioCtrl($scope,$http)
 
   $scope.user = {};
   
-  $scope.msj = true;
+  $scope.msj = false;
 
-  $scope.msj_mal = false;
+  $scope.msj_mal = true;
   
-  $scope.msj_ok = false;
+  $scope.msj_ok = true;
    
-  $scope.limpiarMsj = function()
-    {
-      $scope.user = {};
-      $scope.msj = true;
-      $scope.msj_mal = false;
-      $scope.msj_ok = false;
+  $scope.limpiarMsj = function(){
+    $scope.user = {};
+  
+    $scope.msj = false;
+
+    $scope.msj_mal = true;
+  
+    $scope.msj_ok = true;
     }
   
  $scope.EnviarDatos = function(){
@@ -148,15 +150,18 @@ function FormularioCtrl($scope,$http)
 *//*                $scope.user={fecha:$scope.dt}
 
 */                
-                /*console.log($scope.dt);*/
-/*                console.log($scope.user.fecha);
-*/
+/*                console.log($scope.dt);
+*/                
+                var aux =moment($scope.user.dt);
+                
+                console.log(aux.format('YYYY-MM-DD'));
+
                 $scope.user={
                                 entrada:$scope.user.entrada,  
                                 salida:$scope.user.salida,
                                 evento:$scope.user.evento,
                                 organizador:$scope.user.organizador,
-                                fecha:$scope.user.dt, 
+                                fecha:aux.format('YYYY/MM/DD'), 
                                 apellidonombre:$scope.user.apellidonombre,
                                 asistentes:$scope.user.asistentes,
                                 catering:$scope.user.catering,
@@ -175,23 +180,22 @@ function FormularioCtrl($scope,$http)
 
                     .success(function(data){
                     console.log(data.success);
+
                     if (data.success == true) {
                     //si hubo error en la base de datos
                       $scope.user = {};
                       $scope.msj_ok = true;
                       $scope.msj = false;
                       $scope.msj_mal = false;
-                  }
-                  else
-                  {
-                      $scope.user = {};
-                      $scope.msj_ok = false;
-                      $scope.msj = false;
-                      $scope.msj_mal = true;
-
-                  }
-
+                    }
+                    
                     });  
+
+                    console.log("hola");
+                    $scope.user = {};
+                    $scope.msj_ok = true;
+                    $scope.msj = true;
+                    $scope.msj_mal = false;
             });
 }
      

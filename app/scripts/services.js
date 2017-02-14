@@ -7,7 +7,7 @@
 /*    .constant('BaseUrl', 'http://www.ciidept.edu.ar/api')
 */    /*.constant('BaseUrl', 'http://localhost/laravelproyect/public/api')*/
     .constant('BaseUrl', 'http://www.ciidept.edu.ar/api_ciidept/public/api')
-    .constant('BaseUrl2', 'http://agenda.innovacioneducativa.gob.ar/api/v1')
+    .constant('BaseUrl2', 'http://agenda.educaciondigitaltuc.gob.ar/api/v1')
     .factory('AgendaCiidept', AgendaCiidept)
     .factory('AgendaCiideptHoy', AgendaCiideptHoy)
     .factory('AgendaCiideptN', AgendaCiideptN)    
